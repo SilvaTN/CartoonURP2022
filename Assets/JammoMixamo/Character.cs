@@ -19,7 +19,7 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Mma Kick"))
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("MagicHealJammo"))
         {
             Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             characterController.Move(move * Time.deltaTime * speed);

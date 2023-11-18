@@ -20,7 +20,7 @@ public class AnimationStateController : MonoBehaviour
         bool isRunning = animator.GetBool("IsRunning");
         bool forwardPressed = Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d");
 
-        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("IdleJammo"))
         {
             canStartAttack = false;
         }
@@ -32,13 +32,13 @@ public class AnimationStateController : MonoBehaviour
 
         if (canStartAttack)
         {
-            animator.SetBool("IsMmaKick", true);
+            animator.SetBool("IsMagicHeal", true);
         }
         //bool isMmaKickTrue = animator.GetBool("IsMmaKick");
 
-        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Mma Kick"))
+        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("MagicHealJammo"))
         {
-            animator.SetBool("IsMmaKick", false);
+            animator.SetBool("IsMagicHeal", false);
         }
 
 
