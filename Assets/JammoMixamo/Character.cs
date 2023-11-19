@@ -19,7 +19,13 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("MagicHealJammo"))
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("MagicHealJammo")
+            && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Standing2HMagicAttack04Jammo")
+            && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("FrisbeeJammo")
+            && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("SoccerHeaderJammo")
+            && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Standing2HMagicAttack01")
+            && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("CastingSpell")
+            && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Standing2HMagicAttack05"))
         {
             Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             characterController.Move(move * Time.deltaTime * speed);
