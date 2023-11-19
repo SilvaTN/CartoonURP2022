@@ -6,14 +6,18 @@ public class AnimationStateController : MonoBehaviour
 {
     Animator animator;
     bool canStartAttack;
+    bool canStartVfx;
     string[] allAttacks = new string[] { "MagicHealJammo", "MagicHealJammo", "Standing2HMagicAttack04Jammo",
         "FrisbeeJammo", "SoccerHeaderJammo", "Standing2HMagicAttack01", "CastingSpell", "Standing2HMagicAttack05" };
     int currentAttackIndex;
+    [SerializeField] ParticleSystem vfxHand;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         canStartAttack = false;
+        canStartVfx = false;
         currentAttackIndex = 0;
     }
 
@@ -35,6 +39,7 @@ public class AnimationStateController : MonoBehaviour
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("IdleJammo"))
         {
             canStartAttack = false;
+            canStartVfx = true;
         }
 
         if (Input.GetKey(KeyCode.Space))
@@ -45,12 +50,13 @@ public class AnimationStateController : MonoBehaviour
         if (canStartAttack)
         {
             animator.SetBool("Is" + allAttacks[currentAttackIndex], true);
+            if (canStartVfx) vfxHand.Play();
         }
-        //bool isMmaKickTrue = animator.GetBool("IsMmaKick");
 
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName(allAttacks[currentAttackIndex]))
         {
             animator.SetBool("Is" + allAttacks[currentAttackIndex], false);
+            canStartVfx = false;
         }
 
 

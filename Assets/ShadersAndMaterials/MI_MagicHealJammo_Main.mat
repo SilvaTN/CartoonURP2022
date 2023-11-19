@@ -87,7 +87,7 @@ Material:
     - _VDSizeU: 1
     - _VDSizeV: 1
     - _VDSpiralMultiplier: 1
-    - _Vertex_Displacement_Intensity: 0.2
+    - _Vertex_Displacement_Intensity: 0.1
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
@@ -115,7 +115,7 @@ Material:
     - _VDOffsetUV: {r: 0, g: 0, b: 0, a: 0}
     - _VDSpeedUV: {r: 0.1, g: -1, b: 0, a: 0}
     - _VDSpiralMultiplierUV: {r: 1, g: 0, b: 0, a: 0}
-    - _VDTileUV: {r: 2, g: 1, b: 0, a: 0}
+    - _VDTileUV: {r: 1, g: 1, b: 0, a: 0}
     - _White_Overrides_Tx_Water_Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3923716286133650514
