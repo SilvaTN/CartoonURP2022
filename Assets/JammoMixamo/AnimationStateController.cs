@@ -10,7 +10,7 @@ public class AnimationStateController : MonoBehaviour
     string[] allAttacks = new string[] { "MagicHealJammo", "MagicHealJammo", "Standing2HMagicAttack04Jammo",
         "FrisbeeJammo", "SoccerHeaderJammo", "Standing2HMagicAttack01", "CastingSpell", "Standing2HMagicAttack05" };
     int currentAttackIndex;
-    [SerializeField] ParticleSystem vfxHand;
+    [SerializeField] ParticleSystem vfxCurrentAttack; //TURN INTO ARRAY LIKE allAttacks
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +50,7 @@ public class AnimationStateController : MonoBehaviour
         if (canStartAttack)
         {
             animator.SetBool("Is" + allAttacks[currentAttackIndex], true);
-            if (canStartVfx) vfxHand.Play();
+            if (canStartVfx) vfxCurrentAttack.Play();
         }
 
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName(allAttacks[currentAttackIndex]))
