@@ -11,6 +11,9 @@ public class AnimationStateController : MonoBehaviour
         "FrisbeeJammo", "SoccerHeaderJammo", "Standing2HMagicAttack01", "CastingSpell", "Standing2HMagicAttack05" };
     int currentAttackIndex;
     [SerializeField] ParticleSystem vfxCurrentAttack; //TURN INTO ARRAY LIKE allAttacks
+    bool wasFirstSpacePressRegistered;
+    bool vfxIsLocked;
+    bool isAlreadyPlayingVfx;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +22,8 @@ public class AnimationStateController : MonoBehaviour
         canStartAttack = false;
         canStartVfx = false;
         currentAttackIndex = 0;
+        vfxIsLocked = true;
+        isAlreadyPlayingVfx = false;
     }
 
     // Update is called once per frame
@@ -39,24 +44,34 @@ public class AnimationStateController : MonoBehaviour
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("IdleJammo"))
         {
             canStartAttack = false;
-            canStartVfx = true;
+            isAlreadyPlayingVfx = false;
         }
 
         if (Input.GetKey(KeyCode.Space))
         {
+            if (vfxIsLocked == false && isAlreadyPlayingVfx == false)
+            {
+                vfxCurrentAttack.Play();
+            }
+            isAlreadyPlayingVfx = true;
+            vfxIsLocked = true;
             canStartAttack = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            vfxIsLocked = false;
         }
 
         if (canStartAttack)
         {
-            animator.SetBool("Is" + allAttacks[currentAttackIndex], true);
-            if (canStartVfx) vfxCurrentAttack.Play();
+            animator.SetBool("Is" + allAttacks[currentAttackIndex], true);            
         }
 
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName(allAttacks[currentAttackIndex]))
         {
+            isAlreadyPlayingVfx = true;
             animator.SetBool("Is" + allAttacks[currentAttackIndex], false);
-            canStartVfx = false;
         }
 
 

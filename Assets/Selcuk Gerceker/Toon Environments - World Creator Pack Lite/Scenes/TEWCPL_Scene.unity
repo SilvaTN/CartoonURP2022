@@ -896,7 +896,7 @@ PrefabInstance:
     - target: {fileID: 2024652199341196946, guid: 8b6f2c8a356bc8544b9975ae848ad3b0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.79498
+      value: 14.4
       objectReference: {fileID: 0}
     - target: {fileID: 2024652199341196946, guid: 8b6f2c8a356bc8544b9975ae848ad3b0,
         type: 3}
@@ -9147,7 +9147,7 @@ PrefabInstance:
     - target: {fileID: 1025121959406572989, guid: 9b6f55d6ab69b174dbe452d92b8de783,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.49
+      value: 14.095019
       objectReference: {fileID: 0}
     - target: {fileID: 1025121959406572989, guid: 9b6f55d6ab69b174dbe452d92b8de783,
         type: 3}
@@ -23839,6 +23839,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1489064187}
     m_Modifications:
+    - target: {fileID: 218276412078204321, guid: 6eff1a72598e9894a9f08b84b95eab6f,
+        type: 3}
+      propertyPath: m_Name
+      value: MainCylinder_Current
+      objectReference: {fileID: 0}
     - target: {fileID: 674571052682910665, guid: 6eff1a72598e9894a9f08b84b95eab6f,
         type: 3}
       propertyPath: playOnAwake
@@ -23858,6 +23863,11 @@ PrefabInstance:
         type: 3}
       propertyPath: startDelay.scalar
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1077607145883897524, guid: 6eff1a72598e9894a9f08b84b95eab6f,
+        type: 3}
+      propertyPath: m_Name
+      value: GroundBurn_Current
       objectReference: {fileID: 0}
     - target: {fileID: 2116811579639462204, guid: 6eff1a72598e9894a9f08b84b95eab6f,
         type: 3}
@@ -23989,6 +23999,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6485808560216021390, guid: 6eff1a72598e9894a9f08b84b95eab6f,
+        type: 3}
+      propertyPath: m_Name
+      value: Shockwave_Current
+      objectReference: {fileID: 0}
     - target: {fileID: 7286591330906551021, guid: 6eff1a72598e9894a9f08b84b95eab6f,
         type: 3}
       propertyPath: playOnAwake
@@ -24018,6 +24033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: startDelay.scalar
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840507664116767259, guid: 6eff1a72598e9894a9f08b84b95eab6f,
+        type: 3}
+      propertyPath: m_Name
+      value: MainGround_Current
       objectReference: {fileID: 0}
     - target: {fileID: 8880101505301738683, guid: 6eff1a72598e9894a9f08b84b95eab6f,
         type: 3}
