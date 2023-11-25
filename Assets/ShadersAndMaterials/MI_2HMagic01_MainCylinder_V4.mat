@@ -74,11 +74,12 @@ Material:
     - _ProceduralTxSize: 11
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _SizeProceduralNoise: 11
     - _SmoothStepE1: -0.43
     - _SmoothStepE2: 2.48
     - _SrcBlend: 5
     - _Surface: 1
-    - _TilingU: 6
+    - _TilingU: 5
     - _TilingV: 0.5
     - _ZTest: 4
     - _ZWrite: 0
