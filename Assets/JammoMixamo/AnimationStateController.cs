@@ -11,9 +11,11 @@ public class AnimationStateController : MonoBehaviour
         "FrisbeeJammo", "SoccerHeaderJammo", "Standing2HMagicAttack01", "CastingSpell", "Standing2HMagicAttack05" };
     int currentAttackIndex;
     [SerializeField] ParticleSystem vfxCurrentAttack; //TURN INTO ARRAY LIKE allAttacks
-    bool wasFirstSpacePressRegistered;
-    bool vfxIsLocked;
-    bool isAlreadyPlayingVfx;
+    //bool wasFirstSpacePressRegistered;
+    //bool vfxIsLocked;
+    //bool isAlreadyPlayingVfx;
+    int idleNumberOfTimes;
+    int attackNumberOfTimes;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +24,8 @@ public class AnimationStateController : MonoBehaviour
         canStartAttack = false;
         canStartVfx = false;
         currentAttackIndex = 0;
-        vfxIsLocked = true;
-        isAlreadyPlayingVfx = false;
+        //vfxIsLocked = true;
+        //isAlreadyPlayingVfx = false;
     }
 
     // Update is called once per frame
@@ -43,25 +45,34 @@ public class AnimationStateController : MonoBehaviour
 
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("IdleJammo"))
         {
+            idleNumberOfTimes++;
+            attackNumberOfTimes = 0;
             canStartAttack = false;
-            isAlreadyPlayingVfx = false;
+            //isAlreadyPlayingVfx = false;
+            if (idleNumberOfTimes == 1)
+            {
+                Debug.Log("First time entering Idle after atkAnim");
+            } else
+            {
+                idleNumberOfTimes = 2; //make sure it doesn't loop around to 1
+            }
         }
 
         if (Input.GetKey(KeyCode.Space))
         {
-            if (vfxIsLocked == false && isAlreadyPlayingVfx == false)
-            {
-                vfxCurrentAttack.Play();
-            }
-            isAlreadyPlayingVfx = true;
-            vfxIsLocked = true;
+            //if (vfxIsLocked == false && isAlreadyPlayingVfx == false)
+            //{
+            //    vfxCurrentAttack.Play();
+            //}
+            //isAlreadyPlayingVfx = true;
+            //vfxIsLocked = true;
             canStartAttack = true;
         }
 
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            vfxIsLocked = false;
-        }
+        //if (Input.GetKeyUp(KeyCode.Space))
+        //{
+        //    vfxIsLocked = false;
+        //}
 
         if (canStartAttack)
         {
@@ -69,9 +80,20 @@ public class AnimationStateController : MonoBehaviour
         }
 
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName(allAttacks[currentAttackIndex]))
-        {
-            isAlreadyPlayingVfx = true;
+        {            
+            attackNumberOfTimes++;
+            idleNumberOfTimes = 0;
+            //isAlreadyPlayingVfx = true;
             animator.SetBool("Is" + allAttacks[currentAttackIndex], false);
+            if (attackNumberOfTimes == 1)
+            {
+                vfxCurrentAttack.Play();
+                Debug.Log("First time entering Attack after idlAnim");
+            }
+            else
+            {
+                attackNumberOfTimes = 2; //make sure it doesn't loop around to 1
+            }
         }
 
 

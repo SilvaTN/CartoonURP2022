@@ -87,7 +87,7 @@ Material:
     - _Blend: 0
     - _BloomMultiplier: 8
     - _CastShadows: 0
-    - _Cull: 2
+    - _Cull: 0
     - _DepthFadeDistance: 0
     - _DepthFadeOpacity: 0.1
     - _DepthFadePower: 1
@@ -96,7 +96,7 @@ Material:
     - _DissolveSmoothStepE2: 0
     - _DistortionAmountLerp: 0.1
     - _DistortionScale: 10
-    - _Distxn_Intensity: 1.89
+    - _Distxn_Intensity: 0
     - _DstBlend: 10
     - _Fresnel_Power: 1
     - _LerpTxOpacityMaskVsGradient: 0.3
@@ -135,7 +135,7 @@ Material:
     - _MainSpiralUV: {r: 0, g: 0, b: 0, a: 0}
     - _MainTileUV: {r: 1, g: 1, b: 0, a: 0}
     - _Opacity002SpeedUV: {r: 0, g: 0, b: 0, a: 0}
-    - _Opacity002TileUV: {r: 1, g: 1, b: 0, a: 0}
+    - _Opacity002TileUV: {r: 4, g: 1.2, b: 0, a: 0}
     - _OpacityOffsetUV: {r: 0, g: 0, b: 0, a: 0}
     - _OpacitySpeedUV: {r: 0, g: 0, b: 0, a: 0}
     - _OpacitySpiralUV: {r: 0, g: 0, b: 0, a: 0}
