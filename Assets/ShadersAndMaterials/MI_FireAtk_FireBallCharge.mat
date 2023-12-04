@@ -7,23 +7,19 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MI_2HMagic01_MainCylinder_V8
-  m_Shader: {fileID: -6465566751694194690, guid: 6c27d6c04c7fa97469e8d43dd6441d91,
+  m_Name: MI_FireAtk_FireBallCharge
+  m_Shader: {fileID: -6465566751694194690, guid: 0698a343384b7cf438de004cc8ec02ae,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _SURFACE_TYPE_TRANSPARENT
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Transparent
-  disabledShaderPasses:
-  - DepthOnly
-  - SHADOWCASTER
+  stringTagMap: {}
+  disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -41,7 +37,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxMain:
-        m_Texture: {fileID: 2800000, guid: 81bf5f36d107abc4390bb31860587989, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxNoise:
@@ -49,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxOpacityMask002:
-        m_Texture: {fileID: 2800000, guid: 937b5c1d3b8cd6547b396d93b7401300, type: 3}
+        m_Texture: {fileID: 2800000, guid: bf0f102479569374fb6244c8079ed7e3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tx_Emissive:
@@ -85,7 +81,7 @@ Material:
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
-    - _BloomMultiplier: 8
+    - _BloomMultiplier: 3
     - _CastShadows: 0
     - _Cull: 0
     - _DepthFadeDistance: 0
@@ -96,13 +92,15 @@ Material:
     - _DissolveSmoothStepE2: 0
     - _DistortionAmountLerp: 0.1
     - _DistortionScale: 10
-    - _Distxn_Intensity: 1.89
+    - _Distxn_Intensity: 0
     - _DstBlend: 10
     - _Fresnel_Power: 1
     - _LerpTxOpacityMaskVsGradient: 0.3
     - _Multiply_Tx_Water_Color: 1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _SmoothStepE1: 0
+    - _SmoothStepE2: 0.37
     - _SmoothStepEdge1CustomReplaced: 0
     - _SmoothStepEdge2: 0.1
     - _SrcBlend: 5
@@ -131,13 +129,16 @@ Material:
     - _Fresnel_Inner_Color_A: {r: 0, g: 0, b: 0, a: 0}
     - _Fresnel_Outer_Color_B: {r: 0, g: 0, b: 0, a: 0}
     - _MainOffsetUV: {r: 0, g: 0, b: 0, a: 0}
-    - _MainSpeedUV: {r: 0, g: 0, b: 0, a: 0}
+    - _MainSpeedUV: {r: 0, g: 2, b: 0, a: 0}
+    - _MainSpiralMultilplierUV: {r: -0.01, g: 0, b: 0, a: 0}
     - _MainSpiralUV: {r: 0, g: 0, b: 0, a: 0}
-    - _MainTileUV: {r: 1, g: 1, b: 0, a: 0}
+    - _MainTileUV: {r: 2, g: 1, b: 0, a: 0}
+    - _NoiseSpeedUV: {r: 0, g: 0, b: 0, a: 0}
+    - _NoiseTileUV: {r: 1, g: 1, b: 0, a: 0}
     - _Opacity002SpeedUV: {r: 0, g: 0, b: 0, a: 0}
-    - _Opacity002TileUV: {r: 6, g: 1, b: 0, a: 0}
+    - _Opacity002TileUV: {r: 4, g: 1.2, b: 0, a: 0}
     - _OpacityOffsetUV: {r: 0, g: 0, b: 0, a: 0}
-    - _OpacitySpeedUV: {r: 0, g: 0, b: 0, a: 0}
+    - _OpacitySpeedUV: {r: 1, g: 1, b: 0, a: 0}
     - _OpacitySpiralUV: {r: 0, g: 0, b: 0, a: 0}
     - _OpacityTileUV: {r: 4, g: 1.2, b: 0, a: 0}
     - _OverallSpeedUV: {r: 0, g: 0, b: 0, a: 0}
