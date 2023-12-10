@@ -25,11 +25,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _TxAlpha:
-        m_Texture: {fileID: 2800000, guid: 7a2565b465ff401409ec0821ae0a6c5b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3e5ad57925b26054e9b3583f4cc80b27, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxAlpha002:
-        m_Texture: {fileID: 2800000, guid: 8fa75a4446a9388498401dd4cec593e3, type: 3}
+        m_Texture: {fileID: 2800000, guid: e16a84097f969564588cb47b0c666f13, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxColor:
@@ -100,7 +100,7 @@ Material:
     - _DissolveSmoothStepE1: 0
     - _DissolveSmoothStepE2: 0
     - _DistortionAmountLerp: 0.1
-    - _DistortionMultiplier: 0
+    - _DistortionMultiplier: 0.3
     - _DistortionScale: 10
     - _Distxn_Intensity: 0
     - _DstBlend: 10
@@ -117,7 +117,7 @@ Material:
     - _SmoothStepEdge2: 0.1
     - _SrcBlend: 5
     - _Surface: 1
-    - _TxAlphaTileU: 2
+    - _TxAlphaTileU: -1
     - _UDistortionMultiplier: 1
     - _VDistortionMultiplier: 1
     - _Vertex_Displacement_Intensity: 0
@@ -133,7 +133,7 @@ Material:
     - _ColorForTxColorLowAlpha: {r: 1, g: 1, b: 1, a: 0}
     - _ColorOfFadedAlphaInTx: {r: 1, g: 0.503516, b: 0.27843136, a: 0}
     - _ColorOfTxFadedAlpha: {r: 1, g: 1, b: 1, a: 0}
-    - _DistortionTileAndSpeed: {r: 3, g: 1, b: 0.5, a: 1}
+    - _DistortionTileAndSpeed: {r: 1, g: 2, b: 0.5, a: 3}
     - _DistxnIntensityUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveOffsetUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveSpeedUV: {r: 0, g: 0, b: 0, a: 0}

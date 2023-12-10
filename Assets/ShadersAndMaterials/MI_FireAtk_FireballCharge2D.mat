@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MI_FireAtk_FireBallCharge
+  m_Name: MI_FireAtk_FireballCharge2D
   m_Shader: {fileID: -6465566751694194690, guid: 0698a343384b7cf438de004cc8ec02ae,
     type: 3}
   m_Parent: {fileID: 0}
@@ -37,11 +37,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxMain:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5b5fc6c8badf17b469e4d22a3c9ef852, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxNoise:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 8fa75a4446a9388498401dd4cec593e3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxOpacityMask002:
@@ -78,10 +78,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AdjustDistortionUpAndDown: -0.5
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
-    - _BloomMultiplier: 3
+    - _BloomMultiplier: 2
     - _CastShadows: 0
     - _Cull: 0
     - _DepthFadeDistance: 0
@@ -91,6 +92,7 @@ Material:
     - _DissolveSmoothStepE1: 0
     - _DissolveSmoothStepE2: 0
     - _DistortionAmountLerp: 0.1
+    - _DistortionMultiplier: 0.2
     - _DistortionScale: 10
     - _Distxn_Intensity: 0
     - _DstBlend: 10
@@ -99,7 +101,7 @@ Material:
     - _Multiply_Tx_Water_Color: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _SmoothStepE1: 0
+    - _SmoothStepE1: 0.6
     - _SmoothStepE2: 0.37
     - _SmoothStepEdge1CustomReplaced: 0
     - _SmoothStepEdge2: 0.1
@@ -120,6 +122,7 @@ Material:
     - _ColorForTxColorLowAlpha: {r: 1, g: 1, b: 1, a: 0}
     - _ColorOfFadedAlphaInTx: {r: 1, g: 0.503516, b: 0.27843136, a: 0}
     - _ColorOfTxFadedAlpha: {r: 1, g: 1, b: 1, a: 0}
+    - _DistortionTileAndSpeed: {r: 3, g: 1, b: 0.5, a: 1}
     - _DistxnIntensityUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveOffsetUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveSpeedUV: {r: 0, g: 0, b: 0, a: 0}
@@ -134,7 +137,7 @@ Material:
     - _MainSpiralUV: {r: 0, g: 0, b: 0, a: 0}
     - _MainTileUV: {r: 2, g: 1, b: 0, a: 0}
     - _NoiseSpeedUV: {r: 0, g: 0, b: 0, a: 0}
-    - _NoiseTileUV: {r: 1, g: 1, b: 0, a: 0}
+    - _NoiseTileUV: {r: 4, g: 0.5, b: 0, a: 0}
     - _Opacity002SpeedUV: {r: 0, g: 0, b: 0, a: 0}
     - _Opacity002TileUV: {r: 4, g: 1.2, b: 0, a: 0}
     - _OpacityOffsetUV: {r: 0, g: 0, b: 0, a: 0}
