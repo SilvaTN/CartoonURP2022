@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MI_FireAtk_FireballCharge2D
+  m_Name: MI_FireAtk_Projectile_Main
   m_Shader: {fileID: -6465566751694194690, guid: 0698a343384b7cf438de004cc8ec02ae,
     type: 3}
   m_Parent: {fileID: 0}
@@ -82,7 +82,7 @@ Material:
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
-    - _BloomMultiplier: 2
+    - _BloomMultiplier: 1
     - _CastShadows: 0
     - _Cull: 0
     - _DepthFadeDistance: 0
@@ -92,7 +92,7 @@ Material:
     - _DissolveSmoothStepE1: 0
     - _DissolveSmoothStepE2: 0
     - _DistortionAmountLerp: 0.1
-    - _DistortionMultiplier: 0.2
+    - _DistortionMultiplier: 0.3
     - _DistortionScale: 10
     - _Distxn_Intensity: 0
     - _DstBlend: 10
@@ -101,7 +101,7 @@ Material:
     - _Multiply_Tx_Water_Color: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _SmoothStepE1: 0.6
+    - _SmoothStepE1: 0.1
     - _SmoothStepE2: 0.37
     - _SmoothStepEdge1CustomReplaced: 0
     - _SmoothStepEdge2: 0.1
@@ -123,7 +123,7 @@ Material:
     - _ColorOfFadedAlphaInTx: {r: 1, g: 0.503516, b: 0.27843136, a: 0}
     - _ColorOfTxFadedAlpha: {r: 1, g: 1, b: 1, a: 0}
     - _DistortionSpiralMultiplierUV: {r: 0, g: 0, b: 0, a: 0}
-    - _DistortionTileAndSpeed: {r: 3, g: 1, b: 0.5, a: 1}
+    - _DistortionTileAndSpeed: {r: 3, g: 1, b: 0.2, a: -1}
     - _DistxnIntensityUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveOffsetUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveSpeedUV: {r: 0, g: 0, b: 0, a: 0}
@@ -133,13 +133,13 @@ Material:
     - _Fresnel_Inner_Color_A: {r: 0, g: 0, b: 0, a: 0}
     - _Fresnel_Outer_Color_B: {r: 0, g: 0, b: 0, a: 0}
     - _MainOffsetUV: {r: 0, g: 0, b: 0, a: 0}
-    - _MainSpeedUV: {r: 0, g: 2, b: 0, a: 0}
-    - _MainSpiralMultilplierUV: {r: 0.3, g: 0, b: 0, a: 0}
+    - _MainSpeedUV: {r: 0.1, g: -2, b: 0, a: 0}
+    - _MainSpiralMultilplierUV: {r: -0.01, g: 0, b: 0, a: 0}
     - _MainSpiralUV: {r: 0, g: 0, b: 0, a: 0}
     - _MainTileUV: {r: 2, g: 1, b: 0, a: 0}
     - _NoiseSpeedUV: {r: 0, g: 0, b: 0, a: 0}
-    - _NoiseSpiralMultiplierUV: {r: 0.3, g: 0, b: 0, a: 0}
-    - _NoiseTileUV: {r: 4, g: 0.5, b: 0, a: 0}
+    - _NoiseSpiralMultiplierUV: {r: 0, g: 0, b: 0, a: 0}
+    - _NoiseTileUV: {r: 2, g: 0.5, b: 0, a: 0}
     - _Opacity002SpeedUV: {r: 0, g: 0, b: 0, a: 0}
     - _Opacity002TileUV: {r: 4, g: 1.2, b: 0, a: 0}
     - _OpacityOffsetUV: {r: 0, g: 0, b: 0, a: 0}
