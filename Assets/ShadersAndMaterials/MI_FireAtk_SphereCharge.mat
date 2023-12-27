@@ -12,14 +12,18 @@ Material:
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses:
+  - DepthOnly
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -122,6 +126,7 @@ Material:
     - _ColorForTxColorLowAlpha: {r: 1, g: 1, b: 1, a: 0}
     - _ColorOfFadedAlphaInTx: {r: 1, g: 0.503516, b: 0.27843136, a: 0}
     - _ColorOfTxFadedAlpha: {r: 1, g: 1, b: 1, a: 0}
+    - _DistortionSpiralMultiplierUV: {r: 0, g: 0, b: 0, a: 0}
     - _DistortionTileAndSpeed: {r: 3, g: 1, b: 0.5, a: 1}
     - _DistxnIntensityUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveOffsetUV: {r: 0, g: 0, b: 0, a: 0}
@@ -137,6 +142,7 @@ Material:
     - _MainSpiralUV: {r: 0, g: 0, b: 0, a: 0}
     - _MainTileUV: {r: 2, g: 1, b: 0, a: 0}
     - _NoiseSpeedUV: {r: 0, g: 0, b: 0, a: 0}
+    - _NoiseSpiralMultiplierUV: {r: 0, g: 0, b: 0, a: 0}
     - _NoiseTileUV: {r: 3, g: 0.5, b: 0, a: 0}
     - _Opacity002SpeedUV: {r: 0, g: 0, b: 0, a: 0}
     - _Opacity002TileUV: {r: 4, g: 1.2, b: 0, a: 0}
