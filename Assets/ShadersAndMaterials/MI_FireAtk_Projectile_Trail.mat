@@ -162,7 +162,7 @@ Material:
     - _ColorOfFadedAlphaInTx: {r: 1, g: 0.503516, b: 0.27843136, a: 0}
     - _ColorOfTxFadedAlpha: {r: 1, g: 1, b: 1, a: 0}
     - _DistortionSpiralMultiplierUV: {r: 0, g: 0, b: 0, a: 0}
-    - _DistortionTileAndSpeed: {r: 3, g: 1, b: 0.2, a: -1}
+    - _DistortionTileAndSpeed: {r: 3, g: 1, b: 0.2, a: -2.5}
     - _DistxnIntensityUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveOffsetUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveSpeedUV: {r: 0, g: 0, b: 0, a: 0}
@@ -173,12 +173,12 @@ Material:
     - _Fresnel_Outer_Color_B: {r: 0, g: 0, b: 0, a: 0}
     - _FrontColorMultiply: {r: 4.594794, g: 4.4143777, b: 1.4521279, a: 0}
     - _MainOffsetUV: {r: 0, g: 0, b: 0, a: 0}
-    - _MainSpeedUV: {r: 0.1, g: -2, b: 0, a: 0}
+    - _MainSpeedUV: {r: 0.1, g: -1.5, b: 0, a: 0}
     - _MainSpiralMultilplierUV: {r: -0.01, g: 0, b: 0, a: 0}
     - _MainSpiralUV: {r: 0, g: 0, b: 0, a: 0}
     - _MainTileAndSpeed: {r: 1, g: 1, b: 1, a: 0}
     - _MainTileUV: {r: 2, g: 1, b: 0, a: 0}
-    - _NoiseSpeedUV: {r: 0, g: -1, b: 0, a: 0}
+    - _NoiseSpeedUV: {r: 0, g: -1.5, b: 0, a: 0}
     - _NoiseSpiralMultiplierUV: {r: 0, g: 0, b: 0, a: 0}
     - _NoiseTileUV: {r: 1, g: 1, b: 0, a: 0}
     - _Opacity002SpeedUV: {r: 0, g: 0, b: 0, a: 0}
