@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MI_FireAtk_Projectile_Trail
-  m_Shader: {fileID: -6465566751694194690, guid: 4986bc59fc293944f9a8a6eb72eeda17,
+  m_Name: MI_FireAtk_Projectile_Tip_Slow
+  m_Shader: {fileID: -6465566751694194690, guid: ab29e97ce995c1d49ad7957bfeff0f7c,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -65,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxNoise:
-        m_Texture: {fileID: 2800000, guid: 384c1b95569b41140bcd58a20d4f85dc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 16119518685e90d47a16304d293dfe3c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxOpacityMask002:
@@ -112,8 +112,8 @@ Material:
     - _Blend: 0
     - _BloomMultiplier: 1
     - _CastShadows: 0
-    - _ColorLerpPositionAdd: 0.45
-    - _ColorLerpToPowerOf: 3
+    - _ColorLerpPositionAdd: 0.49
+    - _ColorLerpToPowerOf: 1
     - _Cull: 0
     - _DepthFadeDistance: 0
     - _DepthFadeOpacity: 0.1
@@ -156,13 +156,13 @@ Material:
     - _BothTxOpacitiesSpiralUV: {r: 0, g: 0, b: 0, a: 0}
     - _ColorForTxColorLowAlpha: {r: 1, g: 1, b: 1, a: 0}
     - _ColorLerpA: {r: 1, g: 1, b: 1, a: 0}
-    - _ColorLerpB: {r: 1, g: 0.64900756, b: 0.6273585, a: 0}
+    - _ColorLerpB: {r: 1, g: 0.48503548, b: 0.2117647, a: 0}
     - _ColorMultiplier: {r: 2, g: 1.1337773, b: 0, a: 0}
-    - _ColorMultiply: {r: 4, g: 3.0157065, b: 0, a: 0}
+    - _ColorMultiply: {r: 9.73561, g: 11.313708, b: 0, a: 0}
     - _ColorOfFadedAlphaInTx: {r: 1, g: 0.503516, b: 0.27843136, a: 0}
     - _ColorOfTxFadedAlpha: {r: 1, g: 1, b: 1, a: 0}
     - _DistortionSpiralMultiplierUV: {r: 0, g: 0, b: 0, a: 0}
-    - _DistortionTileAndSpeed: {r: 3, g: 1, b: 0.2, a: -5}
+    - _DistortionTileAndSpeed: {r: 3, g: 1, b: 0.2, a: -1}
     - _DistxnIntensityUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveOffsetUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveSpeedUV: {r: 0, g: 0, b: 0, a: 0}
@@ -173,12 +173,12 @@ Material:
     - _Fresnel_Outer_Color_B: {r: 0, g: 0, b: 0, a: 0}
     - _FrontColorMultiply: {r: 4.594794, g: 4.4143777, b: 1.4521279, a: 0}
     - _MainOffsetUV: {r: 0, g: 0, b: 0, a: 0}
-    - _MainSpeedUV: {r: 0.1, g: -3, b: 0, a: 0}
+    - _MainSpeedUV: {r: 0.1, g: -2, b: 0, a: 0}
     - _MainSpiralMultilplierUV: {r: -0.01, g: 0, b: 0, a: 0}
     - _MainSpiralUV: {r: 0, g: 0, b: 0, a: 0}
     - _MainTileAndSpeed: {r: 1, g: 1, b: 1, a: 0}
     - _MainTileUV: {r: 2, g: 1, b: 0, a: 0}
-    - _NoiseSpeedUV: {r: 0, g: -3, b: 0, a: 0}
+    - _NoiseSpeedUV: {r: 0, g: -1, b: 0, a: 0}
     - _NoiseSpiralMultiplierUV: {r: 0, g: 0, b: 0, a: 0}
     - _NoiseTileUV: {r: 1, g: 1, b: 0, a: 0}
     - _Opacity002SpeedUV: {r: 0, g: 0, b: 0, a: 0}

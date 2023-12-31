@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MI_FireAtk_Projectile_Trail
-  m_Shader: {fileID: -6465566751694194690, guid: 4986bc59fc293944f9a8a6eb72eeda17,
+  m_Name: MI_FireAtk_HitDome
+  m_Shader: {fileID: -6465566751694194690, guid: 0698a343384b7cf438de004cc8ec02ae,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -28,26 +28,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _GatherTexture2D_32bf55fdadea46edaf9a4b2cb59777d3_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: b3ca8decea5218b43b8b885fd5818699, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _GatherTexture2D_527d5f6752c04feea1afdc8586669d6a_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: b3ca8decea5218b43b8b885fd5818699, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_176e37490a844cb08ecfcddc331da11a_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: f0d53216d7f3ada4c9676c493ded80f2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_b866c3c479fd4c0da45dfa131544ad28_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: f0d53216d7f3ada4c9676c493ded80f2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_e6ba8a3bcfde48bd8ea839a192060c6b_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: a91207713fff69a459e74d25a057fd2e, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _TxColor:
         m_Texture: {fileID: 2800000, guid: e00510e9d4b2fc646b0763c0c3912232, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -65,15 +45,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxNoise:
-        m_Texture: {fileID: 2800000, guid: 384c1b95569b41140bcd58a20d4f85dc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5b5fc6c8badf17b469e4d22a3c9ef852, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxOpacityMask002:
         m_Texture: {fileID: 2800000, guid: bf0f102479569374fb6244c8079ed7e3, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TxVertexOffset:
-        m_Texture: {fileID: 2800000, guid: b3ca8decea5218b43b8b885fd5818699, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tx_Emissive:
@@ -106,14 +82,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AdjustDistortionUpAndDown: -0.5
+    - _AdjustDistortionUpAndDown: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
-    - _BloomMultiplier: 1
+    - _BloomMultiplier: 5
     - _CastShadows: 0
-    - _ColorLerpPositionAdd: 0.45
-    - _ColorLerpToPowerOf: 3
     - _Cull: 0
     - _DepthFadeDistance: 0
     - _DepthFadeOpacity: 0.1
@@ -128,12 +102,10 @@ Material:
     - _DstBlend: 10
     - _Fresnel_Power: 1
     - _LerpTxOpacityMaskVsGradient: 0.3
-    - _MainDistortionMultiplier: 0.2
     - _Multiply_Tx_Water_Color: 1
-    - _NoiseDistortionMultiplier: 0.15
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _SmoothStepE1: 0.1
+    - _SmoothStepE1: 0
     - _SmoothStepE2: 0.37
     - _SmoothStepEdge1CustomReplaced: 0
     - _SmoothStepEdge2: 0.1
@@ -141,9 +113,6 @@ Material:
     - _Surface: 1
     - _UDistortionMultiplier: 1
     - _VDistortionMultiplier: 1
-    - _VertexOffsetDistortionMultiplier: 0.3
-    - _VertexOffsetIntensity: 0.25
-    - _VertexOffsetToPowerOf: 0.1
     - _Vertex_Displacement_Intensity: 0
     - _VoronoiCellDensity: 3
     - _VoronoiLerpVertexAlpha: 0.5
@@ -155,14 +124,10 @@ Material:
     m_Colors:
     - _BothTxOpacitiesSpiralUV: {r: 0, g: 0, b: 0, a: 0}
     - _ColorForTxColorLowAlpha: {r: 1, g: 1, b: 1, a: 0}
-    - _ColorLerpA: {r: 1, g: 1, b: 1, a: 0}
-    - _ColorLerpB: {r: 1, g: 0.64900756, b: 0.6273585, a: 0}
-    - _ColorMultiplier: {r: 2, g: 1.1337773, b: 0, a: 0}
-    - _ColorMultiply: {r: 4, g: 3.0157065, b: 0, a: 0}
     - _ColorOfFadedAlphaInTx: {r: 1, g: 0.503516, b: 0.27843136, a: 0}
     - _ColorOfTxFadedAlpha: {r: 1, g: 1, b: 1, a: 0}
     - _DistortionSpiralMultiplierUV: {r: 0, g: 0, b: 0, a: 0}
-    - _DistortionTileAndSpeed: {r: 3, g: 1, b: 0.2, a: -5}
+    - _DistortionTileAndSpeed: {r: 1, g: 1, b: 0, a: 0}
     - _DistxnIntensityUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveOffsetUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveSpeedUV: {r: 0, g: 0, b: 0, a: 0}
@@ -171,14 +136,12 @@ Material:
     - _Emissive_Color: {r: 0, g: 4, b: 3.449684, a: 0}
     - _Fresnel_Inner_Color_A: {r: 0, g: 0, b: 0, a: 0}
     - _Fresnel_Outer_Color_B: {r: 0, g: 0, b: 0, a: 0}
-    - _FrontColorMultiply: {r: 4.594794, g: 4.4143777, b: 1.4521279, a: 0}
     - _MainOffsetUV: {r: 0, g: 0, b: 0, a: 0}
-    - _MainSpeedUV: {r: 0.1, g: -3, b: 0, a: 0}
+    - _MainSpeedUV: {r: 0, g: 0, b: 0, a: 0}
     - _MainSpiralMultilplierUV: {r: -0.01, g: 0, b: 0, a: 0}
     - _MainSpiralUV: {r: 0, g: 0, b: 0, a: 0}
-    - _MainTileAndSpeed: {r: 1, g: 1, b: 1, a: 0}
-    - _MainTileUV: {r: 2, g: 1, b: 0, a: 0}
-    - _NoiseSpeedUV: {r: 0, g: -3, b: 0, a: 0}
+    - _MainTileUV: {r: 1, g: 2, b: 0, a: 0}
+    - _NoiseSpeedUV: {r: 0, g: 0, b: 0, a: 0}
     - _NoiseSpiralMultiplierUV: {r: 0, g: 0, b: 0, a: 0}
     - _NoiseTileUV: {r: 1, g: 1, b: 0, a: 0}
     - _Opacity002SpeedUV: {r: 0, g: 0, b: 0, a: 0}
@@ -198,10 +161,8 @@ Material:
     - _VDSpeedUV: {r: 0, g: 0, b: 0, a: 0}
     - _VDSpiralMultiplierUV: {r: 0, g: 0, b: 0, a: 0}
     - _VDTileUV: {r: 2, g: 1, b: 0, a: 0}
-    - _VertexOffsetTileAndSpeed: {r: 0, g: 0, b: 0, a: 0}
     - _VoronoiCellCentreColor: {r: 0.7169812, g: 0.05749376, b: 0.111246355, a: 0}
     - _VoronoiTileAndOffsetSpeed: {r: 1, g: 1, b: 0.1, a: -0.5}
-    - _VxOffsetTileAndSpeed: {r: 1, g: 1.5, b: 0, a: -2}
     - _White_Overrides_Tx_Water_Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &4910611207526447733
