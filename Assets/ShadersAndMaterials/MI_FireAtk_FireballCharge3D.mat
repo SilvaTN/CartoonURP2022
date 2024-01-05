@@ -12,17 +12,15 @@ Material:
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _SURFACE_TYPE_TRANSPARENT
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap:
-    RenderType: Transparent
+    RenderType: Opaque
   disabledShaderPasses:
-  - DepthOnly
   - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
@@ -41,11 +39,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxMain:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5b5fc6c8badf17b469e4d22a3c9ef852, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxNoise:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: beda5e88944054949b454bd57da288ed, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxOpacityMask002:
@@ -99,7 +97,7 @@ Material:
     - _DistortionMultiplier: 0.2
     - _DistortionScale: 10
     - _Distxn_Intensity: 0
-    - _DstBlend: 10
+    - _DstBlend: 0
     - _Fresnel_Power: 1
     - _LerpTxOpacityMaskVsGradient: 0.3
     - _Multiply_Tx_Water_Color: 1
@@ -109,8 +107,8 @@ Material:
     - _SmoothStepE2: 0.37
     - _SmoothStepEdge1CustomReplaced: 0
     - _SmoothStepEdge2: 0.1
-    - _SrcBlend: 5
-    - _Surface: 1
+    - _SrcBlend: 1
+    - _Surface: 0
     - _UDistortionMultiplier: 1
     - _VDistortionMultiplier: 1
     - _Vertex_Displacement_Intensity: 0
@@ -119,7 +117,7 @@ Material:
     - _VoronoiLerpVertexColor: 0.5
     - _VoronoiPower: 4.16
     - _ZTest: 4
-    - _ZWrite: 0
+    - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
     - _BothTxOpacitiesSpiralUV: {r: 0, g: 0, b: 0, a: 0}
