@@ -100,6 +100,7 @@ Material:
     - _DistortionScale: 10
     - _Distxn_Intensity: 0
     - _DstBlend: 10
+    - _FresnelPowerr: 0
     - _Fresnel_Power: 1
     - _LerpColorContrastViaTxMain: 7
     - _LerpTxOpacityMaskVsGradient: 0.3
