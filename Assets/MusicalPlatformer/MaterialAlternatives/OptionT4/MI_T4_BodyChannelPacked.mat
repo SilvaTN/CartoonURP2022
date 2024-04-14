@@ -41,6 +41,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 8e7579b7f8f613c4ba682fae3979f8ac, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_dbf818b8c7c14b25ace21662047a87c1_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 668cdb06e5c4ab449b51a591ecf2da22, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -59,9 +63,9 @@ Material:
     - _QueueOffset: 0
     - _Smoothness: 0.5
     m_Colors:
-    - _ColorBorders: {r: 0.39504397, g: 0.26232645, b: 0.4245283, a: 0}
+    - _ColorBorders: {r: 1, g: 0.9330026, b: 0.09019607, a: 0}
     - _ColorInside: {r: 0.24528301, g: 0, b: 0.23189506, a: 0}
-    - _ColorRib: {r: 0.2830189, g: 0.105464585, b: 0.105464585, a: 0}
-    - _ColorRosette: {r: 0.6214073, g: 0.7169812, b: 0.49715206, a: 0}
-    - _ColorSoundingBoard: {r: 0.23647007, g: 0.13527946, b: 0.3018868, a: 0}
+    - _ColorRib: {r: 0.23609374, g: 0.040850844, b: 0.509434, a: 0}
+    - _ColorRosette: {r: 0.8301887, g: 0.82971215, b: 0.7949448, a: 0}
+    - _ColorSoundingBoard: {r: 0.48086736, g: 0.2269491, b: 0.6415094, a: 0}
   m_BuildTextureStacks: []
