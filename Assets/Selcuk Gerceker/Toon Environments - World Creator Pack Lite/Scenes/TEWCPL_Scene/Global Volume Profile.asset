@@ -18,10 +18,10 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 1.5
+    m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.1
   scatter:
     m_OverrideState: 0
     m_Value: 0.7
@@ -59,37 +59,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 18.7
+    m_Value: 44
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 33
+    m_Value: 111
   gaussianMaxRadius:
     m_OverrideState: 0
     m_Value: 1
   highQualitySampling:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   focusDistance:
-    m_OverrideState: 0
-    m_Value: 10
+    m_OverrideState: 1
+    m_Value: 8.6
   aperture:
     m_OverrideState: 0
-    m_Value: 5.6
+    m_Value: 32
   focalLength:
-    m_OverrideState: 0
-    m_Value: 50
+    m_OverrideState: 1
+    m_Value: 100
   bladeCount:
     m_OverrideState: 0
     m_Value: 5
   bladeCurvature:
     m_OverrideState: 0
-    m_Value: 1
+    m_Value: 0
   bladeRotation:
     m_OverrideState: 0
     m_Value: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   redOutBlueIn:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: -10
   greenOutRedIn:
     m_OverrideState: 0
@@ -148,16 +148,16 @@ MonoBehaviour:
   active: 1
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.256675, g: 0.30681786, b: 0.5283019, a: 1}
+    m_Value: {r: 0.5801887, g: 0.6598997, b: 1, a: 1}
   center:
     m_OverrideState: 0
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.44
+    m_Value: 0.377
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.29
+    m_Value: 0.191
   rounded:
     m_OverrideState: 0
     m_Value: 0
