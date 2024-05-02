@@ -5,33 +5,61 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] Rigidbody rb;
+    [SerializeField] float jumpForce;
     [SerializeField] float runSpeed;
+    [SerializeField] float customGravity;
+    [SerializeField] bool isOnGround = true;
+    private ConstantForce cForce;
+    private Vector3 forceDirection;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        if (runSpeed <= 0)
+
+
+        if (runSpeed == 0)
         {
-            runSpeed = 200f;
+            runSpeed = 20f;
         }
+        if (jumpForce == 0)
+        {
+            jumpForce = 20f;
+        }
+        if (customGravity == 0)
+        {
+            customGravity = -9.8f;
+        }
+        cForce = GetComponent<ConstantForce>();
+        cForce.force = new Vector3(0, customGravity, 0);
+        Debug.Log("constance force is " + cForce.force + "yoyoyyoy");
+
+
     }
 
     // Update is called once per frame
     private void Update()
     {
-        
-    }
+        transform.Translate(Vector3.right * Time.deltaTime * -runSpeed);
 
-    void FixedUpdate()
-    {
-        rb.AddForce(-runSpeed, 0f, 0f * Time.deltaTime);
-
-        //makes char jump but need to fix code
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
-            rb.AddForce(0f, 200f, 0f);
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); //ForceMode.Impulse applies force immediately.
+            isOnGround = false;
         }
     }
+    
+    void FixUpdate()
+    {
+        rb.AddForce(Physics.gravity * customGravity);
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isOnGround = true;
+        }
+    }
 
 }
