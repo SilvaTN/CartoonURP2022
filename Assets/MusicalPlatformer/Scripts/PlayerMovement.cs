@@ -32,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
         }
         cForce = GetComponent<ConstantForce>();
         cForce.force = new Vector3(0, customGravity, 0);
-        Debug.Log("constance force is " + cForce.force + "yoyoyyoy");
 
 
     }
