@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MusicNote : MonoBehaviour
 {
+    /*
+    [SerializeField] PlayerSound playerSoundScript;
     private bool isPlayerTouching = false;
 
     private void OnTriggerEnter(Collider other)
@@ -18,24 +20,28 @@ public class MusicNote : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        
         if (gameObject.CompareTag("LeftNote"))
         {
+            
             if (Input.GetKeyDown(KeyCode.LeftArrow) && (isPlayerTouching == true))
-            {
+            {                
                 Destroy(gameObject);
             }
         }
         if (gameObject.CompareTag("DownNote"))
         {
+            
             if (Input.GetKeyDown(KeyCode.DownArrow) && (isPlayerTouching == true))
-            {
+            {                
                 Destroy(gameObject);
             }
         }
         if (gameObject.CompareTag("RightNote"))
         {
+            
             if (Input.GetKeyDown(KeyCode.RightArrow) && (isPlayerTouching == true))
-            {
+            {                
                 Destroy(gameObject);
             }
         }
@@ -50,5 +56,6 @@ public class MusicNote : MonoBehaviour
             isPlayerTouching = false;
         }
     }
+    */
 
 }
