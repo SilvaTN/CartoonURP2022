@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerSound : MonoBehaviour
 {
-    [SerializeField] AudioSource srcWrongSounds;
-    [SerializeField] AudioClip[] wrongSounds;
+    //[SerializeField] AudioSource srcWrongSounds;
+    //[SerializeField] AudioClip[] wrongSounds;
+    [SerializeField] AudioSource wrongSound;
     [SerializeField] AudioSource srcCorrectSound;
     //[SerializeField] AudioClip sound1, sound2, sound3, sound4;
+    [SerializeField] float wrongSoundTime;
     private bool isSoundProper; //only set true by MusicNote script
     private KeyCode correctKeyCode;
     private Collider noteTouched;
@@ -32,9 +34,14 @@ public class PlayerSound : MonoBehaviour
             } else
             {
                 srcCorrectSound.mute = true;
-                int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
-                srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
+                wrongSound.Play();
+                //int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
+                //srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
                 Debug.Log("we are playing the WRONG note nnnooooooo");
+                if (noteTouched)
+                {
+                    Destroy(noteTouched.gameObject);
+                }
             }
         } else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
@@ -47,9 +54,14 @@ public class PlayerSound : MonoBehaviour
             else
             {
                 srcCorrectSound.mute = true;
-                int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
-                srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
+                wrongSound.Play();
+                //int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
+                //srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
                 Debug.Log("we are playing the WRONG note nnnooooooo");
+                if (noteTouched)
+                {
+                    Destroy(noteTouched.gameObject);
+                }
             }
         } else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -62,26 +74,17 @@ public class PlayerSound : MonoBehaviour
             else
             {
                 srcCorrectSound.mute = true;
-                int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
-                srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
+                wrongSound.Play();
+                //int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
+                //srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
                 Debug.Log("we are playing the WRONG note nnnooooooo");
+                if (noteTouched)
+                {
+                    Destroy(noteTouched.gameObject);
+                }
             }
         }
 
-        /*
-        if (isSoundProper)
-        {
-            //srcCorrectSound.mute = false;
-            //Debug.Log("playing the proper sound yayayayayyaya");
-        } else
-        {
-            srcCorrectSound.mute = true;
-            //int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
-            //srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
-            //srcWrongSounds.clip = sound1;
-            //srcWrongSounds.Play();
-            //srcWrongSounds.PlayOneShot(sound1);
-        }*/
     }
 
     private void OnTriggerEnter(Collider other)
