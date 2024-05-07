@@ -26,7 +26,8 @@ public class PlayerSound : MonoBehaviour
             if (KeyCode.LeftArrow == correctKeyCode)
             {
                 srcGuitar.mute = false;
-                Destroy(noteTouched.gameObject);                
+                Destroy(noteTouched.gameObject);
+                correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
                 Debug.Log("we are playing the CORRECT note yayayayay");
             } else
             {
@@ -38,6 +39,7 @@ public class PlayerSound : MonoBehaviour
                 if (noteTouched)
                 {
                     Destroy(noteTouched.gameObject);
+                    correctKeyCode = 0; //Resets the correctKeyCode after playing incorrectly.
                 }
             }
         } else if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -46,6 +48,7 @@ public class PlayerSound : MonoBehaviour
             {
                 srcGuitar.mute = false;
                 Destroy(noteTouched.gameObject);
+                correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
                 Debug.Log("we are playing the CORRECT note yayayayay");
             }
             else
@@ -58,6 +61,7 @@ public class PlayerSound : MonoBehaviour
                 if (noteTouched)
                 {
                     Destroy(noteTouched.gameObject);
+                    correctKeyCode = 0; //Resets the correctKeyCode after playing incorrectly.
                 }
             }
         } else if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -66,6 +70,7 @@ public class PlayerSound : MonoBehaviour
             {
                 srcGuitar.mute = false;
                 Destroy(noteTouched.gameObject);
+                correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
                 Debug.Log("we are playing the CORRECT note yayayayay");
             }
             else
@@ -78,6 +83,7 @@ public class PlayerSound : MonoBehaviour
                 if (noteTouched)
                 {
                     Destroy(noteTouched.gameObject);
+                    correctKeyCode = 0; //Resets the correctKeyCode after playing incorrectly.
                 }
             }
         }
@@ -106,6 +112,7 @@ public class PlayerSound : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        //noteTouched = null;
         srcGuitar.mute = true; //if you run past note and don't play it, mute the correct guitar track.
         correctKeyCode = 0;
     }
