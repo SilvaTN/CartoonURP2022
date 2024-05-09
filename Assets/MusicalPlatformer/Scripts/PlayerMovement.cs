@@ -16,7 +16,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //Keep the start position the same in relation to the position of the notes.
+        transform.position = new Vector3(136.91f, 2.764f, 104.42f); // sets char start position.
 
         if (runSpeed == 0)
         {
