@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] TrailMusicSheet trailScript;
     [SerializeField] Rigidbody rb;
     [SerializeField] float jumpForce;
     [SerializeField] float runSpeed;
@@ -44,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
+            //call JumpTrail() after 0.1 seconds of being in the air (maybe have a counter inside FixedUpdate)
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); //ForceMode.Impulse applies force immediately.
             isOnGround = false;
         }
