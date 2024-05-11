@@ -8,6 +8,9 @@ public class PlayerSound : MonoBehaviour
     //[SerializeField] AudioClip[] wrongSounds;
     [SerializeField] AudioSource wrongSound;
     [SerializeField] AudioSource srcGuitar;
+    [SerializeField] ParticleSystem trailNote;
+    [SerializeField] ParticleSystem noteDissipationCorrect;
+    [SerializeField] ParticleSystem noteDissipationWrong;
     //[SerializeField] AudioClip sound1, sound2, sound3, sound4;
     private KeyCode correctKeyCode;
     private Collider noteTouched;
@@ -26,7 +29,10 @@ public class PlayerSound : MonoBehaviour
             if (KeyCode.LeftArrow == correctKeyCode)
             {
                 srcGuitar.mute = false;
+                //noteDissipationCorrect.transform.position = noteTouched.transform.position; //we want both y and x info
+                //noteDissipationCorrect.Play();
                 Destroy(noteTouched.gameObject);
+                trailNote.Play();                
                 correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
                 Debug.Log("we are playing the CORRECT note yayayayay");
             } else
@@ -48,6 +54,7 @@ public class PlayerSound : MonoBehaviour
             {
                 srcGuitar.mute = false;
                 Destroy(noteTouched.gameObject);
+                trailNote.Play();
                 correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
                 Debug.Log("we are playing the CORRECT note yayayayay");
             }
@@ -69,7 +76,10 @@ public class PlayerSound : MonoBehaviour
             if (KeyCode.RightArrow == correctKeyCode)
             {
                 srcGuitar.mute = false;
+                //noteDissipationCorrect.transform.position = noteTouched.transform.position; //we want both y and x info
+                noteDissipationCorrect.Play();
                 Destroy(noteTouched.gameObject);
+                trailNote.Play();
                 correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
                 Debug.Log("we are playing the CORRECT note yayayayay");
             }
