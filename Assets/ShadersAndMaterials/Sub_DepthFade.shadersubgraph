@@ -185,6 +185,7 @@
     "m_OutputNode": {
         "m_Id": "db57c7b0bd32443fbd6c90e8edbafd2d"
     },
+    "m_SubDatas": [],
     "m_ActiveTargets": []
 }
 
@@ -465,21 +466,6 @@
         "m_SerializableColors": []
     },
     "m_ScreenSpaceType": 1
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "66a3e6f6df8f40ec868226eba288e22b",
-    "m_Id": 1,
-    "m_DisplayName": "Out_Vector4",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Out_Vector4",
-    "m_StageCapability": 2,
-    "m_Value": 0.0,
-    "m_DefaultValue": 0.0,
-    "m_Labels": []
 }
 
 {
@@ -815,6 +801,21 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "cd117516a4de4845a7e16526e9d59002",
+    "m_Id": 1,
+    "m_DisplayName": "Out_Float",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out_Float",
+    "m_StageCapability": 2,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.SplitNode",
     "m_ObjectId": "d252f2d0232d4c25885481df2b74f8bc",
     "m_Group": {
@@ -880,7 +881,7 @@
     },
     "m_Slots": [
         {
-            "m_Id": "66a3e6f6df8f40ec868226eba288e22b"
+            "m_Id": "cd117516a4de4845a7e16526e9d59002"
         }
     ],
     "synonyms": [],
