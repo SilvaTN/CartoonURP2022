@@ -8,10 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MI_WaterBeam_002
-  m_Shader: {fileID: -6465566751694194690, guid: 84e34e7e46ad2ac4b9ba253faad24b54,
-    type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
+  m_Shader: {fileID: -6465566751694194690, guid: 84e34e7e46ad2ac4b9ba253faad24b54, type: 3}
   m_ValidKeywords:
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
@@ -24,7 +21,6 @@ Material:
   disabledShaderPasses:
   - DepthOnly
   - SHADOWCASTER
-  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -40,12 +36,24 @@ Material:
         m_Texture: {fileID: 2800000, guid: e00510e9d4b2fc646b0763c0c3912232, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TxDissolve:
+        m_Texture: {fileID: 2800000, guid: 18b1e0102fa2aa54c8ed54c227c80530, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxDissolveDistortion:
+        m_Texture: {fileID: 2800000, guid: 18b1e0102fa2aa54c8ed54c227c80530, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _TxDistortion:
         m_Texture: {fileID: 2800000, guid: 18b1e0102fa2aa54c8ed54c227c80530, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxDistxn:
         m_Texture: {fileID: 2800000, guid: dce13bddc67ea5e438268a9f33c6b131, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxExtraAlpha:
+        m_Texture: {fileID: 2800000, guid: a0aaab6324829b54fa941536083efbb4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxMain:
@@ -90,7 +98,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AdjustDistortionUpAndDown: -0.323
+    - _AdjustDissolveDistortionUpAndDown: -0.308
+    - _AdjustDistortionUpAndDown: -0.32
     - _AlphaClip: 0
     - _AlphaFresnelMultiplier: 1
     - _AlphaFresnelPower: 0
@@ -99,7 +108,7 @@ Material:
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
-    - _BloomMultiplier: 1
+    - _BloomMultiplier: 1.5
     - _CastShadows: 0
     - _Cull: 2
     - _DepthFadeDistance: 0
@@ -107,10 +116,11 @@ Material:
     - _DepthFadeOpacity: 0.1
     - _DepthFadePower: 1
     - _Depth_Fade_Distance: 0
+    - _DissolveDistortionMultiplier: 0.2
     - _DissolveSmoothStepE1: 0
-    - _DissolveSmoothStepE2: 0
+    - _DissolveSmoothStepE2: 0.4
     - _DistortionAmountLerp: 0.1
-    - _DistortionColorMultiplier: 0.2
+    - _DistortionColorMultiplier: 0.3
     - _DistortionMultiplier: 0.2
     - _DistortionNoiseMultiplier: 0.3
     - _DistortionScale: 10
@@ -118,7 +128,7 @@ Material:
     - _DitherIn: 2.01
     - _DstBlend: 10
     - _FresnelMultiplier: 1
-    - _FresnelMultiplierForLerp: 11
+    - _FresnelMultiplierForLerp: 55
     - _FresnelPower: 1
     - _FresnelPowerForLerp: 3
     - _Fresnel_Power: 1
@@ -142,6 +152,8 @@ Material:
     - _TxMainConstrastToPowerOf: 4
     - _UDistortionMultiplier: 1
     - _VDistortionMultiplier: 1
+    - _VertexDisplacementContrastPower: 1
+    - _VertexDisplacementMultiplier: 0.35
     - _Vertex_Displacement_Intensity: 0
     - _VoronoiCellDensity: 3
     - _VoronoiLerpVertexAlpha: 0.5
@@ -156,10 +168,16 @@ Material:
     - _ColorForTxColorLowAlpha: {r: 1, g: 1, b: 1, a: 0}
     - _ColorOfFadedAlphaInTx: {r: 1, g: 0.503516, b: 0.27843136, a: 0}
     - _ColorOfTxFadedAlpha: {r: 1, g: 1, b: 1, a: 0}
-    - _DistortionSpeedUV: {r: -0.3, g: 0, b: 0, a: 0}
-    - _DistortionSpiralMultiplierUV: {r: 1, g: 0, b: 0, a: 0}
+    - _DisplacementSpeedUV: {r: -0.2, g: 1, b: 0, a: 0}
+    - _DisplacementSpiralMultiplierUV: {r: 0, g: 0, b: 0, a: 0}
+    - _DisplacementTileUV: {r: 1, g: 1, b: 0, a: 0}
+    - _DissolveDistortionSpeedUV: {r: -0.2, g: 2, b: 0, a: 0}
+    - _DissolveDistortionSpiralMultiplierUV: {r: 0.5, g: 0, b: 0, a: 0}
+    - _DissolveDistortionTileUV: {r: 1, g: 1, b: 0, a: 0}
+    - _DistortionSpeedUV: {r: -0.7, g: 0.2, b: 0, a: 0}
+    - _DistortionSpiralMultiplierUV: {r: 0, g: 1, b: 0, a: 0}
     - _DistortionTileAndSpeed: {r: 1, g: 1, b: 0, a: 0.2}
-    - _DistortionTileUV: {r: 1, g: 1, b: 0, a: 0}
+    - _DistortionTileUV: {r: 1, g: 3, b: 0, a: 0}
     - _DistxnIntensityUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveOffsetUV: {r: 0, g: 0, b: 0, a: 0}
     - _EmissiveSpeedUV: {r: 0, g: 0, b: 0, a: 0}
@@ -167,15 +185,15 @@ Material:
     - _EmissiveTileUV: {r: 1, g: 1, b: 0, a: 0}
     - _Emissive_Color: {r: 0, g: 4, b: 3.449684, a: 0}
     - _FresnelColor: {r: 0.51397294, g: 0.648316, b: 0.6603774, a: 0}
-    - _FresnelLerpColorA: {r: 0.43867922, g: 0.4837853, b: 1, a: 0}
+    - _FresnelLerpColorA: {r: 0, g: 0.43815926, b: 0.764151, a: 0}
     - _FresnelLerpColorB: {r: 1, g: 1, b: 1, a: 0}
     - _Fresnel_Inner_Color_A: {r: 0, g: 0, b: 0, a: 0}
     - _Fresnel_Outer_Color_B: {r: 0, g: 0, b: 0, a: 0}
-    - _MainColorA: {r: 0.22014059, g: 0.439003, b: 0.9150943, a: 0}
-    - _MainColorB: {r: 0.27189392, g: 0.82940197, b: 0.8867924, a: 0}
+    - _MainColorA: {r: 0, g: 0.23973358, b: 0.754717, a: 0}
+    - _MainColorB: {r: 0.21368816, g: 0.73852915, b: 0.9245283, a: 0}
     - _MainOffsetUV: {r: 0, g: 0, b: 0, a: 0}
-    - _MainSpeedUV: {r: -0.3, g: 1, b: 0, a: 0}
-    - _MainSpiralMultilplierUV: {r: 1, g: 0, b: 0, a: 0}
+    - _MainSpeedUV: {r: -1, g: 0.3, b: 0, a: 0}
+    - _MainSpiralMultilplierUV: {r: 0, g: 1, b: 0, a: 0}
     - _MainSpiralUV: {r: 0, g: 0, b: 0, a: 0}
     - _MainTileUV: {r: 2, g: 2, b: 0, a: 0}
     - _NoiseSpeedUV: {r: 0, g: 0, b: 0, a: 0}
@@ -192,7 +210,16 @@ Material:
     - _PerlinTileAndOffsetSpeed: {r: 1, g: 1, b: 0.1, a: -0.5}
     - _PolarCentreXY: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _PolarTileAndSpeed: {r: 3, g: 3, b: -1, a: 0.3}
+    - _REDUNDANTTxExtraOffsetUV: {r: 0, g: 0, b: 0, a: 0}
     - _TxColorTileAndOffsetSpeed: {r: 1, g: 3, b: -0.5, a: 0.2}
+    - _TxDissolveOffsetUV: {r: 0, g: 0, b: 0, a: 0}
+    - _TxDissolveSpeedUV: {r: -0.1, g: 0.8, b: 0, a: 0}
+    - _TxDissolveSpiralMultiplier: {r: 1, g: 0, b: 0, a: 0}
+    - _TxDissolveTileUV: {r: 2, g: 1, b: 0, a: 0}
+    - _TxExtraOffsetUV: {r: 0, g: 0, b: 0, a: 0}
+    - _TxExtraSpeedUV: {r: 0, g: 0, b: 0, a: 0}
+    - _TxExtraSpiralMultiplierUV: {r: 0, g: 0, b: 0, a: 0}
+    - _TxExtraTileUV: {r: 3, g: 2, b: 0, a: 0}
     - _TxNoiseTileAndSpeed: {r: 1, g: 1, b: 0, a: 0}
     - _VDOffsetUV: {r: 0, g: 0, b: 0, a: 0}
     - _VDSpeedUV: {r: 0, g: 0, b: 0, a: 0}
