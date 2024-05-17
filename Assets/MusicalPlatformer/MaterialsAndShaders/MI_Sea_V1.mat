@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5305873675513131406
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MI_Sea_V1
+  m_Shader: {fileID: -6465566751694194690, guid: 70a06046b7ab42a4084b58a02ba0bde0,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses:
+  - DepthOnly
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _TxDistortion:
+        m_Texture: {fileID: 2800000, guid: 6cb1d41103e365e49b22657052ad0b2b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxMain:
+        m_Texture: {fileID: 2800000, guid: d8658608d3c63c049863884995ffcf74, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AdjustDistortionUpAndDown: -0.5
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _BloomMultiplier: 1
+    - _CastShadows: 1
+    - _Cull: 2
+    - _DepthFadeMultiplier: 1
+    - _DistortionIntensity: 0.2
+    - _DstBlend: 10
+    - _FresnelMultiplierForLerp: 1
+    - _FresnelPowerForLerp: 1
+    - _HasDepthFade: 0
+    - _HasSmoothStep: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _SmoothStepSoftness: 0.2
+    - _SmoothStepSoftnessColorAB: 28.95
+    - _SmoothStepThreshold: 0.12
+    - _SmoothStepThresholdColorAB: 0.49
+    - _SmoothStepThreshold_1: 0
+    - _SrcBlend: 5
+    - _Surface: 1
+    - _TxMainAdd: 1
+    - _TxMainConstrastToPowerOf: 4
+    - _TxMainToPowerOf: 9.69
+    - _VertexDisplacementUniform: 0
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _ZWriteControl: 0
+    m_Colors:
+    - _DistortionSpeedUV: {r: 0, g: 0, b: 0, a: 0}
+    - _DistortionSpiralMultiplierUV: {r: 0, g: 0, b: 0, a: 0}
+    - _DistortionTileUV: {r: 1, g: 1, b: 0, a: 0}
+    - _FresnelLerpColorA: {r: 1, g: 1, b: 1, a: 0}
+    - _FresnelLerpColorB: {r: 1, g: 1, b: 1, a: 0}
+    - _MainColorA: {r: 0.79716986, g: 0.9039225, b: 1, a: 1}
+    - _MainColorB: {r: 0.32156867, g: 0.6179992, b: 0.8392157, a: 1}
+    - _MainSpeedUV: {r: 0, g: 0, b: 0, a: 0}
+    - _MainSpiralMultilplierUV: {r: 0, g: 0, b: 0, a: 0}
+    - _MainTileUV: {r: 22, g: 22, b: 0, a: 0}
+    - _TxDistortionTileAndSpeed: {r: 1, g: 4, b: 0.05, a: 0}
+    - _TxMainTileAndSpeed: {r: 8, g: 8, b: 0, a: 0}
+  m_BuildTextureStacks: []
