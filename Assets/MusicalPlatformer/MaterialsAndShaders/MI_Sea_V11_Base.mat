@@ -74,6 +74,7 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
+    - _ColorOverallMultiplier: {r: 1, g: 0.95686275, b: 0.7490196, a: 0}
     - _FresnelLerpColorA: {r: 1, g: 1, b: 1, a: 0}
     - _FresnelLerpColorB: {r: 1, g: 1, b: 1, a: 0}
     - _MainColorA: {r: 0, g: 0.4507721, b: 0.6792453, a: 0.7647059}
