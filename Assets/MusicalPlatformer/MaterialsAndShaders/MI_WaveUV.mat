@@ -46,15 +46,22 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _GrabCentrePosY: -0.5
+    - _GrabTextureMultiplier: 1
     - _HasLerpUV: 1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _RotateTextureMultiplier: 1
+    - _RotationSubWithTexture: 0
     - _SmoothStepSoftness: 0.1
-    - _SmoothStepThreshold: 0.5
+    - _SmoothStepThreshold: 0.08
     - _TilingMultiplierY: 1
     m_Colors:
+    - _AxisOfRotation: {r: 1, g: 0, b: 0, a: 0}
     - _ColorA: {r: 0.30197576, g: 0.5349166, b: 0.735849, a: 1}
     - _ColorB: {r: 0.7167587, g: 0.8248069, b: 0.8584906, a: 1}
+    - _GrabDistanceMoved: {r: 0, g: 0, b: 0, a: 0}
+    - _MeshSizeMultiplierXYZ: {r: 1, g: 1, b: 1, a: 0}
     - _SmoothStep: {r: 0, g: 0, b: 0, a: 0}
     - _SpeedRegularUV: {r: 0, g: -0.1, b: 0, a: 0}
     - _SpeedWorldPosUV: {r: 1, g: 0, b: 0, a: 0}

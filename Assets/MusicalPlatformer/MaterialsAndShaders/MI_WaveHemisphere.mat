@@ -28,6 +28,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: d5c1ba2c186cc814d89de7568a92d63c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_38a210de72454b34bddccf25bbd61fa7_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: a1402840cfc8de34098f18c0e5ce6489, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_9a77af8ab80e4637b165b1c1c6a2ee2e_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: eacbe8f7c0bf6cf4ca4a018d6a696dd0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_ff054876abe74b829c3aa29f827373c0_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: d5c1ba2c186cc814d89de7568a92d63c, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -46,22 +54,30 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _GrabCentrePosY: -0.35
+    - _Angle: 456.1
+    - _BottomCentrePosY: -0.085
+    - _BottomMeshPowerOf: 5.88
+    - _GrabCentrePosY: -0.587
     - _GrabTextureMultiplier: 3.08
     - _HasLerpUV: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RotateTextureMultiplier: 2.43
-    - _RotationSubWithTexture: 54.39
+    - _RotationCentrePosY: 0.748
+    - _RotationSubWithTexture: 42.5
     - _SmoothStepSoftness: 0.1
     - _SmoothStepThreshold: 0.5
     - _TilingMultiplierY: 1
     m_Colors:
     - _AxisOfRotation: {r: 1, g: 0, b: 0, a: 0}
+    - _BottomMeshSizeMultiplierXYZ: {r: 0, g: 0, b: 1.05, a: 0}
+    - _BottomMeshSmoothStep: {r: 0.66, g: 0.65, b: 0, a: 0}
     - _ColorA: {r: 0.30197576, g: 0.5349166, b: 0.735849, a: 1}
     - _ColorB: {r: 0.7167587, g: 0.8248069, b: 0.8584906, a: 1}
     - _GrabDistanceMoved: {r: 0, g: 0, b: 0.05, a: 0}
-    - _MeshSizeMultiplierXYZ: {r: 1, g: 1, b: 0.35, a: 0}
+    - _MeshSizeMultiplierXYZ: {r: 1, g: 1, b: 0.16, a: 0}
+    - _RotatePivot: {r: 0, g: 0.55, b: 100.63, a: 0}
+    - _RotateSmoothStep: {r: 0.01, g: 3.09, b: 0, a: 0}
     - _SmoothStep: {r: 0, g: 0, b: 0, a: 0}
     - _SpeedRegularUV: {r: 0, g: -0.1, b: 0, a: 0}
     - _SpeedWorldPosUV: {r: 1, g: 0, b: 0, a: 0}

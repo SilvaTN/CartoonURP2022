@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MI_Sea_V12_Caustics
+  m_Shader: {fileID: -6465566751694194690, guid: 35aa0bead523f2144b48b2bb1e7c1431,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses:
+  - DepthOnly
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_5b261190986a4ca9a437b173ac0ea86f_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 6cb1d41103e365e49b22657052ad0b2b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxDistortion:
+        m_Texture: {fileID: 2800000, guid: d8658608d3c63c049863884995ffcf74, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxEdges:
+        m_Texture: {fileID: 2800000, guid: d8658608d3c63c049863884995ffcf74, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxMain:
+        m_Texture: {fileID: 2800000, guid: d5c1ba2c186cc814d89de7568a92d63c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AdjustDistortionUpAndDown: -0.5
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _BloomMultiplier: 1
+    - _CastShadows: 1
+    - _Cull: 2
+    - _DepthFadeAdder: -1.32
+    - _DepthFadeAdderOrMultiplier: 0.51
+    - _DepthFadeMultiplier: 1.45
+    - _DistortionIntensity: 0.04
+    - _DistortionIntensity2: 0.04
+    - _DstBlend: 10
+    - _EdgeStep: -0.8
+    - _FresnelMultiplierForLerp: 1
+    - _FresnelPowerForLerp: 1
+    - _HasDepthFade: 0
+    - _HasSmoothStep: 0
+    - _MinEdgeSize: 0.36
+    - _NumberOfRipples: 2
+    - _OverallRipplesLimitDistance: 1.09
+    - _PlaneRippleDistanceLimit: 0.56
+    - _PrimaryRippleLimitDistance: 0.75
+    - _PrimaryRipplesLimitDistance: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _RippleQuantityPerRippleSet: 19
+    - _RippleSpeed: -4
+    - _RipplesLimitDistance: 0.26
+    - _SecondaryRipplesLimitDistance: -4.21
+    - _SmoothStepSoftness: 0
+    - _SmoothStepThreshold: 0.63
+    - _SpeedRipples: -1
+    - _SpeedRipples1: -1
+    - _SpeedRipples2: -1
+    - _SrcBlend: 5
+    - _Surface: 1
+    - _TexturedRippleJurisdiction: 1
+    - _TexturedRippleLimitDistance: 1
+    - _VertexDisplacementUniform: 0
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _ZWriteControl: 0
+    m_Colors:
+    - _ColorOverallMultiplier: {r: 1, g: 0.95596266, b: 0.75, a: 0}
+    - _EdgesSmoothStep: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _FresnelLerpColorA: {r: 1, g: 1, b: 1, a: 1}
+    - _FresnelLerpColorB: {r: 1, g: 1, b: 1, a: 0}
+    - _MainColorA: {r: 0.2666666, g: 0.5324307, b: 0.67058825, a: 0}
+    - _MainColorB: {r: 0.26666665, g: 0.5333333, b: 0.67058825, a: 0.36078432}
+    - _PrimaryRippleSmoothStep: {r: -0.64, g: 0.3, b: 0, a: 0}
+    - _SecondaryRippleSmoothStep: {r: 1, g: 0.1, b: 0, a: 0}
+    - _TxDistortionTileAndSpeed: {r: 27, g: 27, b: 0.3, a: 0.1}
+    - _TxDistortionTileAndSpeed2: {r: 22, g: 22, b: 0.1, a: 0.2}
+    - _TxEdgesTileAndSpeed: {r: 22, g: 53, b: 0.05, a: 0.15}
+    - _TxMainTileAndSpeed: {r: 11, g: 11, b: 0.02, a: 0.03}
+    - _TxMinEdgeSizeTileAndSpeed: {r: 3, g: 1, b: 0.01, a: 0.02}
+  m_BuildTextureStacks: []
+--- !u!114 &7636727824825963474
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
