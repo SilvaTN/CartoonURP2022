@@ -64,18 +64,18 @@ Material:
     - _QueueOffset: 0
     - _RotateTextureMultiplier: 2.43
     - _RotationCentrePosY: 0.748
-    - _RotationSubWithTexture: 42.5
+    - _RotationSubWithTexture: 22.36
     - _SmoothStepSoftness: 0.1
     - _SmoothStepThreshold: 0.5
     - _TilingMultiplierY: 1
     m_Colors:
     - _AxisOfRotation: {r: 1, g: 0, b: 0, a: 0}
-    - _BottomMeshSizeMultiplierXYZ: {r: 0, g: 0, b: 1.05, a: 0}
+    - _BottomMeshSizeMultiplierXYZ: {r: 0, g: 0, b: 1.13, a: 0}
     - _BottomMeshSmoothStep: {r: 0.66, g: 0.65, b: 0, a: 0}
     - _ColorA: {r: 0.30197576, g: 0.5349166, b: 0.735849, a: 1}
     - _ColorB: {r: 0.7167587, g: 0.8248069, b: 0.8584906, a: 1}
     - _GrabDistanceMoved: {r: 0, g: 0, b: 0.05, a: 0}
-    - _MeshSizeMultiplierXYZ: {r: 1, g: 1, b: 0.16, a: 0}
+    - _MeshSizeMultiplierXYZ: {r: 1, g: 0.96, b: 1, a: 0}
     - _RotatePivot: {r: 0, g: 0.55, b: 100.63, a: 0}
     - _RotateSmoothStep: {r: 0.01, g: 3.09, b: 0, a: 0}
     - _SmoothStep: {r: 0, g: 0, b: 0, a: 0}
