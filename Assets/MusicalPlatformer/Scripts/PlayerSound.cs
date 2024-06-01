@@ -105,17 +105,17 @@ public class PlayerSound : MonoBehaviour
         noteTouched = other;
         if (other.CompareTag("LeftNote"))
         {
-            Debug.Log("Touching left uwuwuwuwuwu");
+            //Debug.Log("Touching left uwuwuwuwuwu");
             correctKeyCode = KeyCode.LeftArrow;            
         }
         if (other.CompareTag("DownNote"))
         {
-            Debug.Log("Touching down qqqqqqqq");
+            //Debug.Log("Touching down qqqqqqqq");
             correctKeyCode = KeyCode.DownArrow;
         }
         if (other.CompareTag("RightNote"))
         {
-            Debug.Log("Touching right jjjjjjjj");
+            //Debug.Log("Touching right jjjjjjjj");
             correctKeyCode = KeyCode.RightArrow;
         }
     }

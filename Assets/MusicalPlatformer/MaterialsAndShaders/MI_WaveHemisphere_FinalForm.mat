@@ -12,14 +12,18 @@ Material:
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _ALPHAPREMULTIPLY_ON
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses:
+  - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -32,8 +36,28 @@ Material:
         m_Texture: {fileID: 2800000, guid: a1402840cfc8de34098f18c0e5ce6489, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_3d7e72d6de0841db85424124a9c435f2_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: d8658608d3c63c049863884995ffcf74, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_5e8b2835977d40eb9c1ece960b618d7a_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2f59a8c7a63423146aac459374b36418, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_630825be972e4e7e8ed45691d66d7976_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 099d835061afce24696884cb4c9ee9be, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_9a77af8ab80e4637b165b1c1c6a2ee2e_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: eacbe8f7c0bf6cf4ca4a018d6a696dd0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_e67a10c5426f4304ba4ebcbe2ec8ba1a_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 099d835061afce24696884cb4c9ee9be, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_f3ff3c794e2e455c9a832f2655701927_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2f59a8c7a63423146aac459374b36418, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_ff054876abe74b829c3aa29f827373c0_Texture_1_Texture2D:
@@ -54,31 +78,63 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
     - _Angle: 456.1
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 1
     - _BottomCentrePosY: -0.085
     - _BottomMeshPowerOf: 5.88
+    - _CastShadows: 1
+    - _Cull: 2
+    - _DstBlend: 10
+    - _Float: 0
     - _GrabCentrePosY: -0.587
     - _GrabTextureMultiplier: 3.08
     - _HasLerpUV: 1
+    - _LightBendIntensity: 0.02
+    - _MaskPosition: -0.13
+    - _MaskStep: 0.05
+    - _NormalStrength: 1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _ReceiveShadows: 1
     - _RotateTextureMultiplier: 2.43
     - _RotationCentrePosY: 0.748
     - _RotationSubWithTexture: 42.5
     - _SmoothStepSoftness: 0.1
     - _SmoothStepThreshold: 0.5
+    - _SrcBlend: 1
+    - _Surface: 1
     - _TilingMultiplierY: 1
+    - _WorkflowMode: 1
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _ZWriteControl: 0
     m_Colors:
+    - _AlphaTileOffset: {r: 0, g: 0.18, b: 0, a: 0}
+    - _AlphaTileUV: {r: 4, g: 8, b: 0, a: 0}
     - _AxisOfRotation: {r: 1, g: 0, b: 0, a: 0}
     - _BottomMeshSizeMultiplierXYZ: {r: 0, g: 0, b: 1.05, a: 0}
     - _BottomMeshSmoothStep: {r: 0.66, g: 0.65, b: 0, a: 0}
+    - _Color: {r: 0.3764706, g: 0.7109654, b: 0.7176471, a: 0}
     - _ColorA: {r: 0.30197576, g: 0.5349166, b: 0.735849, a: 1}
     - _ColorB: {r: 0.7167587, g: 0.8248069, b: 0.8584906, a: 1}
     - _GrabDistanceMoved: {r: 0, g: 0, b: 0.05, a: 0}
+    - _HighlightColor: {r: 0.6537469, g: 0.7592308, b: 0.7830189, a: 0}
+    - _HighlightSmoothStep: {r: 0.62, g: 0, b: 0, a: 0}
+    - _HighlightSpeedUV: {r: 0, g: -1, b: 0, a: 0}
+    - _HighlightTileUV: {r: 10.29, g: 1.5, b: 0, a: 0}
+    - _HighlightVerticalOffsetV: {r: 0, g: 0, b: 0, a: 0}
+    - _HighlightVerticalTileUV: {r: 22, g: 3, b: 0, a: 0}
     - _MeshSizeMultiplierXYZ: {r: 1, g: 1, b: 0.16, a: 0}
+    - _NormalSpeed1: {r: 0, g: -0.5, b: 0, a: 0}
+    - _NormalSpeed2: {r: 0, g: 0, b: 0, a: 0}
+    - _NormalTile1: {r: 4, g: 1, b: 0, a: 0}
+    - _NormalTile2: {r: 3, g: 1, b: 0, a: 0}
     - _RotatePivot: {r: 0, g: 0.55, b: 100.63, a: 0}
     - _RotateSmoothStep: {r: 0.01, g: 3.09, b: 0, a: 0}
-    - _SmoothStep: {r: 0, g: 0, b: 0, a: 0}
+    - _SmoothStep: {r: 0.62, g: 0, b: 0, a: 0}
     - _SpeedRegularUV: {r: 0, g: -0.1, b: 0, a: 0}
     - _SpeedWorldPosUV: {r: 1, g: 0, b: 0, a: 0}
     - _TilingRegularUV: {r: 6, g: 2.5, b: 0, a: 0}

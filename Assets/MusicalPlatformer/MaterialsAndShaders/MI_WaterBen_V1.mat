@@ -92,7 +92,8 @@ Material:
     - _DistanceOfPlainFoam: 0
     - _FoamMultiplier: 0.7
     - _LerpBaseVsEmissision: 0
-    - _LightBendIntensity: 0.02
+    - _LightBendIntensity: 0.002
+    - _LightBendsViaDepthFadeSubtraction: 4.71
     - _NormalStrength: 1
     - _PlainFoamDistance: -1
     - _PrimaryFoamLimitDistance: 0.44
