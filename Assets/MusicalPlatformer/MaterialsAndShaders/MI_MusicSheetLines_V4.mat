@@ -71,10 +71,11 @@ Material:
     - _DstBlend: 10
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _ScrollSpeedTemp: 0
     - _SrcBlend: 5
     - _Surface: 1
     - _WaveAmplitude: 0.0272
-    - _WaveQuantity: 128
+    - _WaveQuantity: 1
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0

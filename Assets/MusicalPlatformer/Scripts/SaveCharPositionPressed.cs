@@ -20,7 +20,7 @@ public class SaveCharPositionPressed : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             //Debug.Log("('LeftNote', " + currentIndex + ", " + transform.position.x + ")");
-            Debug.Log(transform.position.x);
+            Debug.Log("index: " + currentIndex + ", X position: " + transform.position.x);
             currentIndex++;
         }
 
