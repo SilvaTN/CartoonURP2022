@@ -11,6 +11,7 @@ public class NoteSpawner : MonoBehaviour
     [SerializeField] Transform playerTransform;
     [SerializeField] float screenEdge;
     [SerializeField] float noteHeight;
+    [SerializeField] float higherNoteHeight;
     Vector3 nextNotePos = new Vector3(136.91f, 2.764f, 104.42f); //Copied from PlayerMovement char's start position.;
     int currentIndex = 0;
     //Ctrl+E+W to change wrap around.
@@ -44,10 +45,10 @@ public class NoteSpawner : MonoBehaviour
     List<float> yPositionOfNotes = new List<float>() {
         //0 is start of first verse segment
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //10
-        0, 4, 0, 0, 0, 0, 0, 0, 0, 4, //20
-        0, 0, 0, 0, 0, 0, 0, 4, 0, 0, //30
+        0, 4, 4, 4, 4, 4, 4, 4, 4, 0.01f, //20
+        0, 0, 0, 0, 0, 0, 0, 4, 4, 4, //30
         //31 start of second verse segment
-        0, 0, 0, 0, 0, 4, 0, 0, 0, 0, //40
+        4, 4, 4, 4, 4, 4.01f, 0, 0, 0, 0, //40
         0, 0, 0, 4, 0, 0, 0, 0, 0, 0, //50
         0, 4, 0, 0, 0, 0, 0, 0, 0, 4, //60
         //63 is start of third verse segment
@@ -75,6 +76,7 @@ public class NoteSpawner : MonoBehaviour
         listSize = xPositionOfNotes.Count;
         if (screenEdge == 0) screenEdge = -10f;
         if (noteHeight == 0) noteHeight = 2f;
+        if (noteHeight == 0) higherNoteHeight = 4f;
         nextNotePos.x = xPositionOfNotes[currentIndex];
         nextNotePos.y = noteHeight;
     }
@@ -90,7 +92,7 @@ public class NoteSpawner : MonoBehaviour
             {
                 //IF THE NOTE SAYS 4, THEN SPAWN RED NOTE
                 //if (currentIndex % 10 == 0)
-                if (yPositionOfNotes[currentIndex] == 4)
+                if (yPositionOfNotes[currentIndex] > 2)
                 {
                     Instantiate(noteRight, nextNotePos, Quaternion.identity);
                 } else
@@ -103,6 +105,13 @@ public class NoteSpawner : MonoBehaviour
                 if (currentIndex < listSize)
                 {
                     nextNotePos.x = xPositionOfNotes[currentIndex];
+                    if (yPositionOfNotes[currentIndex] < 1) //some values are 0.01f or 4.01f
+                    {
+                        nextNotePos.y = noteHeight;
+                    } else
+                    {
+                        nextNotePos.y = higherNoteHeight;
+                    }
                     //Debug.Log("xPositionOfNotes[currentIndex] is " + xPositionOfNotes[currentIndex]);
                 }
             }     

@@ -95,12 +95,14 @@ Material:
     - _LightBendIntensity: 0.002
     - _LightBendsViaDepthFadeSubtraction: 4.71
     - _NormalStrength: 1
+    - _NormalTileOverallMultiplier: 0.1
     - _PlainFoamDistance: -1
     - _PrimaryFoamLimitDistance: 0.44
     - _PrimaryRippleLimitDistance: 0.59
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SecondaryFoamLimitDistance: 2
+    - _TileWorldUVOverallMultiplier: 0.05
     - _WarpEdgesTest: 0
     m_Colors:
     - _AdditionalFoamSmoothStep: {r: 0.27, g: 0.1, b: 0, a: 0}
@@ -113,7 +115,7 @@ Material:
     - _NormalTile2: {r: 0.375, g: 0.375, b: 0, a: 0}
     - _PlainFoamSmoothStep: {r: 0, g: 0.1, b: 0, a: 0}
     - _PrimaryFoamSmoothStep: {r: 0.71, g: 0.2, b: 0, a: 0}
-    - _PrimaryFoamTileAndSpeed: {r: 1, g: 1, b: 0.2, a: -0.1}
+    - _PrimaryFoamTileAndSpeed: {r: 1, g: 1, b: 0.1, a: -0.2}
     - _PrimaryRippleSmoothStep: {r: 0.71, g: 0.2, b: 0, a: 0}
     - _SecondaryFoamSmoothStep: {r: 0.5, g: 0, b: 0, a: 0}
     - _SecondaryFoamTileAndSpeed: {r: 3, g: 6, b: 0.11, a: -0.2}
