@@ -8,6 +8,7 @@ TagManager:
   - DownNote
   - LeftNote
   - RightNote
+  - Obstacle
   layers:
   - Default
   - TransparentFX

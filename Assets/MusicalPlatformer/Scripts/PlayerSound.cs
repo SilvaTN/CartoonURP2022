@@ -34,14 +34,14 @@ public class PlayerSound : MonoBehaviour
                 Destroy(noteTouched.gameObject);
                 trailNote.Play();                
                 correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
-                Debug.Log("we are playing the CORRECT note yayayayay");
+                //Debug.Log("we are playing the CORRECT note yayayayay");
             } else
             {
                 srcGuitar.mute = true;
                 wrongSound.Play();
                 //int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
                 //srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
-                Debug.Log("we are playing the WRONG note nnnooooooo");
+                //Debug.Log("we are playing the WRONG note nnnooooooo");
                 if (noteTouched)
                 {
                     Destroy(noteTouched.gameObject);
@@ -56,7 +56,7 @@ public class PlayerSound : MonoBehaviour
                 Destroy(noteTouched.gameObject);
                 trailNote.Play();
                 correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
-                Debug.Log("we are playing the CORRECT note yayayayay");
+                //Debug.Log("we are playing the CORRECT note yayayayay");
             }
             else
             {
@@ -64,7 +64,7 @@ public class PlayerSound : MonoBehaviour
                 wrongSound.Play();
                 //int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
                 //srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
-                Debug.Log("we are playing the WRONG note nnnooooooo");
+                //Debug.Log("we are playing the WRONG note nnnooooooo");
                 if (noteTouched)
                 {
                     Destroy(noteTouched.gameObject);
@@ -81,7 +81,7 @@ public class PlayerSound : MonoBehaviour
                 Destroy(noteTouched.gameObject);
                 trailNote.Play();
                 correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
-                Debug.Log("we are playing the CORRECT note yayayayay");
+                //Debug.Log("we are playing the CORRECT note yayayayay");
             }
             else
             {
@@ -89,7 +89,7 @@ public class PlayerSound : MonoBehaviour
                 wrongSound.Play();
                 //int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
                 //srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
-                Debug.Log("we are playing the WRONG note nnnooooooo");
+                //Debug.Log("we are playing the WRONG note nnnooooooo");
                 if (noteTouched)
                 {
                     Destroy(noteTouched.gameObject);

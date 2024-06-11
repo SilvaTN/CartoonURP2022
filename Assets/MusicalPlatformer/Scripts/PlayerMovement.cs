@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     private ConstantForce cForce;
     private Vector3 forceDirection;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -51,9 +50,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-    void FixUpdate()
+    void FixedUpdate()
     {
-        rb.AddForce(Physics.gravity * customGravity);
+        //rb.AddForce(Physics.gravity * customGravity);        
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -61,6 +61,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
+        }
+
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("we have collided with an obstacle oh nooooooooo");
         }
     }
 
