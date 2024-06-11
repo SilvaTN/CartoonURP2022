@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] GameManager gameManager;
     [SerializeField] TrailMusicSheet trailScript;
     [SerializeField] Rigidbody rb;
     [SerializeField] float jumpForce;
@@ -65,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            Debug.Log("we have collided with an obstacle oh nooooooooo");
+            gameManager.EndGame();
         }
     }
 

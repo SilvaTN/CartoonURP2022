@@ -15,6 +15,29 @@ public class PlayerSound : MonoBehaviour
     private KeyCode correctKeyCode;
     private Collider noteTouched;
 
+    private void CorrectNotePressed()
+    {
+        srcGuitar.mute = false;
+        noteDissipationCorrect.Play();
+        Destroy(noteTouched.gameObject);
+        trailNote.Play();
+        correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
+    }
+
+    private void WrongNotePressed()
+    {
+        srcGuitar.mute = true;     
+        wrongSound.Play();
+        //int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
+        //srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
+        if (noteTouched)
+        {
+            noteDissipationWrong.Play();
+            Destroy(noteTouched.gameObject);
+            correctKeyCode = 0; //Resets the correctKeyCode after playing incorrectly.
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,73 +51,30 @@ public class PlayerSound : MonoBehaviour
         {
             if (KeyCode.LeftArrow == correctKeyCode)
             {
-                srcGuitar.mute = false;
-                //noteDissipationCorrect.transform.position = noteTouched.transform.position; //we want both y and x info
-                //noteDissipationCorrect.Play();
-                Destroy(noteTouched.gameObject);
-                trailNote.Play();                
-                correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
-                //Debug.Log("we are playing the CORRECT note yayayayay");
+                CorrectNotePressed();
             } else
             {
-                srcGuitar.mute = true;
-                wrongSound.Play();
-                //int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
-                //srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
-                //Debug.Log("we are playing the WRONG note nnnooooooo");
-                if (noteTouched)
-                {
-                    Destroy(noteTouched.gameObject);
-                    correctKeyCode = 0; //Resets the correctKeyCode after playing incorrectly.
-                }
+                WrongNotePressed();
             }
         } else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             if (KeyCode.DownArrow == correctKeyCode)
             {
-                srcGuitar.mute = false;
-                Destroy(noteTouched.gameObject);
-                trailNote.Play();
-                correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
-                //Debug.Log("we are playing the CORRECT note yayayayay");
+                CorrectNotePressed();
             }
             else
             {
-                srcGuitar.mute = true;
-                wrongSound.Play();
-                //int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
-                //srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
-                //Debug.Log("we are playing the WRONG note nnnooooooo");
-                if (noteTouched)
-                {
-                    Destroy(noteTouched.gameObject);
-                    correctKeyCode = 0; //Resets the correctKeyCode after playing incorrectly.
-                }
+                WrongNotePressed();
             }
         } else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             if (KeyCode.RightArrow == correctKeyCode)
             {
-                srcGuitar.mute = false;
-                //noteDissipationCorrect.transform.position = noteTouched.transform.position; //we want both y and x info
-                noteDissipationCorrect.Play();
-                Destroy(noteTouched.gameObject);
-                trailNote.Play();
-                correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
-                //Debug.Log("we are playing the CORRECT note yayayayay");
+                CorrectNotePressed();
             }
             else
             {
-                srcGuitar.mute = true;
-                wrongSound.Play();
-                //int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
-                //srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
-                //Debug.Log("we are playing the WRONG note nnnooooooo");
-                if (noteTouched)
-                {
-                    Destroy(noteTouched.gameObject);
-                    correctKeyCode = 0; //Resets the correctKeyCode after playing incorrectly.
-                }
+                WrongNotePressed();
             }
         }
 
