@@ -12,6 +12,14 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] ParticleSystem noteDissipationCorrect;
     [SerializeField] ParticleSystem noteDissipationWrong;
     //[SerializeField] AudioClip sound1, sound2, sound3, sound4;
+    private float charSpeed;
+    private float lastPos;
+    private int testCount = 0;
+    private bool pastInitialCount = false;
+    private int numberOfTimesSpeedCalculated = 0;
+    private float totalSpeed = 0;
+    private float minimumSpeed = 20;
+    private float maxSpeed = -30;
     private KeyCode correctKeyCode;
     private Collider noteTouched;
 
@@ -42,11 +50,35 @@ public class PlayerSound : MonoBehaviour
     void Start()
     {
         correctKeyCode = 0;
+        lastPos = transform.position.x;
     }
 
     // Update is called once per frame
     void Update()
     {
+        testCount++;
+        charSpeed = (transform.position.x - lastPos) / Time.deltaTime;
+        lastPos = transform.position.x;
+        numberOfTimesSpeedCalculated++;
+        totalSpeed += charSpeed;
+        if (pastInitialCount && (charSpeed < minimumSpeed))
+        {
+            minimumSpeed = charSpeed;
+            Debug.Log("minimum speed changed to: " + minimumSpeed);
+        }
+        if (pastInitialCount && (charSpeed > maxSpeed))
+        {
+            maxSpeed = charSpeed;
+            Debug.Log("max speed changed to: " + maxSpeed);
+        }
+        if (testCount == 30)
+        {            
+            Debug.Log("The currect speed is: " + charSpeed + " and average speed is: " + 
+                totalSpeed/numberOfTimesSpeedCalculated);
+            testCount = 0;
+            pastInitialCount = true;
+        }
+
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if (KeyCode.LeftArrow == correctKeyCode)
