@@ -10,8 +10,10 @@ public class NoteSpawner : MonoBehaviour
     [SerializeField] GameObject noteRight;
     [SerializeField] Transform playerTransform;
     [SerializeField] float screenEdge;
-    [SerializeField] float noteHeight;
-    [SerializeField] float higherNoteHeight;
+    [SerializeField] float groundNoteHeight;
+    [SerializeField] float maxNoteHeight;
+    [SerializeField] float midNoteHeight;
+    [SerializeField] float minNoteHeight;
     Vector3 nextNotePos = new Vector3(136.91f, 2.764f, 104.42f); //Copied from PlayerMovement char's start position.;
     int currentIndex = 0;
     //Ctrl+E+W to change wrap around.
@@ -42,19 +44,20 @@ public class NoteSpawner : MonoBehaviour
         -826.2689f, -830.1627f, -832.5598f, -836.3936f,  -841.3253f, -845,1475f, -849.4681f, -853.6711f, -855.7802f, -859.886f, //170
         -863.9691f, -866.3346f, -870.1935f, -874.5278f, //174
     };
+    //4 corresponds to max height of red note, 3 is mid, 2 is min.
     List<float> yPositionOfNotes = new List<float>() {
         //0 is start of first verse segment
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //10
-        0, 4, 4, 4, 4, 4, 4, 4, 4, 0.01f, //20
+        0, 2, 2, 2, 2, 2, 2, 2, 2, 0.01f, //20
         0, 0, 0, 0, 0, 0, 0, 4, 4, 4, //30
         //31 start of second verse segment
-        4, 4, 4, 4, 4, 4.01f, 0, 0, 0, 0, //40
-        0, 0, 0, 4, 4, 4, 4, 4, 4, 4, //50
-        4, 4.01f, 0, 0, 0, 0, 0, 0, 0, 4, //60
+        4, 4, 3, 3, 2, 2, 0, 0, 0, 0, //40
+        0, 0, 0, 4, 4, 4, 4, 4, 3, 3, //50
+        2, 2, 0, 0, 0, 0, 0, 0, 0, 4, //60
         //63 is start of third verse segment
-        4, 4, 4, 4, 4, 4, 4, 0.01f, 0, 0, //70
+        4, 4, 4, 4, 3, 3, 2, 0.01f, 0, 0, //70
         0, 0, 0, 0, 0, 4, 4, 4, 4, 4, //80
-        4, 4, 4, 0.01f, 0, 0, 0, 0, 0, 0, //90
+        3, 3, 2, 0.01f, 0, 0, 0, 0, 0, 0, //90
         //96 is start of first chorus segment
         0, 4, 0, 0, 0, 0, 0, 0, 0, 0, //100
         //103 is start of second chorus segment
@@ -75,10 +78,12 @@ public class NoteSpawner : MonoBehaviour
     {
         listSize = xPositionOfNotes.Count;
         if (screenEdge == 0) screenEdge = -10f;
-        if (noteHeight == 0) noteHeight = 2f;
-        if (noteHeight == 0) higherNoteHeight = 4f;
+        if (groundNoteHeight == 0) groundNoteHeight = 4.4f;
+        if (maxNoteHeight == 0) maxNoteHeight = 9f;
+        if (midNoteHeight == 0) midNoteHeight = 7f;
+        if (minNoteHeight == 0) minNoteHeight = 4.4f;
         nextNotePos.x = xPositionOfNotes[currentIndex];
-        nextNotePos.y = noteHeight;
+        nextNotePos.y = groundNoteHeight;
     }
 
     // Update is called once per frame
@@ -107,10 +112,12 @@ public class NoteSpawner : MonoBehaviour
                     nextNotePos.x = xPositionOfNotes[currentIndex];
                     if (yPositionOfNotes[currentIndex] < 1) //some values are 0.01f or 4.01f
                     {
-                        nextNotePos.y = noteHeight;
+                        nextNotePos.y = groundNoteHeight;
                     } else
                     {
-                        nextNotePos.y = higherNoteHeight;
+                        if (yPositionOfNotes[currentIndex] == 2f) nextNotePos.y = minNoteHeight;
+                        if (yPositionOfNotes[currentIndex] == 3f) nextNotePos.y = midNoteHeight;
+                        if (yPositionOfNotes[currentIndex] == 4f) nextNotePos.y = maxNoteHeight;
                     }
                     //Debug.Log("xPositionOfNotes[currentIndex] is " + xPositionOfNotes[currentIndex]);
                 }
