@@ -55,7 +55,7 @@ Material:
     - _BottomSmoothStepThreshold: 0
     - _DepthFadeAdd: -10.15
     - _DepthFadeDistance: 0.09
-    - _Opacity: 0.305
+    - _Opacity: 0.341
     - _QueueControl: 0
     - _QueueOffset: 0
     - _TopGradientSoftness: 0.49
