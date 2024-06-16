@@ -5,10 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - DownNote
-  - LeftNote
-  - RightNote
   - Obstacle
+  - NoteZ
+  - NoteX
+  - NoteC
+  - NoteV
   layers:
   - Default
   - TransparentFX

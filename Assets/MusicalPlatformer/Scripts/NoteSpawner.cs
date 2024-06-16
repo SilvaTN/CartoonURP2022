@@ -6,8 +6,10 @@ using UnityEngine;
 public class NoteSpawner : MonoBehaviour
 {
     
-    [SerializeField] GameObject noteLeft;
-    [SerializeField] GameObject noteRight;
+    [SerializeField] GameObject noteV;
+    [SerializeField] GameObject noteC;
+    [SerializeField] GameObject noteX;
+    [SerializeField] GameObject noteZ;
     [SerializeField] Transform playerTransform;
     [SerializeField] float screenEdge;
     [SerializeField] float groundNoteHeight;
@@ -16,6 +18,7 @@ public class NoteSpawner : MonoBehaviour
     [SerializeField] float minNoteHeight;
     Vector3 nextNotePos = new Vector3(136.91f, 2.764f, 104.42f); //Copied from PlayerMovement char's start position.;
     int currentIndex = 0;
+    private double frac;
     //Ctrl+E+W to change wrap around.
     List<float> xPositionOfNotes = new List<float>() {
         //0 is start of first verse segment (-100)
@@ -47,11 +50,11 @@ public class NoteSpawner : MonoBehaviour
     //4 corresponds to max height of red note, 3 is mid, 2 is min.
     List<float> yPositionOfNotes = new List<float>() {
         //0 is start of first verse segment
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //10
-        0, 2, 2, 2, 2, 2, 2, 2, 2, 0.01f, //20
-        0, 0, 0, 0, 0, 0, 0, 4, 4, 4, //30
+        0, 0, 0, 0, 0, 0, 0.5f, 0.6f, 0.7f, 0.7f, //10
+        0.7f, 2.7f, 2.7f, 2.7f, 2.6f, 2.5f, 2.7f, 2.7f, 2.7f, 0.7f, //20
+        0.7f, 0.6f, 0.5f, 0.6f, 0.7f, 0.7f, 0.7f, 4.7f, 4.7f, 4.6f, //30
         //31 start of second verse segment
-        4, 4, 3, 3, 2, 2, 0, 0, 0, 0, //40
+        4.5f, 4.6f, 3, 3, 2, 2, 0, 0, 0, 0, //40
         0, 0, 0, 4, 4, 4, 4, 4, 3, 3, //50
         2, 2, 0, 0, 0, 0, 0, 0, 0, 4, //60
         //63 is start of third verse segment
@@ -95,16 +98,22 @@ public class NoteSpawner : MonoBehaviour
             if (currentIndex < 96)
             //if ((playerTransform.position.x + screenEdge) <= nextNotePos.x)
             {
-                //IF THE NOTE SAYS 4, THEN SPAWN RED NOTE
-                //if (currentIndex % 10 == 0)
-                if (yPositionOfNotes[currentIndex] > 2)
+
+                if (yPositionOfNotes[currentIndex] == 0f || yPositionOfNotes[currentIndex] == 2f || yPositionOfNotes[currentIndex] == 3f || yPositionOfNotes[currentIndex] == 4f) 
+                {                    
+                    Instantiate(noteV, nextNotePos, Quaternion.identity);
+                } else if (yPositionOfNotes[currentIndex] == 0.5f || yPositionOfNotes[currentIndex] == 2.5f || yPositionOfNotes[currentIndex] == 3.5f || yPositionOfNotes[currentIndex] == 4.5f)
                 {
-                    Instantiate(noteRight, nextNotePos, Quaternion.identity);
-                } else
-                {
-                    Instantiate(noteLeft, nextNotePos, Quaternion.identity);
+                    Instantiate(noteC, nextNotePos, Quaternion.identity);
                 }
-                //Instantiate(noteLeft, nextNotePos, Quaternion.identity);
+                else if (yPositionOfNotes[currentIndex] == 0.6f || yPositionOfNotes[currentIndex] == 2.6f || yPositionOfNotes[currentIndex] == 3.6f || yPositionOfNotes[currentIndex] == 4.6f)
+                {
+                    Instantiate(noteX, nextNotePos, Quaternion.identity);
+                }
+                else if (yPositionOfNotes[currentIndex] == 0.7f || yPositionOfNotes[currentIndex] == 2.7f || yPositionOfNotes[currentIndex] == 3.7f || yPositionOfNotes[currentIndex] == 4.7f)
+                {
+                    Instantiate(noteZ, nextNotePos, Quaternion.identity);
+                }
                 currentIndex++;
                 //Debug.Log(currentIndex + " is the current index and list size is " + listSize);
                 if (currentIndex < listSize)
@@ -115,9 +124,9 @@ public class NoteSpawner : MonoBehaviour
                         nextNotePos.y = groundNoteHeight;
                     } else
                     {
-                        if (yPositionOfNotes[currentIndex] == 2f) nextNotePos.y = minNoteHeight;
-                        if (yPositionOfNotes[currentIndex] == 3f) nextNotePos.y = midNoteHeight;
-                        if (yPositionOfNotes[currentIndex] == 4f) nextNotePos.y = maxNoteHeight;
+                        if (Math.Floor(yPositionOfNotes[currentIndex]) == 2) nextNotePos.y = minNoteHeight;
+                        if (Math.Floor(yPositionOfNotes[currentIndex]) == 3) nextNotePos.y = midNoteHeight;
+                        if (Math.Floor(yPositionOfNotes[currentIndex]) == 4) nextNotePos.y = maxNoteHeight;
                     }
                     //Debug.Log("xPositionOfNotes[currentIndex] is " + xPositionOfNotes[currentIndex]);
                 }

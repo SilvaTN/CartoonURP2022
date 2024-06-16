@@ -12,14 +12,6 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] ParticleSystem noteDissipationCorrect;
     [SerializeField] ParticleSystem noteDissipationWrong;
     //[SerializeField] AudioClip sound1, sound2, sound3, sound4;
-    private float charSpeed;
-    private float lastPos;
-    private int testCount = 0;
-    private bool pastInitialCount = false;
-    private int numberOfTimesSpeedCalculated = 0;
-    private float totalSpeed = 0;
-    private float minimumSpeed = 20;
-    private float maxSpeed = -30;
     private KeyCode correctKeyCode;
     private Collider noteTouched;
 
@@ -46,16 +38,107 @@ public class PlayerSound : MonoBehaviour
         }
     }
 
+    private bool NotePressedAction(KeyCode keyPressed)
+    {
+        if(Input.GetKeyDown(keyPressed))
+        {
+            if (keyPressed == correctKeyCode)
+            {
+                CorrectNotePressed();
+            }
+            else
+            {
+                WrongNotePressed();
+            }
+            return true;
+        } else
+        {
+            return false;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        correctKeyCode = 0;
-        lastPos = transform.position.x;
+        correctKeyCode = 0;        
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (NotePressedAction(KeyCode.Period))
+        {
+            //do nothing
+        } else if (NotePressedAction(KeyCode.Comma))
+        {
+            //do nothing
+        }
+        else if (NotePressedAction(KeyCode.M))
+        {
+            //do nothing
+        }
+        else if (NotePressedAction(KeyCode.N))
+        {
+            //do nothing
+        }
+
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        noteTouched = other;
+        if (other.CompareTag("NoteV"))
+        {
+            //Debug.Log("Touching left uwuwuwuwuwu");
+            correctKeyCode = KeyCode.Period;            
+        }
+        if (other.CompareTag("NoteC"))
+        {
+            //Debug.Log("Touching down qqqqqqqq");
+            correctKeyCode = KeyCode.Comma;
+        }
+        if (other.CompareTag("NoteX"))
+        {
+            //Debug.Log("Touching right jjjjjjjj");
+            correctKeyCode = KeyCode.M;
+        }
+        if (other.CompareTag("NoteZ"))
+        {
+            //Debug.Log("Touching right jjjjjjjj");
+            correctKeyCode = KeyCode.N;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        //noteTouched = null;
+        srcGuitar.mute = true; //if you run past note and don't play it, mute the correct guitar track.
+        correctKeyCode = 0;
+    }
+
+
+}
+
+
+
+//This below calculates speed of char.
+/* put this in the declarations at the top
+    private float charSpeed;
+    private float lastPos;
+    private int testCount = 0;
+    private bool pastInitialCount = false;
+    private int numberOfTimesSpeedCalculated = 0;
+    private float totalSpeed = 0;
+    private float minimumSpeed = 20;
+    private float maxSpeed = -30;
+    /*
+
+// put this in Start()
+    lastPos = transform.position.x;
+
+/* put this inside Update()
         testCount++;
         charSpeed = (transform.position.x - lastPos) / Time.deltaTime;
         lastPos = transform.position.x;
@@ -77,67 +160,4 @@ public class PlayerSound : MonoBehaviour
                 totalSpeed/numberOfTimesSpeedCalculated);
             testCount = 0;
             pastInitialCount = true;
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            if (KeyCode.LeftArrow == correctKeyCode)
-            {
-                CorrectNotePressed();
-            } else
-            {
-                WrongNotePressed();
-            }
-        } else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            if (KeyCode.DownArrow == correctKeyCode)
-            {
-                CorrectNotePressed();
-            }
-            else
-            {
-                WrongNotePressed();
-            }
-        } else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            if (KeyCode.RightArrow == correctKeyCode)
-            {
-                CorrectNotePressed();
-            }
-            else
-            {
-                WrongNotePressed();
-            }
-        }
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        noteTouched = other;
-        if (other.CompareTag("LeftNote"))
-        {
-            //Debug.Log("Touching left uwuwuwuwuwu");
-            correctKeyCode = KeyCode.LeftArrow;            
-        }
-        if (other.CompareTag("DownNote"))
-        {
-            //Debug.Log("Touching down qqqqqqqq");
-            correctKeyCode = KeyCode.DownArrow;
-        }
-        if (other.CompareTag("RightNote"))
-        {
-            //Debug.Log("Touching right jjjjjjjj");
-            correctKeyCode = KeyCode.RightArrow;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        //noteTouched = null;
-        srcGuitar.mute = true; //if you run past note and don't play it, mute the correct guitar track.
-        correctKeyCode = 0;
-    }
-
-
-}
+        }*/
