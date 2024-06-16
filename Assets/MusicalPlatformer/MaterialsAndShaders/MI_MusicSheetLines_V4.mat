@@ -63,23 +63,45 @@ Material:
     - _AlphaToMask: 0
     - _AlphaTransparency: 1
     - _Blend: 0
+    - _BumpEndPosition: 0.621
+    - _BumpEndPosition_1: 0.489
+    - _BumpEndPosition_2: 0.351
+    - _BumpEndSmoothness: 0.0156
+    - _BumpEndSmoothnessForAll: 0.0419
+    - _BumpEndSmoothness_1: 0.0249
+    - _BumpEndSmoothness_2: 0.0221
+    - _BumpHeight: -1.86
+    - _BumpPosition: -0.33
+    - _BumpSmoothness: 0.0043
+    - _BumpStartPosition: 0.282
+    - _BumpStartPosition_1: 0.417
+    - _BumpStartPosition_2: 0.552
+    - _BumpStartSmoothness: 0.0206
+    - _BumpStartSmoothnessForAll: 0.0341
+    - _BumpStartSmoothness_1: 0.0249
+    - _BumpStartSmoothness_2: 0.0306
+    - _BumpWidth: 0
     - _CastShadows: 0
     - _ColorTransition: 3.49
     - _Cull: 2
-    - _DepthFadeMultiplier: 11
+    - _DepthFadeMultiplier: 1
     - _DistortionMultiplier: 0.02
     - _DstBlend: 10
+    - _MainTextureOffsetU: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ScrollSpeedTemp: 0
     - _SrcBlend: 5
     - _Surface: 1
-    - _WaveAmplitude: 0.0272
+    - _WaveAmplitude: 0
     - _WaveQuantity: 1
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
+    - _BumpPositionAndSmoothness: {r: 0.07, g: 0, b: 0, a: 0}
     - _Color: {r: 0.199767, g: 0.15156636, b: 0.24528295, a: 1}
-    - _ColorAndTransparency: {r: 0, g: 0, b: 0, a: 0.8784314}
+    - _ColorAndTransparency: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
+    - _MainTextureTileUV: {r: 1, g: 6.82, b: 0, a: 0}
+    - _SmoothStepElevatedPlatform: {r: 0.07, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
