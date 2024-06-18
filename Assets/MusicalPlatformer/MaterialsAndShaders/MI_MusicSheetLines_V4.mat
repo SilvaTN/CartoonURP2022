@@ -66,6 +66,8 @@ Material:
     - _BumpEndPosition: 0.621
     - _BumpEndPosition_1: 0.489
     - _BumpEndPosition_2: 0.351
+    - _BumpEndPosition_3: 0.222
+    - _BumpEndPosition_4: 0.085
     - _BumpEndSmoothness: 0.0156
     - _BumpEndSmoothnessForAll: 0.0419
     - _BumpEndSmoothness_1: 0.0249
@@ -76,6 +78,8 @@ Material:
     - _BumpStartPosition: 0.282
     - _BumpStartPosition_1: 0.417
     - _BumpStartPosition_2: 0.552
+    - _BumpStartPosition_3: 0.686
+    - _BumpStartPosition_4: 0.818
     - _BumpStartSmoothness: 0.0206
     - _BumpStartSmoothnessForAll: 0.0341
     - _BumpStartSmoothness_1: 0.0249
@@ -83,16 +87,31 @@ Material:
     - _BumpWidth: 0
     - _CastShadows: 0
     - _ColorTransition: 3.49
+    - _ColorTransitionPosition: 0.1
+    - _ColorTransitionPositionAdd: 17.51
+    - _ColorTransitionPositionMultiply: 0.1
     - _Cull: 2
     - _DepthFadeMultiplier: 1
     - _DistortionMultiplier: 0.02
     - _DstBlend: 10
+    - _LerpBetweenPlainAndColourful: 0
     - _MainTextureOffsetU: 0
+    - _NoiseColorScale: 2
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ScrollSpeedTemp: 0
     - _SrcBlend: 5
     - _Surface: 1
+    - _UNUSED_BumpEndSmoothness: 0.1
+    - _UNUSED_BumpEndSmoothness_1: 0.1
+    - _UNUSED_BumpEndSmoothness_2: 0.1
+    - _UNUSED_BumpEndSmoothness_3: 0.1
+    - _UNUSED_BumpEndSmoothness_4: 0.1
+    - _UNUSED_BumpStartSmoothness: 0.1
+    - _UNUSED_BumpStartSmoothness_1: 0.1
+    - _UNUSED_BumpStartSmoothness_2: 0.1
+    - _UNUSED_BumpStartSmoothness_3: 0.1
+    - _UNUSED_BumpStartSmoothness_4: 0.1
     - _WaveAmplitude: 0
     - _WaveQuantity: 1
     - _ZTest: 4
@@ -101,7 +120,9 @@ Material:
     m_Colors:
     - _BumpPositionAndSmoothness: {r: 0.07, g: 0, b: 0, a: 0}
     - _Color: {r: 0.199767, g: 0.15156636, b: 0.24528295, a: 1}
-    - _ColorAndTransparency: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
+    - _ColorAndTransparency: {r: 1, g: 1, b: 1, a: 0.8}
     - _MainTextureTileUV: {r: 1, g: 6.82, b: 0, a: 0}
+    - _NoiseSpeedUV: {r: 0, g: -0.1, b: 0, a: 0}
+    - _NoiseTileUV: {r: 1, g: 1, b: 0, a: 0}
     - _SmoothStepElevatedPlatform: {r: 0.07, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
