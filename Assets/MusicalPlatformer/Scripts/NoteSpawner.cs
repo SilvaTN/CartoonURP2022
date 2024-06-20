@@ -62,7 +62,7 @@ public class NoteSpawner : MonoBehaviour
         0.5f, 0.6f, 0.7f, 0.7f, 0.7f, 4.7f, 4.7f, 4.7f, 4.6f, 4.5f, //80
         3.7f, 3.7f, 2.7f, 0.7f, 0.7f, 0.6f, 0.5f, 0.6f, 0.7f, 0.7f, //90
         //96 is start of first chorus segment
-        0.7f, 4.7f, 4.7f, 4.6f, 4.5f, 0, 0, 0, 0, 0, //100
+        0.7f, 4.7f, 4.7f, 4.7f, 4.7f, 0, 0, 0, 0, 0, //100
         //103 is start of second chorus segment
         //109 is start of first outro segment
         4, 0, 0, 0, 0, 0, 0, 0, 0, 0, //110
