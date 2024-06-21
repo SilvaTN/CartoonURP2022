@@ -51,13 +51,27 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Float: 1111
+    - _AddToSineOfTime: 1.01
+    - _AdjustToTempoViaTimeAddOffset: 0
+    - _Float: 0
+    - _MinValueToPowerOf: 2
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _QuicknessOfOneBeat: 2
+    - _ScaleMagnitudeFloat: 0
+    - _ScaleSizeRange: 0.05
+    - _ScaleSpeed: 10
+    - _TheAboveMultiplied: 0.04
+    - _TheAboveToPowerOf: 2
+    - _TimeMultiplier: 12.01
+    - _TimeSpentPerScale: 1.01
+    - _VerticalMovementRange: 0.00142
     - _ramp: 46.78
     - _yMultiply: 40.55
     m_Colors:
     - _AddToPosition: {r: 0.1, g: 0.2, b: 0, a: 0}
     - _Color: {r: 0.92941177, g: 0.3529412, b: 1, a: 0}
     - _NormalMultiplier: {r: 0, g: 0, b: 0, a: 0}
+    - _ScaleMagnitude: {r: 0, g: 0, b: 0, a: 0}
+    - _Vector3: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
