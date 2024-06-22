@@ -8,7 +8,6 @@ public class PlayerSound : MonoBehaviour
     //[SerializeField] AudioClip[] wrongSounds;
     [SerializeField] AudioSource wrongSound;
     [SerializeField] AudioSource srcGuitar;
-    [SerializeField] ParticleSystem trailNote;
     [SerializeField] ParticleSystem noteDissipationCorrect;
     [SerializeField] ParticleSystem noteDissipationWrong;
     //[SerializeField] AudioClip sound1, sound2, sound3, sound4;
@@ -20,7 +19,6 @@ public class PlayerSound : MonoBehaviour
         srcGuitar.mute = false;
         noteDissipationCorrect.Play();
         Destroy(noteTouched.gameObject);
-        trailNote.Play();
         correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
     }
 

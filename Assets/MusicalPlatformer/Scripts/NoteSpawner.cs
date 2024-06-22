@@ -101,18 +101,18 @@ public class NoteSpawner : MonoBehaviour
 
                 if (yPositionOfNotes[currentIndex] == 0f || yPositionOfNotes[currentIndex] == 2f || yPositionOfNotes[currentIndex] == 3f || yPositionOfNotes[currentIndex] == 4f) 
                 {                    
-                    Instantiate(noteV, nextNotePos, Quaternion.identity);
+                    Instantiate(noteV, nextNotePos, Quaternion.Euler(-90f,0f,0f));
                 } else if (yPositionOfNotes[currentIndex] == 0.5f || yPositionOfNotes[currentIndex] == 2.5f || yPositionOfNotes[currentIndex] == 3.5f || yPositionOfNotes[currentIndex] == 4.5f)
                 {
-                    Instantiate(noteC, nextNotePos, Quaternion.identity);
+                    Instantiate(noteC, nextNotePos, Quaternion.Euler(-90f, 0f, 0f));
                 }
                 else if (yPositionOfNotes[currentIndex] == 0.6f || yPositionOfNotes[currentIndex] == 2.6f || yPositionOfNotes[currentIndex] == 3.6f || yPositionOfNotes[currentIndex] == 4.6f)
                 {
-                    Instantiate(noteX, nextNotePos, Quaternion.identity);
+                    Instantiate(noteX, nextNotePos, Quaternion.Euler(-90f, 0f, 0f));
                 }
                 else if (yPositionOfNotes[currentIndex] == 0.7f || yPositionOfNotes[currentIndex] == 2.7f || yPositionOfNotes[currentIndex] == 3.7f || yPositionOfNotes[currentIndex] == 4.7f)
                 {
-                    Instantiate(noteZ, nextNotePos, Quaternion.identity);
+                    Instantiate(noteZ, nextNotePos, Quaternion.Euler(-90f, 0f, 0f));
                 }
                 currentIndex++;
                 //Debug.Log(currentIndex + " is the current index and list size is " + listSize);
