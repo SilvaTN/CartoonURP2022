@@ -64,7 +64,7 @@ Material:
     - _ScaleSpeed: 10
     - _TheAboveMultiplied: 0.04
     - _TheAboveToPowerOf: 2
-    - _TimeMultiplier: 12.01
+    - _TimeMultiplier: 11.22
     - _TimeSpentPerScale: 1.01
     - _VerticalMovementRange: 0.005
     - _ramp: 46.78

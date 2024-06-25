@@ -52,7 +52,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AddSineOffsetViaMultiplyingWorldPosX: 0.4
-    - _AddToSineOfTime: 1.01
+    - _AddToSineOfTime: 0
     - _AdjustToTempoViaTimeAddOffset: 0
     - _Float: 0
     - _MinValueToPowerOf: 2
@@ -62,9 +62,9 @@ Material:
     - _ScaleMagnitudeFloat: 0
     - _ScaleSizeRange: 0.05
     - _ScaleSpeed: 10
-    - _TheAboveMultiplied: 0.04
-    - _TheAboveToPowerOf: 2
-    - _TimeMultiplier: 12.01
+    - _TheAboveMultiplied: 0.2
+    - _TheAboveToPowerOf: 19.86
+    - _TimeMultiplier: 11.22
     - _TimeSpentPerScale: 1.01
     - _VerticalMovementRange: 0.005
     - _ramp: 46.78

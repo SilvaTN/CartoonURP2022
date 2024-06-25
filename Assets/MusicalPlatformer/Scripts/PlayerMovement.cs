@@ -20,15 +20,15 @@ public class PlayerMovement : MonoBehaviour
 
         if (runSpeed == 0)
         {
-            runSpeed = 20f;
+            runSpeed = 15f;
         }
         if (jumpForce == 0)
         {
-            jumpForce = 20f;
+            jumpForce = 25f;
         }
         if (customGravity == 0)
         {
-            customGravity = -9.8f;
+            customGravity = -50f;
         }
         cForce = GetComponent<ConstantForce>();
         cForce.force = new Vector3(0, customGravity, 0);

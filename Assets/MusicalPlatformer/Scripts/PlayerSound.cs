@@ -31,8 +31,8 @@ public class PlayerSound : MonoBehaviour
         if (noteTouched)
         {
             noteDissipationWrong.Play();
-            Destroy(noteTouched.gameObject);
-            correctKeyCode = 0; //Resets the correctKeyCode after playing incorrectly.
+            //Destroy(noteTouched.gameObject);
+            //correctKeyCode = 0; //Resets the correctKeyCode after playing incorrectly.
         }
     }
 
@@ -64,7 +64,7 @@ public class PlayerSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //maybe replace these with switch statements bc it looks more clean for when you dont wanna do nothing inside.
         if (NotePressedAction(KeyCode.Period))
         {
             //do nothing
