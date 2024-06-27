@@ -240,10 +240,10 @@
             "m_Id": "4102d88f4d624931a9e5923957dab607"
         },
         {
-            "m_Id": "a70047e74d3a4242b4ad3dc603463561"
+            "m_Id": "6c7bdd1354c44971a40ef7aea5ac32bf"
         },
         {
-            "m_Id": "6c7bdd1354c44971a40ef7aea5ac32bf"
+            "m_Id": "a70047e74d3a4242b4ad3dc603463561"
         }
     ]
 }
@@ -491,7 +491,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "613395b434a44a309d75cb9a8b5c6181",
     "m_Id": 0,
-    "m_DisplayName": "Color",
+    "m_DisplayName": "ColorBottom",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -542,10 +542,10 @@
     "m_Guid": {
         "m_GuidSerialized": "b8c2e99a-0828-4a39-a6e3-7d84f4ed4ffe"
     },
-    "m_Name": "Color (1)",
+    "m_Name": "ColorTop",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Color (1)",
-    "m_DefaultReferenceName": "_Color_1",
+    "m_RefNameGeneratedByDisplayName": "ColorTop",
+    "m_DefaultReferenceName": "_ColorTop",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -679,10 +679,10 @@
     "m_Guid": {
         "m_GuidSerialized": "95a1c5ed-eadd-4fef-a137-600bf26d623d"
     },
-    "m_Name": "Color",
+    "m_Name": "ColorBottom",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Color",
-    "m_DefaultReferenceName": "_Color",
+    "m_RefNameGeneratedByDisplayName": "ColorBottom",
+    "m_DefaultReferenceName": "_ColorBottom",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -807,7 +807,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "bad76025bf19499f9106135024a12134",
     "m_Id": 0,
-    "m_DisplayName": "Color (1)",
+    "m_DisplayName": "ColorTop",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
