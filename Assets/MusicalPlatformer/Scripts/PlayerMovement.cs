@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed;
     [SerializeField] float customGravity;
     [SerializeField] bool isOnGround = true;
+    [SerializeField] Animator GuitarAnimator;
     private ConstantForce cForce;
     private Vector3 forceDirection;
 
@@ -46,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
             //call JumpTrail() after 0.1 seconds of being in the air (maybe have a counter inside FixedUpdate)
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); //ForceMode.Impulse applies force immediately.
             isOnGround = false;
+            GuitarAnimator.Play("GuitarChar_Jump");
         }
     }
     
@@ -60,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
+            GuitarAnimator.Play("GuitarChar_Running");
         }
 
         if (collision.gameObject.CompareTag("Obstacle"))
