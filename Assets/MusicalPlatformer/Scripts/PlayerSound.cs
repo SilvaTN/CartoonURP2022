@@ -10,6 +10,7 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] AudioSource srcGuitar;
     [SerializeField] ParticleSystem noteDissipationCorrect;
     [SerializeField] ParticleSystem noteDissipationWrong;
+    [SerializeField] GameObject wrongPatternOnChar;
     //[SerializeField] AudioClip sound1, sound2, sound3, sound4;
     private KeyCode correctKeyCode;
     private Collider noteTouched;
@@ -26,14 +27,16 @@ public class PlayerSound : MonoBehaviour
     {
         srcGuitar.mute = true;     
         wrongSound.Play();
-        //int soundIndex = Random.Range(0, 4); //which of the four wrongSounds to play
-        //srcWrongSounds.PlayOneShot(wrongSounds[soundIndex]); //play Xth sound
-        if (noteTouched)
-        {
-            noteDissipationWrong.Play();
-            //Destroy(noteTouched.gameObject);
-            //correctKeyCode = 0; //Resets the correctKeyCode after playing incorrectly.
-        }
+        noteDissipationWrong.Play();
+        wrongPatternOnChar.SetActive(true);
+        StartCoroutine(waiter());
+    }
+
+    IEnumerator waiter()
+    {        
+        //Wait for X seconds
+        yield return new WaitForSeconds(0.2f);
+        wrongPatternOnChar.SetActive(false);
     }
 
     private bool NotePressedAction(KeyCode keyPressed)
