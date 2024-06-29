@@ -6,24 +6,30 @@ using System.IO;
 
 public class SaveCharPositionPressed : MonoBehaviour
 {
-    private int currentIndex;
+    private string filePath;
 
-    // Start is called before the first frame update
     void Start()
     {
-        currentIndex = 0;       
+        // Set the file path to the specific directory
+        filePath = Application.dataPath + "/MusicalPlatformer/Scripts/player_positions.txt";
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
-            //Debug.Log("('LeftNote', " + currentIndex + ", " + transform.position.x + ")");
-            Debug.Log("index: " + currentIndex + ", X position: " + transform.position.x);
-            currentIndex++;
+            SavePosition();
         }
-
     }
 
+    void SavePosition()
+    {
+        Vector2 position = new Vector2(transform.position.x, transform.position.y);
+        string positionString = position.x + "," + position.y;
+
+        // Append the position to the file
+        File.AppendAllText(filePath, positionString + "\n");
+
+        Debug.Log("Position saved: " + positionString);
+    }
 }
