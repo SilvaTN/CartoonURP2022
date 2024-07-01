@@ -45,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tx_Opacity_Mask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 6d2a8cbcb99c80b4d9d361684a4e7244, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tx_Vertex_Displacement_Mask:
@@ -65,11 +65,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tx_Water_Color:
-        m_Texture: {fileID: 2800000, guid: f746776da4a21f048a86665cab903ce4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6d2a8cbcb99c80b4d9d361684a4e7244, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tx_Water_Distxn:
-        m_Texture: {fileID: 2800000, guid: a1402840cfc8de34098f18c0e5ce6489, type: 3}
+        m_Texture: {fileID: 2800000, guid: d8658608d3c63c049863884995ffcf74, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Water_Distxn:
@@ -105,9 +105,9 @@ Material:
     - _Displacement_Gradient_Mask_1_Power: 3
     - _Displacement_Gradient_Mask_Power: 3
     - _Distortion_Intensity: 1
-    - _Distxn_Intensity: 0.2
+    - _Distxn_Intensity: 0.1
     - _DstBlend: 10
-    - _Fresnel_Power: 1
+    - _Fresnel_Power: 2
     - _Fresnel_Power_Ratio: 4
     - _Multiply_Tx_Water_Color: 1
     - _QueueControl: 0
@@ -115,14 +115,14 @@ Material:
     - _SmoothStep1: 0
     - _SmoothStep2: 0
     - _SmoothStepEdge1: 0
-    - _SmoothStepEdge2: 0.3
+    - _SmoothStepEdge2: 0
     - _SrcBlend: 5
     - _Surface: 1
     - _UDistortionMultiplier: -0.41
     - _VDistortionMultiplier: 0.25
     - _VertexPos_Gradient_Power: 11
     - _VertexPos_Offset_Intensity: 0.003
-    - _Vertex_Displacement_Intensity: 0.02
+    - _Vertex_Displacement_Intensity: 0
     - _Water_Color_Intensity: 1
     - _Water_Color_Intensity_REDUNDANT: 1
     - _ZTest: 4
@@ -130,21 +130,22 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _ColorOfTxFadedAlpha: {r: 1, g: 0.36649156, b: 0.24999997, a: 0}
-    - _Color_Multiply_All: {r: 0.8396226, g: 0.58219117, b: 0.75445104, a: 0}
+    - _Color_Multiply_All: {r: 1, g: 1, b: 1, a: 0}
     - _Color_Overall: {r: 0.495283, g: 0.74266714, b: 1, a: 0}
     - _Color_White_Tx_Override: {r: 0, g: 0, b: 0, a: 0}
     - _Emissive_Color: {r: 0, g: 0, b: 0, a: 0}
-    - _Fresnel_Inner_Color_A: {r: 0.495283, g: 1, b: 0.8967256, a: 0}
+    - _Fresnel_Inner_Color_A: {r: 0, g: 0, b: 0, a: 0}
     - _Fresnel_Outer_Color_A: {r: 0, g: 0, b: 0, a: 0}
-    - _Fresnel_Outer_Color_B: {r: 1, g: 0.8993568, b: 0.7216981, a: 0}
+    - _Fresnel_Outer_Color_B: {r: 0, g: 0, b: 0, a: 0}
     - _PolarCentreXY: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _PolarTileAndSpeed: {r: 1, g: 1, b: 0.4, a: 0.1}
-    - _UV_Color_Tile_and_Offset_Speed: {r: 2, g: 2, b: -0.2, a: -1}
+    - _UV_Color_Tile_and_Offset_Speed: {r: 2, g: 2, b: 0, a: -1}
     - _UV_Distxn_Tile_and_Offset_Speed: {r: 1, g: 1, b: 0.1, a: -0.8}
     - _UV_Distxn_Tiling_and_Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _UV_Opacity_Mask_Tile_and_Offset_Speed: {r: 1, g: 1, b: 0.1, a: -0.4}
+    - _UV_Opacity_Mask_Tile_and_Offset_Speed: {r: 2, g: 2, b: 0, a: -1}
     - _UV_VertexPos_Tile_and_Offset_Speed: {r: 1, g: 1, b: 0.1, a: -0.4}
-    - _White_Overrides_Tx_Water_Color: {r: 0, g: 0.7075472, b: 0.6867646, a: 0}
+    - _White_Overrides_Tx_Water_Color: {r: 0.14097543, g: 0.22739077, b: 0.3018868,
+        a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3478622649221847932
 MonoBehaviour:

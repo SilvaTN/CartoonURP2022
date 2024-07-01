@@ -114,15 +114,15 @@ Material:
     - _QueueOffset: 5
     - _SmoothStep1: 0
     - _SmoothStep2: 0
-    - _SmoothStepEdge1: -0.12
-    - _SmoothStepEdge2: 0.4
+    - _SmoothStepEdge1: 0
+    - _SmoothStepEdge2: 0
     - _SrcBlend: 5
     - _Surface: 1
     - _UDistortionMultiplier: -0.41
     - _VDistortionMultiplier: 0.25
     - _VertexPos_Gradient_Power: 11
     - _VertexPos_Offset_Intensity: 0.003
-    - _Vertex_Displacement_Intensity: -0.003
+    - _Vertex_Displacement_Intensity: -0.01
     - _Water_Color_Intensity: 1
     - _Water_Color_Intensity_REDUNDANT: 1
     - _ZTest: 4

@@ -101,7 +101,8 @@ Material:
     - _BloomMultiplier: 1
     - _CastShadows: 0
     - _Cull: 1
-    - _Depth_Fade_Distance: 0
+    - _DecreaseBottomSize: 1
+    - _Depth_Fade_Distance: 1
     - _Displacement_Gradient_Mask_Power: 3
     - _Distortion_Intensity: 1
     - _Distxn_Intensity: 0.2
@@ -129,7 +130,7 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _ColorOfTxFadedAlpha: {r: 1, g: 0.36649156, b: 0.24999997, a: 0}
-    - _Color_Multiply_All: {r: 1, g: 1, b: 1, a: 0}
+    - _Color_Multiply_All: {r: 0.8867924, g: 0.52287287, b: 0.85506064, a: 0}
     - _Color_Overall: {r: 0.5613208, g: 0.97853637, b: 1, a: 0}
     - _Color_White_Tx_Override: {r: 0, g: 0, b: 0, a: 0}
     - _Emissive_Color: {r: 0, g: 0, b: 0, a: 0}
@@ -145,7 +146,7 @@ Material:
     - _UV_Opacity_Mask_Tile_and_Offset_Speed: {r: 1, g: 0.6, b: 0, a: 0}
     - _UV_VertexPos_Tile_and_Offset_Speed: {r: 1, g: 1, b: 0.1, a: -0.4}
     - _White_Override_Tx_Water_Color: {r: 0, g: 0, b: 0, a: 0}
-    - _White_Overrides_Tx_Water_Color: {r: 1, g: 0, b: 0.9176221, a: 0}
+    - _White_Overrides_Tx_Water_Color: {r: 0.764151, g: 0.5298594, b: 0.5298594, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3478622649221847932
 MonoBehaviour:
