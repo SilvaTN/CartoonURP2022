@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
             isOnGround = false;
             GuitarAnimator.SetBool("isOnGround", isOnGround);
             isJumping = true;
-            GuitarAnimator.Play("GuitarChar_Jump");
+            GuitarAnimator.Play("GuitarChar_Jump_LessFrames");
             //jumpPoof.transform = transform;
             jumpPoof.Play();
         }
@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
                 if ((previousHeight - fallThreshold) > currentHeight)
                 {
                     isFalling = true;
-                    GuitarAnimator.Play("GuitarChar_FallJump");
+                    GuitarAnimator.Play("GuitarChar_FallJump_LessFrames");
                 }
             }
             previousHeight = currentHeight;
