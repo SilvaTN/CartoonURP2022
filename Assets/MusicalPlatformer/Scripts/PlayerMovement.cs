@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float customGravity;
     [SerializeField] bool isOnGround = true;
     [SerializeField] ParticleSystem jumpPoof;
+    [SerializeField] ParticleSystem jumpLandPoof;
     [SerializeField] Animator GuitarAnimator;
     private ConstantForce cForce;
     private Vector3 forceDirection;
@@ -56,7 +57,6 @@ public class PlayerMovement : MonoBehaviour
             GuitarAnimator.SetBool("isOnGround", isOnGround);
             isJumping = true;
             GuitarAnimator.Play("GuitarChar_Jump_LessFrames");
-            //jumpPoof.transform = transform;
             jumpPoof.Play();
         }
         if (isJumping)
@@ -91,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
             GuitarAnimator.SetBool("isOnGround", isOnGround);
             isJumping = false;
             isFalling = false;
+            jumpLandPoof.Play();
             //GuitarAnimator.Play("GuitarChar_Running");
         }
 
