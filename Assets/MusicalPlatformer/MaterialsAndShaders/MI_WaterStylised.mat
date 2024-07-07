@@ -47,14 +47,14 @@ Material:
     m_Ints: []
     m_Floats:
     - _NormalStrength: 2
-    - _OffsetV: -1.47
+    - _OffsetV: -1.13
     - _Opacity: 0.3
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.5
     - _TileOverallScaleMultiply: 0.1
     - _WaveAmplitude: 0.1
-    - _WaveQuantity: 1
+    - _WaveQuantity: 2
     m_Colors:
     - _Color: {r: 0.18396229, g: 0.71043813, b: 1, a: 0}
     - _Emission: {r: 0, g: 0.33306658, b: 0.41509432, a: 0}
