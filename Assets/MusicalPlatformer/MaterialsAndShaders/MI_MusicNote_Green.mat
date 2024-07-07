@@ -54,11 +54,13 @@ Material:
     - _AddSineOffsetViaMultiplyingWorldPosX: 0.4
     - _AddToSineOfTime: 1.01
     - _AdjustToTempoViaTimeAddOffset: 0
+    - _DecreasedSizeNotPlayed: 0.7
     - _Float: 0
     - _MinValueToPowerOf: 2
     - _QueueControl: 0
     - _QueueOffset: 0
     - _QuicknessOfOneBeat: 2
+    - _RotationSpeed: 300
     - _ScaleMagnitudeFloat: 0
     - _ScaleSizeRange: 0.05
     - _ScaleSpeed: 10

@@ -11,6 +11,7 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] ParticleSystem noteDissipationCorrect;
     [SerializeField] ParticleSystem noteDissipationWrong;
     [SerializeField] GameObject wrongPatternOnChar;
+    [SerializeField] float rotationSpeed;
     //[SerializeField] AudioClip sound1, sound2, sound3, sound4;
     private KeyCode correctKeyCode;
     private Collider noteTouched;
@@ -61,6 +62,10 @@ public class PlayerSound : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (rotationSpeed == 0)
+        {
+            rotationSpeed = 900f;
+        }
         correctKeyCode = 0;        
     }
 
@@ -110,6 +115,17 @@ public class PlayerSound : MonoBehaviour
             //Debug.Log("Touching right jjjjjjjj");
             correctKeyCode = KeyCode.N;
         }
+        //other.transform.localScale *= 0.8f;
+        //Renderer renderer = other.GetComponent<Renderer>();
+        //if (renderer != null)
+        //{
+
+        // Find the property ID of SpinAmount
+        //int spinAmountPropertyID = Shader.PropertyToID("_RotationSpeed");
+
+        // Set the SpinAmount property of the material to 360
+        //renderer.material.SetFloat(spinAmountPropertyID, 660f);
+        //}
     }
 
     private void OnTriggerExit(Collider other)

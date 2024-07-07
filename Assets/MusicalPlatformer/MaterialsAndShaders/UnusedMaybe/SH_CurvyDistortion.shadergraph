@@ -5195,7 +5195,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "24fa87f2dc6d4b52b5f9605fcfc0969a",
     "m_Id": 0,
-    "m_DisplayName": "ColorTransitionPosition",
+    "m_DisplayName": "ColorTransitionPositionMultiply",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

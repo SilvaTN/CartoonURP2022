@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Restart()
     {
+        //playerMovement.enabled = false;
         Time.timeScale = 1f / slowness;
         Time.fixedDeltaTime = Time.fixedDeltaTime / slowness; //not sure this line is necessary idk if i use fixedDeltaTime anywhere.
         instrumentals.pitch = pitchSlowness;
@@ -64,6 +65,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         Time.fixedDeltaTime = Time.fixedDeltaTime * slowness;
         instrumentals.pitch = 1f;
+        //playerMovement.enabled = true;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
