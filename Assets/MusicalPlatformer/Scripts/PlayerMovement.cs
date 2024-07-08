@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] bool moveToStartPosition = true;
     [SerializeField] GameManager gameManager;
     [SerializeField] Rigidbody rb;
     [SerializeField] float jumpForce;
@@ -22,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         //Keep the start position the same in relation to the position of the notes.
-        transform.position = new Vector3(136.91f, 3f, 104.42f); // sets char start position.       
+        if (moveToStartPosition) transform.position = new Vector3(136.91f, 3f, 104.42f); // sets char start position.       
         
         if (runSpeed == 0)
         {

@@ -24,8 +24,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2D_542947c1de304e2caacc7555dff37fe9_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 54b1295ccf52d3a4685e77e5c1d8c368, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_82d38c9aad0c4a228d86e2cfa2844274_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 07414a25c8e5ee145a011c37305a04e8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxFoam:
+        m_Texture: {fileID: 2800000, guid: 5fecd4e4c43e8e247901da9ae9e551e7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxNormalMap:
@@ -46,19 +54,29 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _NormalStrength: 2
+    - _FoamThickness: 0.1
+    - _HeightOscillation: 0.05
+    - _NormalStrength: 1
     - _OffsetV: -1.13
-    - _Opacity: 0.3
+    - _Opacity: 1
+    - _OpacityFoamAndWater: 0.496
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 0.5
+    - _Smoothness: 0.7
     - _TileOverallScaleMultiply: 0.1
-    - _WaveAmplitude: 0.1
+    - _TxFoamSpeedU: -0.04
+    - _WaterHeightOffset: 0
+    - _WaterOpacity: 0.899
+    - _WaveAmplitude: 0.14
     - _WaveQuantity: 2
+    - _WaveSpeed: 1
     m_Colors:
-    - _Color: {r: 0.18396229, g: 0.71043813, b: 1, a: 0}
-    - _Emission: {r: 0, g: 0.33306658, b: 0.41509432, a: 0}
-    - _TileWorldUV: {r: 1, g: 1, b: 0, a: 0}
+    - _Color: {r: 0, g: 0.9804158, b: 1, a: 0}
+    - _ColorFoam: {r: 1, g: 0, b: 0, a: 0}
+    - _Emission: {r: 0, g: 0.7143944, b: 0.764151, a: 0}
+    - _EmissionFoam: {r: 1, g: 1, b: 1, a: 0}
+    - _OffsetWorldUV: {r: 0, g: -0.76, b: 0, a: 0}
+    - _TileWorldUV: {r: 1, g: 9, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6010216137488352037
 MonoBehaviour:

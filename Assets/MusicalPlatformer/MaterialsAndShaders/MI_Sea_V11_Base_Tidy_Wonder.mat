@@ -87,8 +87,8 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _BaseColorA: {r: 0, g: 0.640811, b: 0.7830189, a: 0.7647059}
-    - _BaseColorB: {r: 0, g: 0.6104396, b: 0.6415094, a: 0.6392157}
+    - _BaseColorA: {r: 0.12967247, g: 0.74672526, b: 0.8867924, a: 0.7647059}
+    - _BaseColorB: {r: 0.18823424, g: 0.8168214, b: 0.8490566, a: 0.6392157}
     - _BaseDistortionTileAndSpeed: {r: 15, g: 22, b: 0.2, a: 0.1}
     - _BaseTileAndSpeed: {r: 11, g: 11, b: 0.01, a: 0.03}
     - _ColorOverallMultiplier: {r: 1, g: 0.95686275, b: 0.7490196, a: 0}
