@@ -1308,7 +1308,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: -11.914652, y: -2.2576573, z: 77.14492}
+        value: {x: -11.914652, y: -2.2576573, z: 127.337105}
         inSlope: {x: Infinity, y: Infinity, z: Infinity}
         outSlope: {x: Infinity, y: Infinity, z: Infinity}
         tangentMode: 0
@@ -1317,7 +1317,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5416667
-        value: {x: -11.914652, y: -2.2576573, z: 77.14492}
+        value: {x: -11.914652, y: -2.2576573, z: 127.337105}
         inSlope: {x: Infinity, y: Infinity, z: Infinity}
         outSlope: {x: Infinity, y: Infinity, z: Infinity}
         tangentMode: 0
@@ -1326,7 +1326,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5833333
-        value: {x: -11.946462, y: -2.347152, z: 89.078575}
+        value: {x: -11.946462, y: -2.347152, z: 106.06089}
         inSlope: {x: Infinity, y: Infinity, z: Infinity}
         outSlope: {x: Infinity, y: Infinity, z: Infinity}
         tangentMode: 0
@@ -1335,7 +1335,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.625
-        value: {x: -11.946462, y: -2.347152, z: 89.078575}
+        value: {x: -11.946462, y: -2.347152, z: 106.06089}
         inSlope: {x: Infinity, y: Infinity, z: Infinity}
         outSlope: {x: Infinity, y: Infinity, z: Infinity}
         tangentMode: 0
@@ -6914,7 +6914,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 77.14492
+        value: 127.337105
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -6923,7 +6923,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5416667
-        value: 77.14492
+        value: 127.337105
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -6932,7 +6932,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5833333
-        value: 89.078575
+        value: 106.06089
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -6941,7 +6941,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.625
-        value: 89.078575
+        value: 106.06089
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -10916,7 +10916,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: GuitarChar/Root/Leg_R/LowerLeg_R/FootMain_R
+    path: GuitarChar/Root
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -10928,7 +10928,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: GuitarChar/Root/Leg_R/LowerLeg_R/FootMain_R
+    path: GuitarChar/Root
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -10940,7 +10940,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: GuitarChar/Root/Leg_R/LowerLeg_R/FootMain_R
+    path: GuitarChar/Root
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -11312,7 +11312,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: GuitarChar/Root
+    path: GuitarChar/Root/Leg_R/LowerLeg_R/FootMain_R
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -11324,7 +11324,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: GuitarChar/Root
+    path: GuitarChar/Root/Leg_R/LowerLeg_R/FootMain_R
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -11336,7 +11336,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: GuitarChar/Root
+    path: GuitarChar/Root/Leg_R/LowerLeg_R/FootMain_R
     classID: 4
     script: {fileID: 0}
     flags: 0
