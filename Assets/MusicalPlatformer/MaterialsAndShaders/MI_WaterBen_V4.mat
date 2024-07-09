@@ -106,7 +106,7 @@ Material:
     - _WarpEdgesTest: 0
     m_Colors:
     - _AdditionalFoamSmoothStep: {r: 0.27, g: 0.1, b: 0, a: 0}
-    - _Color: {r: 0.32694018, g: 0.7975562, b: 0.8773585, a: 0}
+    - _Color: {r: 0.26032394, g: 0.6163406, b: 0.735849, a: 0}
     - _EdgesFoamColor: {r: 1, g: 1, b: 1, a: 0}
     - _FoamColor: {r: 0.79045033, g: 0.87436163, b: 0.8773585, a: 0}
     - _NormalSpeed1: {r: -0.025, g: 0.0125, b: 0, a: 0}
