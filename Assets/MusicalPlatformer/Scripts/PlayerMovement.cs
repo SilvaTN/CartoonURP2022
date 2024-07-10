@@ -39,9 +39,9 @@ public class PlayerMovement : MonoBehaviour
         }
         cForce = GetComponent<ConstantForce>();
         cForce.force = new Vector3(0, customGravity, 0);
-
-        previousHeight = transform.position.y;
+                
         if (fallThreshold == 0) fallThreshold = 0.01f;
+        previousHeight = transform.position.y - (fallThreshold * 100);
 
     }
 
@@ -72,6 +72,9 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
             previousHeight = currentHeight;
+        } else
+        {
+            previousHeight = transform.position.y - (fallThreshold * 100); //otherwise jump fall plays immediately after jump.
         }
         
 
@@ -93,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
             isFalling = false;
             jumpLandPoof.Play();
+            //GuitarAnimator.Play("GuitarChar_SquashRunning");
             //GuitarAnimator.Play("GuitarChar_Running");
         }
 
