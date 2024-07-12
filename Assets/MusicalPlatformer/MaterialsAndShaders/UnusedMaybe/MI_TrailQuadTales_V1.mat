@@ -54,7 +54,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DistortionMultiplier: 0.1
+    - _DistortionMultiplier: 0.05
     - _DistortionPositiveNegativeRatio: -0.52
     - _DistortionSpeedU: -0.6
     - _GradientDissolveMultiplier: 4
@@ -62,11 +62,11 @@ Material:
     - _IsMultipliedWithTxColor: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _TrailSpeed: -1.5
+    - _TrailSpeed: 2
     - _TxColorContrastPower: 1.3
     - _TxMainColorContrastPower: 1
     - _TxMainSizeCenteredV: 1
-    - _TxMainSizeU: 3
+    - _TxMainSizeU: 1
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 0}
     - _DistortionTilingUV: {r: 1, g: 0.5, b: 0, a: 0}
