@@ -12,6 +12,8 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] ParticleSystem noteDissipationWrong;
     [SerializeField] GameObject wrongPatternOnChar;
     [SerializeField] float rotationSpeed;
+    [SerializeField] float noteSizeScaleFactor = 1.4f;
+    private Vector3 noteSizeOriginalScale;
     //[SerializeField] AudioClip sound1, sound2, sound3, sound4;
     private KeyCode correctKeyCode;
     private Collider noteTouched;
@@ -94,7 +96,9 @@ public class PlayerSound : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        noteSizeOriginalScale = other.transform.localScale;
         noteTouched = other;
+        other.transform.localScale *= noteSizeScaleFactor;
         if (other.CompareTag("NoteV"))
         {
             //Debug.Log("Touching left uwuwuwuwuwu");
@@ -131,6 +135,7 @@ public class PlayerSound : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         //noteTouched = null;
+        other.transform.localScale = noteSizeOriginalScale;
         srcGuitar.mute = true; //if you run past note and don't play it, mute the correct guitar track.
         correctKeyCode = 0;
     }
