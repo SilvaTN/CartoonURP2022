@@ -10,7 +10,7 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] AudioSource srcGuitar;
     [SerializeField] ParticleSystem noteDissipationCorrect;
     [SerializeField] ParticleSystem noteDissipationWrong;
-    [SerializeField] GameObject wrongPatternOnChar;
+    [SerializeField] Material guitarBodyMaterial;
     [SerializeField] float rotationSpeed;
     [SerializeField] float noteSizeScaleFactor = 1.4f;
     private Vector3 noteSizeOriginalScale;
@@ -30,16 +30,23 @@ public class PlayerSound : MonoBehaviour
     {
         srcGuitar.mute = true;     
         wrongSound.Play();
-        noteDissipationWrong.Play();
-        wrongPatternOnChar.SetActive(true);
+        noteDissipationWrong.Play();        
+        if (guitarBodyMaterial != null && guitarBodyMaterial.HasProperty("_LerpRegularVsPolka"))
+        {            
+            guitarBodyMaterial.SetFloat("_LerpRegularVsPolka", 0.5f);
+        }
+        else
+        {
+            Debug.LogError("Material is not assigned or does not have the property '_LerpRegularVsPolka'.");
+        }
         StartCoroutine(waiter());
     }
 
     IEnumerator waiter()
     {        
         //Wait for X seconds
-        yield return new WaitForSeconds(0.2f);
-        wrongPatternOnChar.SetActive(false);
+        yield return new WaitForSeconds(0.2f);        
+        guitarBodyMaterial.SetFloat("_LerpRegularVsPolka", 1f);
     }
 
     private bool NotePressedAction(KeyCode keyPressed)
