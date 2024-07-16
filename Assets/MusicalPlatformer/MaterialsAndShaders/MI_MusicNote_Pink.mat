@@ -60,6 +60,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _QuicknessOfOneBeat: 2
+    - _RelativeHeight: -0.007
     - _RotationSpeed: 300
     - _ScaleMagnitudeFloat: 0
     - _ScaleSizeRange: 0.05
