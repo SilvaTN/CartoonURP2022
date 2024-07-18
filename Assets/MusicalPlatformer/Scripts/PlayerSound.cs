@@ -9,6 +9,7 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] AudioSource wrongSound;
     [SerializeField] AudioSource srcGuitar;
     [SerializeField] ParticleSystem noteDissipationCorrect;
+    [SerializeField] ParticleSystem glowInsideGuitar;
     [SerializeField] ParticleSystem noteDissipationWrong;
     [SerializeField] Material guitarBodyMaterial;
     [SerializeField] float rotationSpeed;
@@ -21,7 +22,10 @@ public class PlayerSound : MonoBehaviour
     private void CorrectNotePressed()
     {
         srcGuitar.mute = false;
+
         noteDissipationCorrect.Play();
+        glowInsideGuitar.Play();
+
         Destroy(noteTouched.gameObject);
         correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
     }
@@ -106,6 +110,7 @@ public class PlayerSound : MonoBehaviour
         noteSizeOriginalScale = other.transform.localScale;
         noteTouched = other;
         other.transform.localScale *= noteSizeScaleFactor;
+
         if (other.CompareTag("NoteV"))
         {
             //Debug.Log("Touching left uwuwuwuwuwu");
@@ -126,6 +131,8 @@ public class PlayerSound : MonoBehaviour
             //Debug.Log("Touching right jjjjjjjj");
             correctKeyCode = KeyCode.N;
         }
+
+
         //other.transform.localScale *= 0.8f;
         //Renderer renderer = other.GetComponent<Renderer>();
         //if (renderer != null)

@@ -69,7 +69,7 @@ Material:
     - _TheAboveToPowerOf: 2
     - _TimeMultiplier: 11.22
     - _TimeSpentPerScale: 1.01
-    - _VerticalMovementRange: 0.005
+    - _VerticalMovementRange: 0
     - _ramp: 46.78
     - _yMultiply: 40.55
     m_Colors:
