@@ -12,8 +12,10 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] ParticleSystem glowInsideGuitar;
     [SerializeField] ParticleSystem noteDissipationWrong;
     [SerializeField] Material guitarBodyMaterial;
+    [SerializeField] Animator eyeAnimator;
     [SerializeField] float rotationSpeed;
     [SerializeField] float noteSizeScaleFactor = 1.4f;
+
     private Vector3 noteSizeOriginalScale;
     //[SerializeField] AudioClip sound1, sound2, sound3, sound4;
     private KeyCode correctKeyCode;
@@ -34,7 +36,8 @@ public class PlayerSound : MonoBehaviour
     {
         srcGuitar.mute = true;     
         wrongSound.Play();
-        noteDissipationWrong.Play();        
+        noteDissipationWrong.Play();
+        eyeAnimator.Play("EyelidAnimation");
         if (guitarBodyMaterial != null && guitarBodyMaterial.HasProperty("_LerpRegularVsPolka"))
         {            
             guitarBodyMaterial.SetFloat("_LerpRegularVsPolka", 0.5f);

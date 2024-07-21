@@ -102,7 +102,7 @@ Material:
     - _ColorSpray: {r: 0, g: 0, b: 0, a: 0}
     - _FresnelEmission: {r: 0.9056604, g: 0.35439247, b: 0.021359911, a: 0}
     - _JellyScrollSpeedUV: {r: 0.1, g: -0.4, b: 0, a: 0}
-    - _JellySmoothStep: {r: 0.4, g: 0.2, b: 0, a: 0}
+    - _JellySmoothStep: {r: 0.2, g: 0.7, b: 0, a: 0}
     - _JellyTileUV: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _NormalMultiplier: {r: 0, g: 0, b: 0, a: 0}
     - _ScaleMagnitude: {r: 0, g: 0, b: 0, a: 0}
