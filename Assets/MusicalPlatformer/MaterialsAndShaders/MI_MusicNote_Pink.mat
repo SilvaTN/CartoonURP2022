@@ -57,6 +57,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: d8658608d3c63c049863884995ffcf74, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TxColor:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -76,10 +80,11 @@ Material:
     - _AdjustToTempoViaTimeAddOffset: 0
     - _DecreasedSizeNotPlayed: 0.7
     - _Float: 0
-    - _FresnelPower: 0.1
+    - _FresnelPower: 2
     - _JellyDistortionMultiplier: 0.1
     - _JellyDistortionScrollSpeedU: -1
     - _LerpEmissionOff: 0.3
+    - _LerpFresnelVsTexture: 0
     - _MinValueToPowerOf: 2
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -93,6 +98,9 @@ Material:
     - _TheAboveToPowerOf: 19.86
     - _TimeMultiplier: 11.22
     - _TimeSpentPerScale: 1.01
+    - _TxFresnelPower: 1
+    - _TxRotationDegrees: 0
+    - _UsesTextureColor: 0
     - _VerticalMovementRange: 0.005
     - _ramp: 46.78
     - _yMultiply: 40.55
@@ -102,7 +110,8 @@ Material:
     - _ColorB: {r: 0.7384515, g: 0.19290671, b: 0.8018868, a: 0}
     - _ColorSparkle: {r: 1, g: 1, b: 1, a: 0}
     - _ColorSpray: {r: 1, g: 1, b: 1, a: 0}
-    - _FresnelEmission: {r: 0.5471698, g: 0.3009434, b: 0, a: 0}
+    - _FresnelEmission: {r: 0.645, g: 0.42241177, b: 0.5337059, a: 0}
+    - _FresnelOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _JellyScrollSpeedUV: {r: 0.1, g: -0.4, b: 0, a: 0}
     - _JellySmoothStep: {r: 0.1, g: 0.8, b: 0, a: 0}
     - _JellyTileUV: {r: 0.5, g: 0.5, b: 0, a: 0}
@@ -112,5 +121,8 @@ Material:
     - _SparkleTileUV: {r: 1, g: 1, b: 0, a: 0}
     - _SpraySpeedUV: {r: -0.1, g: -0.2, b: 0, a: 0}
     - _SprayTileUV: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _TxFresnelSmoothStep: {r: 0, g: 0, b: 0, a: 0}
+    - _TxSpeedUV: {r: 0, g: 0, b: 0, a: 0}
+    - _TxTileUV: {r: 0, g: 0, b: 0, a: 0}
     - _Vector3: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

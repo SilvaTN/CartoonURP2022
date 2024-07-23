@@ -10,6 +10,7 @@ TagManager:
   - NoteX
   - NoteC
   - NoteV
+  - NoteSpecial
   layers:
   - Default
   - TransparentFX
