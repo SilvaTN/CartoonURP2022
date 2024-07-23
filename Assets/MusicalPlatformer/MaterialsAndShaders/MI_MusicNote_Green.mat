@@ -42,7 +42,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_59cddaaea2134531b33b7f989a27b95d_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: d9a26d75974b315429f7500c56a9de31, type: 3}
+        m_Texture: {fileID: 2800000, guid: d8658608d3c63c049863884995ffcf74, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_66833f8dac88424dac1f970a6a4bebb2_Texture_1_Texture2D:
@@ -79,6 +79,7 @@ Material:
     - _FresnelPower: 0.1
     - _JellyDistortionMultiplier: 0.1
     - _JellyDistortionScrollSpeedU: -1
+    - _LerpEmissionOff: 0
     - _MinValueToPowerOf: 2
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -99,16 +100,16 @@ Material:
     - _AddToPosition: {r: 0.1, g: 0.2, b: 0, a: 0}
     - _Color: {r: 0.13333334, g: 0.69803923, b: 0, a: 0}
     - _ColorB: {r: 0.1128033, g: 0.5849056, b: 0, a: 0}
-    - _ColorSparkle: {r: 0.14320946, g: 1, b: 0, a: 0}
+    - _ColorSparkle: {r: 1.1456757, g: 8, b: 0, a: 0}
     - _ColorSpray: {r: 0, g: 0, b: 0, a: 0}
-    - _FresnelEmission: {r: 0.51295805, g: 0.6698113, b: 0.12953897, a: 0}
+    - _FresnelEmission: {r: 0.055053912, g: 0.4056604, b: 0, a: 0}
     - _JellyScrollSpeedUV: {r: 0.1, g: -0.4, b: 0, a: 0}
-    - _JellySmoothStep: {r: 0, g: 1, b: 0, a: 0}
+    - _JellySmoothStep: {r: 0.3, g: 1, b: 0, a: 0}
     - _JellyTileUV: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _NormalMultiplier: {r: 0, g: 0, b: 0, a: 0}
     - _ScaleMagnitude: {r: 0, g: 0, b: 0, a: 0}
-    - _SparkleSpeedUV: {r: 0, g: -1, b: 0, a: 0}
-    - _SparkleTileUV: {r: 1, g: 1, b: 0, a: 0}
+    - _SparkleSpeedUV: {r: 0, g: -0.1, b: 0, a: 0}
+    - _SparkleTileUV: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _SpraySpeedUV: {r: 1, g: 1, b: 0, a: 0}
     - _SprayTileUV: {r: 1, g: 1, b: 0, a: 0}
     - _Vector3: {r: 0, g: 0, b: 0, a: 0}
