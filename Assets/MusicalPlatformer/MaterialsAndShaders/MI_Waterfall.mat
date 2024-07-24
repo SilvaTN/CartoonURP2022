@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5954356924700488710
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MI_Waterfall
+  m_Shader: {fileID: -6465566751694194690, guid: 050e710cdf0b6cd4d9f2c9bcd4dbdbfa,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_41b720edac69432ba71904c0564f4dad_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2f59a8c7a63423146aac459374b36418, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_afd405ba9db14b3ab19228729ce50a34_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2f59a8c7a63423146aac459374b36418, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxAllFoam:
+        m_Texture: {fileID: 2800000, guid: d8658608d3c63c049863884995ffcf74, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxEdges:
+        m_Texture: {fileID: 2800000, guid: d8658608d3c63c049863884995ffcf74, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxFoam:
+        m_Texture: {fileID: 2800000, guid: d8658608d3c63c049863884995ffcf74, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxPrimaryFoam:
+        m_Texture: {fileID: 2800000, guid: d8658608d3c63c049863884995ffcf74, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxSecondaryFoam:
+        m_Texture: {fileID: 2800000, guid: d8658608d3c63c049863884995ffcf74, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxTertiaryFoam:
+        m_Texture: {fileID: 2800000, guid: d8658608d3c63c049863884995ffcf74, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AdditionalFoamLimitDistance: -0.22
+    - _AdditionalFoamStepLimitsDistance: -0.43
+    - _BLANK: 0
+    - _DepthFadeEdges: 0.1
+    - _DepthFalloff: 0.5
+    - _DepthMax: 5555
+    - _DistanceOfPlainFoam: 0
+    - _FoamMultiplier: 0.7
+    - _LerpBaseVsEmissision: 0
+    - _LightBendIntensity: 0.002
+    - _LightBendsViaDepthFadeSubtraction: 4.71
+    - _NormalStrength: 3
+    - _NormalTileOverallMultiplier: 0.1
+    - _PlainFoamDistance: -1
+    - _PrimaryFoamLimitDistance: 0.44
+    - _PrimaryRippleLimitDistance: 0.59
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _SecondaryFoamLimitDistance: 2
+    - _TileWorldUVOverallMultiplier: 0.05
+    - _WarpEdgesTest: 0
+    m_Colors:
+    - _AdditionalFoamSmoothStep: {r: 0.27, g: 0.1, b: 0, a: 0}
+    - _Color: {r: 0.26032394, g: 0.6163406, b: 0.735849, a: 0}
+    - _EdgesFoamColor: {r: 1, g: 1, b: 1, a: 0}
+    - _FoamColor: {r: 0.79045033, g: 0.87436163, b: 0.8773585, a: 0}
+    - _NormalSpeed1: {r: -0.025, g: -0.0675, b: 0, a: 0}
+    - _NormalSpeed2: {r: -0.03, g: -0.0275, b: 0, a: 0}
+    - _NormalTile1: {r: 1, g: 0.2, b: 0, a: 0}
+    - _NormalTile2: {r: 0.75, g: 0.1875, b: 0, a: 0}
+    - _PlainFoamSmoothStep: {r: 0, g: 0.1, b: 0, a: 0}
+    - _PrimaryFoamSmoothStep: {r: 0.71, g: 0.2, b: 0, a: 0}
+    - _PrimaryFoamTileAndSpeed: {r: 2, g: 0.5, b: 0.1, a: 0.5}
+    - _PrimaryRippleSmoothStep: {r: 0.71, g: 0.2, b: 0, a: 0}
+    - _SecondaryFoamSmoothStep: {r: 0.5, g: 0, b: 0, a: 0}
+    - _SecondaryFoamTileAndSpeed: {r: 6, g: 3, b: 0.11, a: -0.6}
+    - _TertiaryFoamTileAndSpeed: {r: 8, g: 2.5, b: -0.033, a: -0.1}
+    - _TxEdgesTileAndSpeed: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
