@@ -17,8 +17,9 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] float noteSizeScaleFactor = 1.4f;
 
     private Vector3 noteSizeOriginalScale;
-    //[SerializeField] AudioClip sound1, sound2, sound3, sound4;
+    //[SerializeField] AudioClip sound1, sound2, sound3, sound4;    
     private KeyCode correctKeyCode;
+    private KeyCode specialKeyCodeIsPrevCorrect; //special note
     private Collider noteTouched;
 
     private void CorrectNotePressed()
@@ -29,6 +30,7 @@ public class PlayerSound : MonoBehaviour
         glowInsideGuitar.Play();
 
         Destroy(noteTouched.gameObject);
+        specialKeyCodeIsPrevCorrect = correctKeyCode;
         correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
     }
 
@@ -134,6 +136,11 @@ public class PlayerSound : MonoBehaviour
             //Debug.Log("Touching right jjjjjjjj");
             correctKeyCode = KeyCode.N;
         }
+        if (other.CompareTag("NoteSpecial"))
+        {
+            //Debug.Log("Touching right jjjjjjjj");
+            correctKeyCode = specialKeyCodeIsPrevCorrect;
+        }
 
 
         //other.transform.localScale *= 0.8f;
@@ -154,6 +161,7 @@ public class PlayerSound : MonoBehaviour
         //noteTouched = null;
         other.transform.localScale = noteSizeOriginalScale;
         srcGuitar.mute = true; //if you run past note and don't play it, mute the correct guitar track.
+        specialKeyCodeIsPrevCorrect = correctKeyCode;
         correctKeyCode = 0;
     }
 

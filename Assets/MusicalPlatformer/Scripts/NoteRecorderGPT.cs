@@ -27,7 +27,8 @@ public class NoteRecorderGPT : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown(KeyCode.C) ||
-            Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Z))
+            Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Z) ||
+            Input.GetKeyDown(KeyCode.R)) 
         {
             RecordNote();
             keyPressIndex++;
