@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerSound : MonoBehaviour
 {
+    [SerializeField] PlayerMovement playerMovementScript;
     //[SerializeField] AudioSource srcWrongSounds;
     //[SerializeField] AudioClip[] wrongSounds;
     [SerializeField] AudioSource wrongSound;
@@ -15,6 +16,7 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] Animator eyeAnimator;
     [SerializeField] float rotationSpeed;
     [SerializeField] float noteSizeScaleFactor = 1.4f;
+    private bool isRainbow;
 
     private Vector3 noteSizeOriginalScale;
     //[SerializeField] AudioClip sound1, sound2, sound3, sound4;    
@@ -28,6 +30,11 @@ public class PlayerSound : MonoBehaviour
 
         noteDissipationCorrect.Play();
         glowInsideGuitar.Play();
+
+        if (isRainbow)
+        {
+            playerMovementScript.upwardsThrust(isRainbow);
+        }
 
         Destroy(noteTouched.gameObject);
         specialKeyCodeIsPrevCorrect = correctKeyCode;
@@ -80,6 +87,7 @@ public class PlayerSound : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isRainbow = false;
         if (rotationSpeed == 0)
         {
             rotationSpeed = 900f;
@@ -119,27 +127,32 @@ public class PlayerSound : MonoBehaviour
         if (other.CompareTag("NoteV"))
         {
             //Debug.Log("Touching left uwuwuwuwuwu");
-            correctKeyCode = KeyCode.Period;            
+            correctKeyCode = KeyCode.Period;
+            isRainbow = false;
         }
         if (other.CompareTag("NoteC"))
         {
             //Debug.Log("Touching down qqqqqqqq");
             correctKeyCode = KeyCode.Comma;
+            isRainbow = false;
         }
         if (other.CompareTag("NoteX"))
         {
             //Debug.Log("Touching right jjjjjjjj");
             correctKeyCode = KeyCode.M;
+            isRainbow = false;
         }
         if (other.CompareTag("NoteZ"))
         {
             //Debug.Log("Touching right jjjjjjjj");
             correctKeyCode = KeyCode.N;
+            isRainbow = false;
         }
         if (other.CompareTag("NoteSpecial"))
         {
             //Debug.Log("Touching right jjjjjjjj");
             correctKeyCode = specialKeyCodeIsPrevCorrect;
+            isRainbow = true;
         }
 
 
