@@ -10,6 +10,7 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] AudioSource wrongSound;
     [SerializeField] AudioSource srcGuitar;
     [SerializeField] ParticleSystem noteDissipationCorrect;
+    [SerializeField] ParticleSystem rainbowJumpSwirl;
     [SerializeField] ParticleSystem glowInsideGuitar;
     [SerializeField] ParticleSystem noteDissipationWrong;
     [SerializeField] Material guitarBodyMaterial;
@@ -27,15 +28,15 @@ public class PlayerSound : MonoBehaviour
     private void CorrectNotePressed()
     {
         srcGuitar.mute = false;
-
         noteDissipationCorrect.Play();
-        glowInsideGuitar.Play();
-
         if (isRainbow)
         {
             playerMovementScript.upwardsThrust(isRainbow);
+            rainbowJumpSwirl.Play();
+        } else
+        {
+            glowInsideGuitar.Play();
         }
-
         Destroy(noteTouched.gameObject);
         specialKeyCodeIsPrevCorrect = correctKeyCode;
         correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
@@ -67,7 +68,7 @@ public class PlayerSound : MonoBehaviour
 
     private bool NotePressedAction(KeyCode keyPressed)
     {
-        if(Input.GetKeyDown(keyPressed))
+        if (Input.GetKeyDown(keyPressed))
         {
             if (keyPressed == correctKeyCode)
             {

@@ -14746,7 +14746,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 125.67, y: 4.5200005, z: 105}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6129035, y: 1.6129031, z: 1.612903}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5745410530420690604}
@@ -40574,7 +40574,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 0.98420835, b: 0.6367924, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 0.6933962, g: 1, b: 0.6933962, a: 1}
         key2: {r: 1, g: 0.6385642, b: 0.24056602, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}

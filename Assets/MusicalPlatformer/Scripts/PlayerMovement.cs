@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] ParticleSystem jumpPoof;
     [SerializeField] ParticleSystem jumpLandPoof;
     [SerializeField] Animator GuitarAnimator;
+    private const string JUMP_ANIM = "GuitarChar_Jump_LessFrames";
+    private const string RAINBOW_JUMP_ANIM = "GuitarChar_RainbowJump";
+    private string currentJumpAnim;
     float upwardThrustForce;
     private ConstantForce cForce;
     private Vector3 forceDirection;
@@ -26,16 +29,18 @@ public class PlayerMovement : MonoBehaviour
         if (isRainbow)
         {
             upwardThrustForce = rainbowJumpForce;
+            currentJumpAnim = RAINBOW_JUMP_ANIM;
         } else
         {
             upwardThrustForce = jumpForce;
+            currentJumpAnim = JUMP_ANIM;
         }                    
         //call JumpTrail() after 0.1 seconds of being in the air (maybe have a counter inside FixedUpdate)
         rb.AddForce(Vector3.up * upwardThrustForce, ForceMode.Impulse); //ForceMode.Impulse applies force immediately.
         isOnGround = false;
         GuitarAnimator.SetBool("isOnGround", isOnGround);
         isJumping = true;
-        GuitarAnimator.Play("GuitarChar_Jump_LessFrames");
+        GuitarAnimator.Play(currentJumpAnim);
         jumpPoof.Play();
     }
 
