@@ -10,6 +10,8 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] AudioSource wrongSound;
     [SerializeField] AudioSource srcGuitar;
     [SerializeField] ParticleSystem noteDissipationCorrect;
+    [SerializeField] ParticleSystem rainbowPathPS;
+    [SerializeField] GameObject rainbowPathCollider;
     [SerializeField] ParticleSystem rainbowJumpSwirl;
     [SerializeField] ParticleSystem glowInsideGuitar;
     [SerializeField] ParticleSystem noteDissipationWrong;
@@ -22,7 +24,7 @@ public class PlayerSound : MonoBehaviour
     private Vector3 noteSizeOriginalScale;
     //[SerializeField] AudioClip sound1, sound2, sound3, sound4;    
     private KeyCode correctKeyCode;
-    private KeyCode specialKeyCodeIsPrevCorrect; //special note
+    //private KeyCode specialKeyCodeIsPrevCorrect; //special note
     private Collider noteTouched;
 
     private void CorrectNotePressed()
@@ -33,12 +35,14 @@ public class PlayerSound : MonoBehaviour
         {
             playerMovementScript.upwardsThrust(isRainbow);
             rainbowJumpSwirl.Play();
+            rainbowPathPS.Play();
+            rainbowPathCollider.SetActive(true);
         } else
         {
             glowInsideGuitar.Play();
         }
         Destroy(noteTouched.gameObject);
-        specialKeyCodeIsPrevCorrect = correctKeyCode;
+        //specialKeyCodeIsPrevCorrect = correctKeyCode;
         correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
     }
 
@@ -70,7 +74,7 @@ public class PlayerSound : MonoBehaviour
     {
         if (Input.GetKeyDown(keyPressed))
         {
-            if (keyPressed == correctKeyCode)
+            if ((keyPressed == correctKeyCode) || (isRainbow))
             {
                 CorrectNotePressed();
             }
@@ -152,7 +156,7 @@ public class PlayerSound : MonoBehaviour
         if (other.CompareTag("NoteSpecial"))
         {
             //Debug.Log("Touching right jjjjjjjj");
-            correctKeyCode = specialKeyCodeIsPrevCorrect;
+            //correctKeyCode = specialKeyCodeIsPrevCorrect;
             isRainbow = true;
         }
 
@@ -175,7 +179,7 @@ public class PlayerSound : MonoBehaviour
         //noteTouched = null;
         other.transform.localScale = noteSizeOriginalScale;
         srcGuitar.mute = true; //if you run past note and don't play it, mute the correct guitar track.
-        specialKeyCodeIsPrevCorrect = correctKeyCode;
+        //specialKeyCodeIsPrevCorrect = correctKeyCode;
         correctKeyCode = 0;
     }
 

@@ -99,6 +99,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RotationDegrees: 0
+    - _SmoothStepAnimationSoftness: 0.1
     - _Sparkles1Multiplier: 1
     - _Sparkles2Multiplier: 0.7
     - _SparklesMultiplier: 2

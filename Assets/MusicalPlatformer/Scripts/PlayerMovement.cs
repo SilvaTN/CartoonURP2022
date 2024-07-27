@@ -23,9 +23,12 @@ public class PlayerMovement : MonoBehaviour
     private bool isFalling;
     [SerializeField] float fallThreshold;
     private float previousHeight;
+    private bool isRainbowJumping;
+    
 
     public void upwardsThrust(bool isRainbow = false)
-    {        
+    {
+        isRainbowJumping = isRainbow;
         if (isRainbow)
         {
             upwardThrustForce = rainbowJumpForce;
@@ -49,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //Keep the start position the same in relation to the position of the notes.
         if (moveToStartPosition) transform.position = new Vector3(136.91f, 3f, 104.42f); // sets char start position.       
-        
+        isRainbowJumping = false;
         if (runSpeed == 0) runSpeed = 15f;      
         if (jumpForce == 0) jumpForce = 25f;
         if (rainbowJumpForce == 0) rainbowJumpForce = 15f;
@@ -74,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
         if (isJumping)
         {         
             float currentHeight = transform.position.y;
-            if (isFalling == false)
+            if ((isFalling == false) &&(!isRainbowJumping))
             {
                 if ((previousHeight - fallThreshold) > currentHeight)
                 {
@@ -103,6 +106,8 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
+            if (isRainbowJumping) transform.rotation = Quaternion.identity; //otherwise, it changes rotation slightly for some reason.
+            isRainbowJumping = false;
             GuitarAnimator.SetBool("isOnGround", isOnGround);
             isJumping = false;
             isFalling = false;
