@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
                 if ((previousHeight - fallThreshold) > currentHeight)
                 {
                     isFalling = true;
-                    GuitarAnimator.Play("GuitarChar_FallJump_LessFrames");
+                    GuitarAnimator.Play("GuitarChar_FallJump_LessFrames");                    
                 }
             }
             previousHeight = currentHeight;
@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
     
     void FixedUpdate()
     {
-        //rb.AddForce(Physics.gravity * customGravity);        
+        //rb.AddForce(Physics.gravity * customGravity);       
 
     }
 
@@ -106,12 +106,12 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
-            if (isRainbowJumping) transform.rotation = Quaternion.identity; //otherwise, it changes rotation slightly for some reason.
+            //if (isRainbowJumping) transform.rotation = Quaternion.identity; //otherwise, it changes rotation slightly for some reason.
             isRainbowJumping = false;
             GuitarAnimator.SetBool("isOnGround", isOnGround);
+            if (isFalling) jumpLandPoof.Play();
             isJumping = false;
-            isFalling = false;
-            jumpLandPoof.Play();
+            isFalling = false;            
             //GuitarAnimator.Play("GuitarChar_SquashRunning");
             //GuitarAnimator.Play("GuitarChar_Running");
         }

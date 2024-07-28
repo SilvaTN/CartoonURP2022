@@ -11,6 +11,7 @@ TagManager:
   - NoteC
   - NoteV
   - NoteSpecial
+  - RainbowPathTrigger
   layers:
   - Default
   - TransparentFX

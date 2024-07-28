@@ -42,6 +42,7 @@ public class PlayerSound : MonoBehaviour
             glowInsideGuitar.Play();
         }
         Destroy(noteTouched.gameObject);
+        isRainbow = false;
         //specialKeyCodeIsPrevCorrect = correctKeyCode;
         correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
     }
