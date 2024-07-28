@@ -8,6 +8,7 @@ public class NoteSpawnerGPT : MonoBehaviour
     public GameObject noteXSingle, noteXDouble, noteXTriple;
     public GameObject noteZSingle, noteZDouble, noteZTriple;
     public GameObject noteRainbowSingle, noteRainbowDouble, noteRainbowTriple;
+    public GameObject noteGoldSingle, noteGoldDouble, noteGoldTriple;
     public float offsetY = 0f;
 
     private string filePath;
@@ -64,6 +65,9 @@ public class NoteSpawnerGPT : MonoBehaviour
                     break;
                 case KeyCode.R:
                     prefab = GetPrefabForType(noteRainbowSingle, noteRainbowDouble, noteRainbowTriple, noteType);
+                    break;
+                case KeyCode.G:
+                    prefab = GetPrefabForType(noteGoldSingle, noteGoldDouble, noteGoldTriple, noteType);
                     break;
             }
 

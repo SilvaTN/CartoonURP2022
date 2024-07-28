@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] float jumpForce;
     [SerializeField] float rainbowJumpForce;
+    [SerializeField] float goldJumpForce;
     [SerializeField] float runSpeed;
     [SerializeField] float customGravity;
     [SerializeField] bool isOnGround = true;
@@ -14,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] ParticleSystem jumpLandPoof;
     [SerializeField] Animator GuitarAnimator;
     private const string JUMP_ANIM = "GuitarChar_Jump_LessFrames";
-    private const string RAINBOW_JUMP_ANIM = "GuitarChar_RainbowJump";
+    private const string SPECIAL_JUMP_ANIM = "GuitarChar_SpecialJump";
     private string currentJumpAnim;
     float upwardThrustForce;
     private ConstantForce cForce;
@@ -23,16 +24,20 @@ public class PlayerMovement : MonoBehaviour
     private bool isFalling;
     [SerializeField] float fallThreshold;
     private float previousHeight;
-    private bool isRainbowJumping;
+    private bool isSpecialJumping;
     
 
-    public void upwardsThrust(bool isRainbow = false)
+    public void upwardsThrust(bool isRainbow = false, bool isGold = false)
     {
-        isRainbowJumping = isRainbow;
+        isSpecialJumping = isRainbow || isGold;
         if (isRainbow)
         {
             upwardThrustForce = rainbowJumpForce;
-            currentJumpAnim = RAINBOW_JUMP_ANIM;
+            currentJumpAnim = SPECIAL_JUMP_ANIM;
+        } else if (isGold)
+        {
+            upwardThrustForce = goldJumpForce;
+            currentJumpAnim = SPECIAL_JUMP_ANIM;
         } else
         {
             upwardThrustForce = jumpForce;
@@ -52,10 +57,11 @@ public class PlayerMovement : MonoBehaviour
     {
         //Keep the start position the same in relation to the position of the notes.
         if (moveToStartPosition) transform.position = new Vector3(136.91f, 3f, 104.42f); // sets char start position.       
-        isRainbowJumping = false;
+        isSpecialJumping = false;
         if (runSpeed == 0) runSpeed = 15f;      
         if (jumpForce == 0) jumpForce = 25f;
         if (rainbowJumpForce == 0) rainbowJumpForce = 15f;
+        if (goldJumpForce == 0) goldJumpForce = 25f;
         if (customGravity == 0) customGravity = -50f;        
         cForce = GetComponent<ConstantForce>();
         cForce.force = new Vector3(0, customGravity, 0);
@@ -77,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         if (isJumping)
         {         
             float currentHeight = transform.position.y;
-            if ((isFalling == false) &&(!isRainbowJumping))
+            if ((isFalling == false) &&(!isSpecialJumping))
             {
                 if ((previousHeight - fallThreshold) > currentHeight)
                 {
@@ -106,8 +112,8 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
-            //if (isRainbowJumping) transform.rotation = Quaternion.identity; //otherwise, it changes rotation slightly for some reason.
-            isRainbowJumping = false;
+            //if (isSpecialJumping) transform.rotation = Quaternion.identity; //otherwise, it changes rotation slightly for some reason.
+            isSpecialJumping = false;
             GuitarAnimator.SetBool("isOnGround", isOnGround);
             if (isFalling) jumpLandPoof.Play();
             isJumping = false;

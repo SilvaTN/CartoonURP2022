@@ -12,7 +12,7 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] ParticleSystem noteDissipationCorrect;
     [SerializeField] ParticleSystem rainbowPathPS;
     [SerializeField] GameObject rainbowPathCollider;
-    [SerializeField] ParticleSystem rainbowJumpSwirl;
+    [SerializeField] ParticleSystem specialJumpSwirl;
     [SerializeField] ParticleSystem glowInsideGuitar;
     [SerializeField] ParticleSystem noteDissipationWrong;
     [SerializeField] Material guitarBodyMaterial;
@@ -20,6 +20,7 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] float rotationSpeed;
     [SerializeField] float noteSizeScaleFactor = 1.4f;
     private bool isRainbow;
+    private bool isGold;
 
     private Vector3 noteSizeOriginalScale;
     //[SerializeField] AudioClip sound1, sound2, sound3, sound4;    
@@ -33,16 +34,21 @@ public class PlayerSound : MonoBehaviour
         noteDissipationCorrect.Play();
         if (isRainbow)
         {
-            playerMovementScript.upwardsThrust(isRainbow);
-            rainbowJumpSwirl.Play();
+            playerMovementScript.upwardsThrust(isRainbow, isGold);
+            specialJumpSwirl.Play();
             rainbowPathPS.Play();
             rainbowPathCollider.SetActive(true);
+        } else if (isGold)
+        {
+            playerMovementScript.upwardsThrust(isRainbow, isGold);
+            specialJumpSwirl.Play();
         } else
         {
             glowInsideGuitar.Play();
         }
         Destroy(noteTouched.gameObject);
         isRainbow = false;
+        isGold = false;
         //specialKeyCodeIsPrevCorrect = correctKeyCode;
         correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
     }
@@ -94,6 +100,7 @@ public class PlayerSound : MonoBehaviour
     void Start()
     {
         isRainbow = false;
+        isGold = false;
         if (rotationSpeed == 0)
         {
             rotationSpeed = 900f;
@@ -135,30 +142,36 @@ public class PlayerSound : MonoBehaviour
             //Debug.Log("Touching left uwuwuwuwuwu");
             correctKeyCode = KeyCode.Period;
             isRainbow = false;
-        }
-        if (other.CompareTag("NoteC"))
+            isGold = false;
+        } else if (other.CompareTag("NoteC"))
         {
             //Debug.Log("Touching down qqqqqqqq");
             correctKeyCode = KeyCode.Comma;
             isRainbow = false;
-        }
-        if (other.CompareTag("NoteX"))
+            isGold = false;
+        } else if (other.CompareTag("NoteX"))
         {
             //Debug.Log("Touching right jjjjjjjj");
             correctKeyCode = KeyCode.M;
             isRainbow = false;
-        }
-        if (other.CompareTag("NoteZ"))
+            isGold = false;
+        } else if (other.CompareTag("NoteZ"))
         {
             //Debug.Log("Touching right jjjjjjjj");
             correctKeyCode = KeyCode.N;
             isRainbow = false;
-        }
-        if (other.CompareTag("NoteSpecial"))
+            isGold = false;
+        } else if (other.CompareTag("NoteSpecial"))
         {
             //Debug.Log("Touching right jjjjjjjj");
             //correctKeyCode = specialKeyCodeIsPrevCorrect;
             isRainbow = true;
+            isGold = false;
+        } else if (other.CompareTag("NoteGold"))
+        {
+            correctKeyCode = KeyCode.Comma; //same as NoteX tag
+            isRainbow = false;
+            isGold = true;
         }
 
 
