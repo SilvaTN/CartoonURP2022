@@ -37,13 +37,15 @@ public class PlayerMovement : MonoBehaviour
         } else if (isGold)
         {
             upwardThrustForce = goldJumpForce;
+            Debug.Log("goldJumpForce is " + goldJumpForce);
             currentJumpAnim = SPECIAL_JUMP_ANIM;
         } else
         {
             upwardThrustForce = jumpForce;
             currentJumpAnim = JUMP_ANIM;
-        }                    
+        }
         //call JumpTrail() after 0.1 seconds of being in the air (maybe have a counter inside FixedUpdate)
+        rb.velocity = new Vector3(rb.velocity.x, 0, 0); //zero out the vertical velocity in case the player is falling bc we always want the same jump height regardless.
         rb.AddForce(Vector3.up * upwardThrustForce, ForceMode.Impulse); //ForceMode.Impulse applies force immediately.
         isOnGround = false;
         GuitarAnimator.SetBool("isOnGround", isOnGround);

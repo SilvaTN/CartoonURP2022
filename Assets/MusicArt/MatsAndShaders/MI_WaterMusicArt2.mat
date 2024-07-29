@@ -111,8 +111,8 @@ Material:
     - _FoamColor: {r: 0.79045033, g: 0.87436163, b: 0.8773585, a: 0}
     - _NormalSpeed1: {r: -0.025, g: 0.0125, b: 0, a: 0}
     - _NormalSpeed2: {r: -0.03, g: -0.0175, b: 0, a: 0}
-    - _NormalTile1: {r: 0.5, g: 0.5, b: 0, a: 0}
-    - _NormalTile2: {r: 0.375, g: 0.375, b: 0, a: 0}
+    - _NormalTile1: {r: 1, g: 1, b: 0, a: 0}
+    - _NormalTile2: {r: 0.75, g: 0.75, b: 0, a: 0}
     - _PlainFoamSmoothStep: {r: 0, g: 0.1, b: 0, a: 0}
     - _PrimaryFoamSmoothStep: {r: 0.71, g: 0.2, b: 0, a: 0}
     - _PrimaryFoamTileAndSpeed: {r: 2, g: 2, b: 0.1, a: -0.2}

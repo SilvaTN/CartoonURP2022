@@ -191,10 +191,15 @@ public class PlayerSound : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         //noteTouched = null;
-        other.transform.localScale = noteSizeOriginalScale;
-        srcGuitar.mute = true; //if you run past note and don't play it, mute the correct guitar track.
-        //specialKeyCodeIsPrevCorrect = correctKeyCode;
-        correctKeyCode = 0;
+        if (!other.CompareTag("RainbowPathTrigger"))
+        {
+            other.transform.localScale = noteSizeOriginalScale;
+            //Debug.Log("OnTriggerExit mute");
+            srcGuitar.mute = true; //if you run past note and don't play it, mute the correct guitar track.
+            //specialKeyCodeIsPrevCorrect = correctKeyCode;
+            correctKeyCode = 0;
+        }
+            
     }
 
 
