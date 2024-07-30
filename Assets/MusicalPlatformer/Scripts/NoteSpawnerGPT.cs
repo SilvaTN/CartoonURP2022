@@ -67,7 +67,9 @@ public class NoteSpawnerGPT : MonoBehaviour
                     prefab = GetPrefabForType(noteRainbowSingle, noteRainbowDouble, noteRainbowTriple, noteType);
                     break;
                 case KeyCode.G:
-                    prefab = GetPrefabForType(noteGoldSingle, noteGoldDouble, noteGoldTriple, noteType);
+                    prefab = null; //I am manually placing the gold note instead of via script
+                    i++; //manually telling it's a double note, so it knows to skip next.
+                    //prefab = GetPrefabForType(noteGoldSingle, noteGoldDouble, noteGoldTriple, noteType);
                     break;
             }
 

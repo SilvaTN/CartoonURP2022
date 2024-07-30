@@ -10,7 +10,10 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] AudioSource wrongSound;
     [SerializeField] AudioSource srcGuitar;
     [SerializeField] ParticleSystem noteDissipationCorrect;
+    [SerializeField] ParticleSystem noteDissipationGold;
     [SerializeField] ParticleSystem rainbowPathPS;
+    [SerializeField] GameObject NoteGold;
+    [SerializeField] GameObject NoteGoldNormal;
     [SerializeField] GameObject rainbowPathCollider;
     [SerializeField] ParticleSystem specialJumpSwirl;
     [SerializeField] ParticleSystem glowInsideGuitar;
@@ -19,7 +22,9 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] Animator eyeAnimator;
     [SerializeField] float rotationSpeed;
     [SerializeField] float noteSizeScaleFactor = 1.4f;
+    private bool isInsideRainbowPathTrigger;
     private bool isRainbow;
+    private int numofRainbowNotesCorrect;
     private bool isGold;
 
     private Vector3 noteSizeOriginalScale;
@@ -31,20 +36,32 @@ public class PlayerSound : MonoBehaviour
     private void CorrectNotePressed()
     {
         srcGuitar.mute = false;
-        noteDissipationCorrect.Play();
+        
         if (isRainbow)
         {
+            noteDissipationCorrect.Play();
             playerMovementScript.upwardsThrust(isRainbow, isGold);
             specialJumpSwirl.Play();
             rainbowPathPS.Play();
             rainbowPathCollider.SetActive(true);
         } else if (isGold)
         {
+            noteDissipationGold.Play();
             playerMovementScript.upwardsThrust(isRainbow, isGold);
             specialJumpSwirl.Play();
         } else
         {
+            noteDissipationCorrect.Play();
             glowInsideGuitar.Play();
+            if (isInsideRainbowPathTrigger)
+            {
+                numofRainbowNotesCorrect++;
+                if (numofRainbowNotesCorrect == 4)
+                {
+                    NoteGold.SetActive(true);
+                    NoteGoldNormal.SetActive(false);
+                }
+            }
         }
         Destroy(noteTouched.gameObject);
         isRainbow = false;
@@ -101,6 +118,8 @@ public class PlayerSound : MonoBehaviour
     {
         isRainbow = false;
         isGold = false;
+        isInsideRainbowPathTrigger = false;
+        numofRainbowNotesCorrect = 0;
         if (rotationSpeed == 0)
         {
             rotationSpeed = 900f;
@@ -172,6 +191,9 @@ public class PlayerSound : MonoBehaviour
             correctKeyCode = KeyCode.Comma; //same as NoteX tag
             isRainbow = false;
             isGold = true;
+        } else if (other.CompareTag("RainbowPathTrigger"))
+        {
+            isInsideRainbowPathTrigger = true;
         }
 
 
@@ -180,24 +202,22 @@ public class PlayerSound : MonoBehaviour
         //if (renderer != null)
         //{
 
-        // Find the property ID of SpinAmount
-        //int spinAmountPropertyID = Shader.PropertyToID("_RotationSpeed");
+            // Find the property ID of SpinAmount
+            //int spinAmountPropertyID = Shader.PropertyToID("_RotationSpeed");
 
-        // Set the SpinAmount property of the material to 360
-        //renderer.material.SetFloat(spinAmountPropertyID, 660f);
-        //}
+            // Set the SpinAmount property of the material to 360
+            //renderer.material.SetFloat(spinAmountPropertyID, 660f);
+            //}
     }
 
     private void OnTriggerExit(Collider other)
     {
         //noteTouched = null;
-        if (!other.CompareTag("RainbowPathTrigger"))
+        other.transform.localScale = noteSizeOriginalScale;
+        correctKeyCode = 0;        
+        if (!other.CompareTag("RainbowPathTrigger")) //otherwise it automatically mutes when you leave rainbow.
         {
-            other.transform.localScale = noteSizeOriginalScale;
-            //Debug.Log("OnTriggerExit mute");
             srcGuitar.mute = true; //if you run past note and don't play it, mute the correct guitar track.
-            //specialKeyCodeIsPrevCorrect = correctKeyCode;
-            correctKeyCode = 0;
         }
             
     }

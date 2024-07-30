@@ -94,7 +94,7 @@ Material:
     - _Cull: 2
     - _DepthFade: 0.25
     - _DstBlend: 10
-    - _PositionOfAlphaSmoothStepHorizontal: -0.431
+    - _PositionOfAlphaSmoothStepHorizontal: -0.401
     - _PositionOfAlphaSmoothStepVertical: -0.5
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -111,7 +111,7 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _AlphaSmoothStep: {r: 0.8, g: 0.2, b: 0, a: 0}
-    - _AlphaSmoothStepHorizontal: {r: 0.82, g: 0.1, b: 0, a: 0}
+    - _AlphaSmoothStepHorizontal: {r: 0.84, g: 0.1, b: 0, a: 0}
     - _AlphaSmoothStepVertical: {r: 0.8, g: 0.1, b: 0, a: 0}
     - _OffsetUV: {r: 0, g: -0.52, b: 0, a: 0}
     - _Sparkles1SpeedUV: {r: -0.7, g: -0.05, b: 0, a: 0}
