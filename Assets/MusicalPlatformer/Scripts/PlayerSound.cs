@@ -8,6 +8,7 @@ public class PlayerSound : MonoBehaviour
     //[SerializeField] AudioSource srcWrongSounds;
     //[SerializeField] AudioClip[] wrongSounds;
     [SerializeField] AudioSource wrongSound;
+    [SerializeField] AudioSource goldNoteSound;
     [SerializeField] AudioSource srcGuitar;
     [SerializeField] ParticleSystem noteDissipationCorrect;
     [SerializeField] ParticleSystem noteDissipationGold;
@@ -46,6 +47,7 @@ public class PlayerSound : MonoBehaviour
             rainbowPathCollider.SetActive(true);
         } else if (isGold)
         {
+            goldNoteSound.Play();
             noteDissipationGold.Play();
             playerMovementScript.upwardsThrust(isRainbow, isGold);
             specialJumpSwirl.Play();
