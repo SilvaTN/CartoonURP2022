@@ -10,6 +10,7 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] AudioSource wrongSound;
     [SerializeField] AudioSource goldNoteSound;
     [SerializeField] AudioSource srcGuitar;
+    [SerializeField] AudioSource srcGuitarHarmony;
     [SerializeField] ParticleSystem noteDissipationCorrect;
     [SerializeField] ParticleSystem noteDissipationGold;
     [SerializeField] ParticleSystem rainbowPathPS;
@@ -37,9 +38,10 @@ public class PlayerSound : MonoBehaviour
     private void CorrectNotePressed()
     {
         srcGuitar.mute = false;
-        
+
         if (isRainbow)
         {
+            srcGuitarHarmony.mute = false;
             noteDissipationCorrect.Play();
             playerMovementScript.upwardsThrust(isRainbow, isGold);
             specialJumpSwirl.Play();
@@ -47,6 +49,7 @@ public class PlayerSound : MonoBehaviour
             rainbowPathCollider.SetActive(true);
         } else if (isGold)
         {
+            srcGuitarHarmony.mute = false;
             goldNoteSound.Play();
             noteDissipationGold.Play();
             playerMovementScript.upwardsThrust(isRainbow, isGold);
@@ -74,7 +77,8 @@ public class PlayerSound : MonoBehaviour
 
     private void WrongNotePressed()
     {
-        srcGuitar.mute = true;     
+        srcGuitar.mute = true;
+        if (isRainbow || isGold) srcGuitarHarmony.mute = true;
         wrongSound.Play();
         noteDissipationWrong.Play();
         eyeAnimator.Play("EyelidAnimation");
@@ -220,6 +224,7 @@ public class PlayerSound : MonoBehaviour
         if (!other.CompareTag("RainbowPathTrigger")) //otherwise it automatically mutes when you leave rainbow.
         {
             srcGuitar.mute = true; //if you run past note and don't play it, mute the correct guitar track.
+            srcGuitarHarmony.mute = true;
         }
             
     }
