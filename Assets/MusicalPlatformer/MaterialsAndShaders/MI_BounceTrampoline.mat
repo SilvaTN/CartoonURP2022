@@ -96,8 +96,8 @@ Material:
     - _LightBendIntensity: 0.05
     - _MaskPosition: -0.5
     - _MaskStep: 0.05
-    - _MeshSizeGradientCentrePosY: -0.4
-    - _MeshSizeMultiplierXZ: 1
+    - _MeshSizeGradientCentrePosY: -0.1
+    - _MeshSizeMultiplierXZ: 0
     - _MultiplyTxForEmission: 0.11
     - _NormalStrength: 1
     - _OverallAnimationSpeed: 4
@@ -105,10 +105,10 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RegularMeshSizeMultiplierXZ: 0.349
-    - _RegularMeshSizeMultiplierY: 1.11
+    - _RegularMeshSizeMultiplierXZ: 0.496
+    - _RegularMeshSizeMultiplierY: 3
     - _RotationCentrePosY: 0
-    - _RotationMagnitude: 22
+    - _RotationMagnitude: 2
     - _RotationSubWithTexture: 0
     - _SrcBlend: 1
     - _Surface: 0
@@ -130,7 +130,7 @@ Material:
     - _HighlightTileUV: {r: 1, g: 1, b: 0, a: 0}
     - _HighlightVerticalOffsetV: {r: 0, g: 0, b: 0, a: 0}
     - _HighlightVerticalTileUV: {r: 1, g: 1, b: 0, a: 0}
-    - _MeshSizeGradientMaskSmoothStep: {r: -0.02, g: 0.05, b: 0, a: 0}
+    - _MeshSizeGradientMaskSmoothStep: {r: 0, g: 0, b: 0, a: 0}
     - _MeshSizeMultiplierXYZ: {r: 0, g: 0, b: 0, a: 0}
     - _NormalSpeed1: {r: 0, g: 0, b: 0, a: 0}
     - _NormalSpeed2: {r: 0, g: 0, b: 0, a: 0}
