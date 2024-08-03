@@ -25,15 +25,18 @@ Material:
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _ALPHAPREMULTIPLY_ON
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 3000
   stringTagMap:
-    RenderType: Opaque
-  disabledShaderPasses: []
+    RenderType: Transparent
+  disabledShaderPasses:
+  - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -60,6 +63,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _TxColor:
         m_Texture: {fileID: 2800000, guid: 5c1b812b7905f0a45b97938395d00998, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxMain:
+        m_Texture: {fileID: 2800000, guid: 3e8a265c2ae778040a0900f6df0f6492, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -91,17 +98,22 @@ Material:
     - _BottomMeshPowerOf: 1
     - _CastShadows: 1
     - _Cull: 2
-    - _DstBlend: 0
+    - _DstBlend: 10
+    - _HieghVsWidthOffsetTimin: 3
     - _IsColorGradientSizeNotRotation: 1
+    - _IsFlippedTexture: 1
     - _LightBendIntensity: 0.05
     - _MaskPosition: -0.5
     - _MaskStep: 0.05
+    - _MaxStretch: 1.2
     - _MeshSizeGradientCentrePosY: -0.4
     - _MeshSizeMultiplierXZ: 1
+    - _MinSquash: 0.8
     - _MultiplyTxForEmission: 0.11
     - _NormalStrength: 1
     - _OverallAnimationSpeed: 8
     - _OverallAnimationTimingOffset: 0
+    - _PivotOfVerticalScale: 0.221
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -110,12 +122,13 @@ Material:
     - _RotationCentrePosY: 0
     - _RotationMagnitude: 22
     - _RotationSubWithTexture: 0
+    - _SizeRange: 0.02
     - _SrcBlend: 1
-    - _Surface: 0
+    - _Surface: 1
     - _UsesObjectPositionNotUV: 1
     - _WorkflowMode: 1
     - _ZTest: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
     - _AlphaTileOffset: {r: 0, g: 0, b: 0, a: 0}
@@ -124,6 +137,7 @@ Material:
     - _BottomMeshSizeMultiplierXYZ: {r: 1, g: 1, b: 1, a: 0}
     - _BottomMeshSmoothStep: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0.29019606, g: 0.6470588, b: 0.7843137, a: 0}
+    - _ColorMultiplierOfTx: {r: 0.5372549, g: 0.58431375, b: 0.6509804, a: 0}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 0}
     - _HighlightSmoothStep: {r: 0.49, g: 0, b: 0, a: 0}
     - _HighlightSpeedUV: {r: 0, g: 0, b: 0, a: 0}
