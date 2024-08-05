@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6994659698575023329
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MI_BounceTrampolineGiant_A
+  m_Shader: {fileID: -6465566751694194690, guid: e7ab55d847f6e584dbdf33d22a34e57c,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    RenderType: Opaque
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_0ee6218c987e4734b961a865f67898ff_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 5c1b812b7905f0a45b97938395d00998, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_3d7e72d6de0841db85424124a9c435f2_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: d8658608d3c63c049863884995ffcf74, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_630825be972e4e7e8ed45691d66d7976_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 099d835061afce24696884cb4c9ee9be, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_e67a10c5426f4304ba4ebcbe2ec8ba1a_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 099d835061afce24696884cb4c9ee9be, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_f3ff3c794e2e455c9a832f2655701927_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2f59a8c7a63423146aac459374b36418, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxColor:
+        m_Texture: {fileID: 2800000, guid: ee3c5f05515127a4dbf71870092e17de, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AdjustRotateGradientMultiplier: 1.17
+    - _AdjustRotateGradientPower: 1.37
+    - _AlphaClip: 0
+    - _AlphaForPreviewingOnTopOfDefaultCylinder: 1
+    - _AlphaToMask: 0
+    - _AnimationRotationTimingOffsetVertexAlphaMultiplier: 0.65
+    - _AnimationSizeTimingOffsetVertexAlphaMultiplier: 0.65
+    - _AnimationTimingOffsetOfSizeVsRotation: 2
+    - _AnimationTimingOffsetVertexAlphaMultiplier: 0.6
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 1
+    - _BottomCentrePosY: 0.1
+    - _BottomMeshPowerOf: 1
+    - _CastShadows: 1
+    - _Cull: 2
+    - _DstBlend: 0
+    - _IsColorGradientSizeNotRotation: 1
+    - _LightBendIntensity: 0.05
+    - _MaskPosition: -0.5
+    - _MaskStep: 0.05
+    - _MeshSizeGradientCentrePosY: -0.1
+    - _MeshSizeMultiplierXZ: 0
+    - _MultiplyTxForEmission: 0.11
+    - _NormalStrength: 1
+    - _OverallAnimationSpeed: 2.81
+    - _OverallAnimationTimingOffset: 3
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _RegularMeshSizeMultiplierXZ: 0.876
+    - _RegularMeshSizeMultiplierY: 1.1
+    - _RotationCentrePosY: 0
+    - _RotationMagnitude: 2
+    - _RotationSubWithTexture: 0
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _UsesObjectPositionNotUV: 1
+    - _WorkflowMode: 1
+    - _ZTest: 4
+    - _ZWrite: 1
+    - _ZWriteControl: 0
+    m_Colors:
+    - _AlphaTileOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _AlphaTileUV: {r: 1, g: 1, b: 0, a: 0}
+    - _AxisOfRotation: {r: 0, g: 0, b: 1, a: 0}
+    - _BottomMeshSizeMultiplierXYZ: {r: 1, g: 1, b: 1, a: 0}
+    - _BottomMeshSmoothStep: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 0.29019606, g: 0.6470588, b: 0.7843137, a: 0}
+    - _HighlightColor: {r: 1, g: 1, b: 1, a: 0}
+    - _HighlightSmoothStep: {r: 0.49, g: 0, b: 0, a: 0}
+    - _HighlightSpeedUV: {r: 0, g: 0, b: 0, a: 0}
+    - _HighlightTileUV: {r: 1, g: 1, b: 0, a: 0}
+    - _HighlightVerticalOffsetV: {r: 0, g: 0, b: 0, a: 0}
+    - _HighlightVerticalTileUV: {r: 1, g: 1, b: 0, a: 0}
+    - _MeshSizeGradientMaskSmoothStep: {r: 0, g: 0, b: 0, a: 0}
+    - _MeshSizeMultiplierXYZ: {r: 0, g: 0, b: 0, a: 0}
+    - _NormalSpeed1: {r: 0, g: 0, b: 0, a: 0}
+    - _NormalSpeed2: {r: 0, g: 0, b: 0, a: 0}
+    - _NormalTile1: {r: 1, g: 1, b: 0, a: 0}
+    - _NormalTile2: {r: 1, g: 1, b: 0, a: 0}
+    - _RegularMeshSizeMultiplierXYZ: {r: 1, g: 1, b: 1, a: 0}
+    - _RotateGradientMaskSmoothStep: {r: 0.45, g: 0.6, b: 0, a: 0}
+    - _RotateSmoothStep: {r: -0.2, g: 2.21, b: 0, a: 0}
+  m_BuildTextureStacks: []

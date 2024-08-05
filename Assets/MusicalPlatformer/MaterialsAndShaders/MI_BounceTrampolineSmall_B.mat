@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MI_BounceBush
+  m_Name: MI_BounceTrampolineSmall_B
   m_Shader: {fileID: -6465566751694194690, guid: e7ab55d847f6e584dbdf33d22a34e57c,
     type: 3}
   m_Parent: {fileID: 0}
@@ -59,7 +59,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TxColor:
-        m_Texture: {fileID: 2800000, guid: 5c1b812b7905f0a45b97938395d00998, type: 3}
+        m_Texture: {fileID: 2800000, guid: ee3c5f05515127a4dbf71870092e17de, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -96,19 +96,19 @@ Material:
     - _LightBendIntensity: 0.05
     - _MaskPosition: -0.5
     - _MaskStep: 0.05
-    - _MeshSizeGradientCentrePosY: -0.4
-    - _MeshSizeMultiplierXZ: 1
+    - _MeshSizeGradientCentrePosY: -0.1
+    - _MeshSizeMultiplierXZ: 0
     - _MultiplyTxForEmission: 0.11
     - _NormalStrength: 1
-    - _OverallAnimationSpeed: 8
-    - _OverallAnimationTimingOffset: 4
+    - _OverallAnimationSpeed: 5.6
+    - _OverallAnimationTimingOffset: 1.5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RegularMeshSizeMultiplierXZ: 0.349
-    - _RegularMeshSizeMultiplierY: 1.11
+    - _RegularMeshSizeMultiplierXZ: 0.496
+    - _RegularMeshSizeMultiplierY: 3
     - _RotationCentrePosY: 0
-    - _RotationMagnitude: 22
+    - _RotationMagnitude: 4
     - _RotationSubWithTexture: 0
     - _SrcBlend: 1
     - _Surface: 0
@@ -130,7 +130,7 @@ Material:
     - _HighlightTileUV: {r: 1, g: 1, b: 0, a: 0}
     - _HighlightVerticalOffsetV: {r: 0, g: 0, b: 0, a: 0}
     - _HighlightVerticalTileUV: {r: 1, g: 1, b: 0, a: 0}
-    - _MeshSizeGradientMaskSmoothStep: {r: -0.02, g: 0.05, b: 0, a: 0}
+    - _MeshSizeGradientMaskSmoothStep: {r: 0, g: 0, b: 0, a: 0}
     - _MeshSizeMultiplierXYZ: {r: 0, g: 0, b: 0, a: 0}
     - _NormalSpeed1: {r: 0, g: 0, b: 0, a: 0}
     - _NormalSpeed2: {r: 0, g: 0, b: 0, a: 0}

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1954842142887700320
+--- !u!1001 &1911803595993228347
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b726e27113bd9954991ed69306d82806,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b726e27113bd9954991ed69306d82806,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.2
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b726e27113bd9954991ed69306d82806,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b726e27113bd9954991ed69306d82806,
         type: 3}
@@ -87,17 +87,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 35927d16d5749784e887d216bda9eae3, type: 2}
+      objectReference: {fileID: 2100000, guid: 19663618840c4af418b8f3638b02875f, type: 2}
     - target: {fileID: -5754084199372789682, guid: b726e27113bd9954991ed69306d82806,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -3616049515458178650, guid: e91f667803931aa4fb207009847718c1,
+      objectReference: {fileID: 2135021404862769742, guid: 4c1cb59f55680254a8ad6dc75f4ce17e,
         type: 3}
     - target: {fileID: 919132149155446097, guid: b726e27113bd9954991ed69306d82806,
         type: 3}
       propertyPath: m_Name
-      value: tree_002_VertPaintAndTransformed
+      value: bush_002_dancing
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b726e27113bd9954991ed69306d82806,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -100,7 +100,7 @@ Material:
     - _MeshSizeMultiplierXZ: 1
     - _MultiplyTxForEmission: 0.11
     - _NormalStrength: 1
-    - _OverallAnimationSpeed: 4
+    - _OverallAnimationSpeed: 5.6
     - _OverallAnimationTimingOffset: 4
     - _QueueControl: 0
     - _QueueOffset: 0

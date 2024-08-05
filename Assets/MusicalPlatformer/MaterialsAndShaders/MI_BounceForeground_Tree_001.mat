@@ -109,7 +109,7 @@ Material:
     - _MinSquash: 0.8
     - _MultiplyTxForEmission: 0.11
     - _NormalStrength: 1
-    - _OverallAnimationSpeed: 6
+    - _OverallAnimationSpeed: 5.6
     - _OverallAnimationTimingOffset: 0
     - _PivotOfVerticalScale: 0.325
     - _QueueControl: 0

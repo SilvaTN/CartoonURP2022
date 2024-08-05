@@ -37,6 +37,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2D_a598a216339347548a90f4fb25ec5d10_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: ae923b20587a6604bad2fd86e7c9dbdd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_b4749eb185224708bbaf77a6cc8d51ca_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 8e7579b7f8f613c4ba682fae3979f8ac, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -59,6 +63,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _LerpRegularVsPolka: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.5
@@ -68,4 +73,8 @@ Material:
     - _ColorRib: {r: 0.2830189, g: 0.105464585, b: 0.105464585, a: 0}
     - _ColorRosette: {r: 0.8018868, g: 0.63107777, b: 0.4274208, a: 0}
     - _ColorSoundingBoard: {r: 0.98772573, g: 1, b: 0.4292453, a: 0}
+    - _OffsetUV: {r: 0, g: 0, b: 0, a: 0}
+    - _PolkaColorA: {r: 1, g: 0.6196079, b: 0.10980386, a: 1}
+    - _PolkaColorB: {r: 0.9529411, g: 0, b: 0.58431375, a: 1}
+    - _TileUV: {r: 2, g: 1.2, b: 0, a: 0}
   m_BuildTextureStacks: []
