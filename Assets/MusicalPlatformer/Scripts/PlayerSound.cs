@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerSound : MonoBehaviour
 {
     [SerializeField] PlayerMovement playerMovementScript;
+    [SerializeField] UpdatingUI updatingUIScript;
     //[SerializeField] AudioSource srcWrongSounds;
     //[SerializeField] AudioClip[] wrongSounds;
     [SerializeField] AudioSource wrongSound;
@@ -38,6 +39,7 @@ public class PlayerSound : MonoBehaviour
     private void CorrectNotePressed()
     {
         srcGuitar.mute = false;
+        updatingUIScript.IncreaseLives();
 
         if (isRainbow)
         {
@@ -78,7 +80,11 @@ public class PlayerSound : MonoBehaviour
     private void WrongNotePressed()
     {
         srcGuitar.mute = true;
-        if (isRainbow || isGold) srcGuitarHarmony.mute = true;
+        updatingUIScript.DecreaseLives();
+        if (isRainbow || isGold)
+        {
+            srcGuitarHarmony.mute = true;            
+        }
         wrongSound.Play();
         noteDissipationWrong.Play();
         eyeAnimator.Play("EyelidAnimation");
@@ -225,6 +231,7 @@ public class PlayerSound : MonoBehaviour
         {
             srcGuitar.mute = true; //if you run past note and don't play it, mute the correct guitar track.
             srcGuitarHarmony.mute = true;
+            updatingUIScript.DecreaseLives();
         }
             
     }
