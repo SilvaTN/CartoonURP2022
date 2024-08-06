@@ -6,7 +6,7 @@ public class UpdatingUI : MonoBehaviour
 {
     private int numOfLives = 6;
     private int numOfSpecialNotes = 3;
-    [SerializeField] private GameObject heart1, heart2, heart3;
+    [SerializeField] private GameObject heart1, heartHollow1, heart2, heartHollow2, heart3, heartHollow3;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +30,15 @@ public class UpdatingUI : MonoBehaviour
                 break;
             case 5:
                 heart3.SetActive(true);
+                heartHollow3.SetActive(false);
                 break;
             case 3:
                 heart2.SetActive(true);
+                heartHollow2.SetActive(false);
                 break;
             case 1:
                 heart1.SetActive(true);
+                heartHollow1.SetActive(false);
                 break;
             //default:
                 //break;
@@ -50,12 +53,15 @@ public class UpdatingUI : MonoBehaviour
         switch (numOfLives)
         {
             case 4:
-                heart3.SetActive(false);
+                heartHollow3.SetActive(true);
+                heart3.SetActive(false);                
                 break;
             case 2:
-                heart2.SetActive(false);
+                heartHollow2.SetActive(true);
+                heart2.SetActive(false);                
                 break;
             case 0:
+                heartHollow1.SetActive(true);
                 heart1.SetActive(false);
                 Debug.Log("You lose");
                 break;
