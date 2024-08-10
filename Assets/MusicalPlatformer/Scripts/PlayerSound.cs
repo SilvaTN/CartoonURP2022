@@ -15,6 +15,7 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] ParticleSystem noteDissipationCorrect;
     [SerializeField] ParticleSystem noteDissipationGold;
     [SerializeField] ParticleSystem rainbowPathPS;
+    [SerializeField] ParticleSystem sparklesFromRainbowNote;
     [SerializeField] GameObject NoteGold;
     [SerializeField] GameObject NoteGoldNormal;
     [SerializeField] GameObject rainbowPathCollider;
@@ -47,6 +48,7 @@ public class PlayerSound : MonoBehaviour
             noteDissipationCorrect.Play();
             playerMovementScript.upwardsThrust(isRainbow, isGold);
             specialJumpSwirl.Play();
+            sparklesFromRainbowNote.Play();
             rainbowPathPS.Play();
             rainbowPathCollider.SetActive(true);
         } else if (isGold)
