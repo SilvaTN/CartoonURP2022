@@ -7,6 +7,7 @@ public class UpdatingUI : MonoBehaviour
     private int numOfLives = 6;
     private int numOfSpecialNotes = 3;
     [SerializeField] private GameObject heart1, heartHollow1, heart2, heartHollow2, heart3, heartHollow3;
+    [SerializeField] private GameObject specialNote1, specialNoteHollow1;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,5 +72,11 @@ public class UpdatingUI : MonoBehaviour
                 numOfLives++; //dont let it go below 0 for test purposes.
                 break;
         }
+    }
+
+    public void specialNoteCollectedUI()
+    {
+        specialNote1.SetActive(true);
+        specialNoteHollow1.SetActive(false);
     }
 }

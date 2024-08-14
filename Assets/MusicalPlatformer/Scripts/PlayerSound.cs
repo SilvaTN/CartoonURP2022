@@ -14,6 +14,7 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] AudioSource srcGuitarHarmony;
     [SerializeField] ParticleSystem noteDissipationCorrect;
     [SerializeField] ParticleSystem noteDissipationGold;
+    [SerializeField] float timeBeforeUpdatingSpecialUI = 0.2f;
     [SerializeField] ParticleSystem rainbowPathPS;
     [SerializeField] ParticleSystem sparklesFromRainbowNote;
     [SerializeField] GameObject NoteGold;
@@ -62,6 +63,7 @@ public class PlayerSound : MonoBehaviour
             noteDissipationGold.Play();
             playerMovementScript.upwardsThrust(isRainbow, isGold);
             specialJumpSwirl.Play();
+            StartCoroutine(waitThenShowSpecialNoteUI());
         } else
         {
             noteDissipationCorrect.Play();
@@ -125,6 +127,13 @@ public class PlayerSound : MonoBehaviour
         Destroy(correctNote);
     }
 
+    private IEnumerator waitThenShowSpecialNoteUI()
+    {
+        //Wait for X seconds
+        yield return new WaitForSeconds(timeBeforeUpdatingSpecialUI);
+        updatingUIScript.specialNoteCollectedUI();
+    }
+
     private bool NotePressedAction(KeyCode keyPressed)
     {
         if (Input.GetKeyDown(keyPressed))
@@ -161,6 +170,11 @@ public class PlayerSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (Input.GetKeyDown(KeyCode.H)) //for testing
+        //{
+        //    goldNoteSound.Play();
+        //    noteDissipationGold.Play();
+        //}
         //maybe replace these with switch statements bc it looks more clean for when you dont wanna do nothing inside.
         if (NotePressedAction(KeyCode.Period))
         {
