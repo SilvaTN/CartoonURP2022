@@ -27,10 +27,13 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] Animator eyeAnimator;
     [SerializeField] float rotationSpeed;
     [SerializeField] float noteSizeScaleFactor = 1.4f;
+    [SerializeField] private float correctNoteShrinkSpeed = 500f;
+    [SerializeField] private float correctNoteMinSize = 20f;
     private bool isInsideRainbowPathTrigger;
     private bool isRainbow;
     private int numofRainbowNotesCorrect;
     private bool isGold;
+    
 
     private Vector3 noteSizeOriginalScale;
     //[SerializeField] AudioClip sound1, sound2, sound3, sound4;    
@@ -73,7 +76,9 @@ public class PlayerSound : MonoBehaviour
                 }
             }
         }
-        Destroy(noteTouched.gameObject);
+        //Destroy(noteTouched.gameObject);
+        noteTouched.enabled = false; //disable just the collider, while still keeping the note object.
+        StartCoroutine(ScaleDownAndDestroy(noteTouched.gameObject));
         isRainbow = false;
         isGold = false;
         //specialKeyCodeIsPrevCorrect = correctKeyCode;
@@ -107,6 +112,17 @@ public class PlayerSound : MonoBehaviour
         //Wait for X seconds
         yield return new WaitForSeconds(0.2f);        
         guitarBodyMaterial.SetFloat("_LerpRegularVsPolka", 1f);
+    }
+
+    private IEnumerator ScaleDownAndDestroy(GameObject correctNote)
+    {
+        // Continuously scale down the object until it reaches correctNoteMinSize
+        while (correctNote.transform.localScale.z > correctNoteMinSize)
+        {
+            correctNote.transform.localScale -= Vector3.one * correctNoteShrinkSpeed * Time.deltaTime;
+            yield return null;
+        }
+        Destroy(correctNote);
     }
 
     private bool NotePressedAction(KeyCode keyPressed)
