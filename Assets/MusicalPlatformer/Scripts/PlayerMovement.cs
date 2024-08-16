@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 forceDirection;
     private bool isJumping;
     private bool isFalling;
+    //private bool canShowJumpLandPoof = false;
     [SerializeField] float fallThreshold;
     private float previousHeight;
     private bool isSpecialJumping;
@@ -117,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
             //if (isSpecialJumping) transform.rotation = Quaternion.identity; //otherwise, it changes rotation slightly for some reason.
             isSpecialJumping = false;
             GuitarAnimator.SetBool("isOnGround", isOnGround);
-            if (isFalling) jumpLandPoof.Play();
+            jumpLandPoof.Play();
             isJumping = false;
             isFalling = false;            
             //GuitarAnimator.Play("GuitarChar_SquashRunning");
@@ -129,5 +130,6 @@ public class PlayerMovement : MonoBehaviour
             gameManager.EndGame();
         }
     }
+
 
 }
