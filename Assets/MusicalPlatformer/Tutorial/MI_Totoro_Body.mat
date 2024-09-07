@@ -77,12 +77,24 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_4bb7b146d2eb426ba6f6dc441d932d7f_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 2f59a8c7a63423146aac459374b36418, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_504d2ecc97154a05bdd25fdbd1d7b276_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: ae5bd8733cbc6974a8f2d91c1637e2d0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_88ca5f1075e34732a607c8ce348dd0b4_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: adc3f470595bfb9409021ca78b61badf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TxNormalMap:
+        m_Texture: {fileID: 2800000, guid: c0359df017bcde24e93728ad73d76528, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -119,6 +131,9 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
+    - _NormalStrength: 0.13
+    - _NormalStrengthA: 0.35
+    - _NormalStrengthB: 0.13
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -139,5 +154,6 @@ Material:
     - _ColorB: {r: 0.7830188, g: 0.774138, b: 0.7054557, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelColor: {r: 0.3962264, g: 0.36806113, b: 0.24483801, a: 0}
+    - _NormalMapTileUV: {r: 1, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
