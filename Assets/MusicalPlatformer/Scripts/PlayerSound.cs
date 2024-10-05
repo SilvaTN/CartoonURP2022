@@ -124,6 +124,7 @@ public class PlayerSound : MonoBehaviour
             correctNote.transform.localScale -= Vector3.one * correctNoteShrinkSpeed * Time.deltaTime;
             yield return null;
         }
+        Debug.Log("destroying " + correctNote.tag);
         Destroy(correctNote);
     }
 
@@ -197,49 +198,54 @@ public class PlayerSound : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        noteSizeOriginalScale = other.transform.localScale;
-        noteTouched = other;
-        other.transform.localScale *= noteSizeScaleFactor;
-
-        if (other.CompareTag("NoteV"))
-        {
-            //Debug.Log("Touching left uwuwuwuwuwu");
-            correctKeyCode = KeyCode.Period;
-            isRainbow = false;
-            isGold = false;
-        } else if (other.CompareTag("NoteC"))
-        {
-            //Debug.Log("Touching down qqqqqqqq");
-            correctKeyCode = KeyCode.Comma;
-            isRainbow = false;
-            isGold = false;
-        } else if (other.CompareTag("NoteX"))
-        {
-            //Debug.Log("Touching right jjjjjjjj");
-            correctKeyCode = KeyCode.M;
-            isRainbow = false;
-            isGold = false;
-        } else if (other.CompareTag("NoteZ"))
-        {
-            //Debug.Log("Touching right jjjjjjjj");
-            correctKeyCode = KeyCode.N;
-            isRainbow = false;
-            isGold = false;
-        } else if (other.CompareTag("NoteSpecial"))
-        {
-            //Debug.Log("Touching right jjjjjjjj");
-            //correctKeyCode = specialKeyCodeIsPrevCorrect;
-            isRainbow = true;
-            isGold = false;
-        } else if (other.CompareTag("NoteGold"))
-        {
-            correctKeyCode = KeyCode.Comma; //same as NoteX tag
-            isRainbow = false;
-            isGold = true;
-        } else if (other.CompareTag("RainbowPathTrigger"))
+        if (other.CompareTag("RainbowPathTrigger"))
         {
             isInsideRainbowPathTrigger = true;
         }
+        else
+        {
+            noteSizeOriginalScale = other.transform.localScale;
+            noteTouched = other;
+            other.transform.localScale *= noteSizeScaleFactor;
+
+            if (other.CompareTag("NoteV"))
+            {
+                correctKeyCode = KeyCode.Period;
+                isRainbow = false;
+                isGold = false;
+            }
+            else if (other.CompareTag("NoteC"))
+            {
+                correctKeyCode = KeyCode.Comma;
+                isRainbow = false;
+                isGold = false;
+            }
+            else if (other.CompareTag("NoteX"))
+            {
+                correctKeyCode = KeyCode.M;
+                isRainbow = false;
+                isGold = false;
+            }
+            else if (other.CompareTag("NoteZ"))
+            {
+                correctKeyCode = KeyCode.N;
+                isRainbow = false;
+                isGold = false;
+            }
+            else if (other.CompareTag("NoteSpecial"))
+            {
+                //correctKeyCode = specialKeyCodeIsPrevCorrect;
+                isRainbow = true;
+                isGold = false;
+            }
+            else if (other.CompareTag("NoteGold"))
+            {
+                correctKeyCode = KeyCode.Comma; //same as NoteX tag
+                isRainbow = false;
+                isGold = true;
+            }
+        }
+        
 
 
         //other.transform.localScale *= 0.8f;
@@ -258,10 +264,10 @@ public class PlayerSound : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         //noteTouched = null;
-        other.transform.localScale = noteSizeOriginalScale;
-        correctKeyCode = 0;        
+        other.transform.localScale = noteSizeOriginalScale;        
         if (!other.CompareTag("RainbowPathTrigger")) //otherwise it automatically mutes when you leave rainbow.
         {
+            correctKeyCode = 0; // do not reset to 0 just bc you stopped touching rainbow.
             srcGuitar.mute = true; //if you run past note and don't play it, mute the correct guitar track.
             srcGuitarHarmony.mute = true;
             updatingUIScript.DecreaseLives();

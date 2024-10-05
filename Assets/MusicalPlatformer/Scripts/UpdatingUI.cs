@@ -23,7 +23,7 @@ public class UpdatingUI : MonoBehaviour
     public void IncreaseLives()
     {
         numOfLives++;
-        Debug.Log("Increased lives to " + numOfLives);
+        //Debug.Log("Increased lives to " + numOfLives);
         switch (numOfLives)
         {
             case 7:
@@ -50,7 +50,7 @@ public class UpdatingUI : MonoBehaviour
     public void DecreaseLives()
     {
         numOfLives--;
-        Debug.Log("decreased lives to " + numOfLives);
+        //Debug.Log("decreased lives to " + numOfLives);
         switch (numOfLives)
         {
             case 4:
@@ -64,7 +64,7 @@ public class UpdatingUI : MonoBehaviour
             case 0:
                 heartHollow1.SetActive(true);
                 heart1.SetActive(false);
-                Debug.Log("You lose");
+                //Debug.Log("You lose");
                 break;
             //default:
             //break;
