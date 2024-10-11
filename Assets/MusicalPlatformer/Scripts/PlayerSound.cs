@@ -34,6 +34,7 @@ public class PlayerSound : MonoBehaviour
     private bool isRainbow;
     private int numofRainbowNotesCorrect;
     private bool isGold;
+    private int noteNumberForWIP = 0;
     
 
     private Vector3 noteSizeOriginalScale;
@@ -204,6 +205,8 @@ public class PlayerSound : MonoBehaviour
         }
         else
         {
+            noteNumberForWIP++;
+            Debug.Log("note number is " + noteNumberForWIP);
             noteSizeOriginalScale = other.transform.localScale;
             noteTouched = other;
             other.transform.localScale *= noteSizeScaleFactor;
