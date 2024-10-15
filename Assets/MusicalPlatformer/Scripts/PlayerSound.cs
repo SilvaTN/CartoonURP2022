@@ -10,8 +10,10 @@ public class PlayerSound : MonoBehaviour
     //[SerializeField] AudioClip[] wrongSounds;
     [SerializeField] AudioSource wrongSound;
     [SerializeField] AudioSource goldNoteSound;
+    [Range(0,70)] public int songStartTime;
     [SerializeField] AudioSource srcGuitar;
     [SerializeField] AudioSource srcGuitarHarmony;
+    [SerializeField] AudioSource srcBgInstrumentals;
     [SerializeField] ParticleSystem noteDissipationCorrect;
     [SerializeField] ParticleSystem noteDissipationGold;
     [SerializeField] float timeBeforeUpdatingSpecialUI = 0.2f;
@@ -125,7 +127,7 @@ public class PlayerSound : MonoBehaviour
             correctNote.transform.localScale -= Vector3.one * correctNoteShrinkSpeed * Time.deltaTime;
             yield return null;
         }
-        Debug.Log("destroying " + correctNote.tag);
+        //Debug.Log("destroying " + correctNote.tag);
         Destroy(correctNote);
     }
 
@@ -166,7 +168,10 @@ public class PlayerSound : MonoBehaviour
         {
             rotationSpeed = 900f;
         }
-        correctKeyCode = 0;        
+        correctKeyCode = 0;
+
+        srcGuitar.time = songStartTime;
+        srcBgInstrumentals.time = songStartTime;
     }
 
     // Update is called once per frame
@@ -206,7 +211,7 @@ public class PlayerSound : MonoBehaviour
         else
         {
             noteNumberForWIP++;
-            Debug.Log("note number is " + noteNumberForWIP);
+            //Debug.Log("note number is " + noteNumberForWIP);
             noteSizeOriginalScale = other.transform.localScale;
             noteTouched = other;
             other.transform.localScale *= noteSizeScaleFactor;

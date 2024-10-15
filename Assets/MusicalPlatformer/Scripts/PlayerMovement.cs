@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] ParticleSystem jumpPoof;
     [SerializeField] ParticleSystem jumpLandPoof;
     [SerializeField] Animator GuitarAnimator;
+    private Vector3 startPosition = new Vector3(136.91f, 3f, 104.42f);
     private const string JUMP_ANIM = "GuitarChar_Jump_LessFrames";
     private const string SPECIAL_JUMP_ANIM = "GuitarChar_SpecialJump";
     private string currentJumpAnim;
@@ -59,7 +60,14 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         //Keep the start position the same in relation to the position of the notes.
-        if (moveToStartPosition) transform.position = new Vector3(136.91f, 3f, 104.42f); // sets char start position.       
+        if (moveToStartPosition)
+        {
+            int songStartingTime = GetComponent<PlayerSound>().songStartTime;
+            Debug.Log("songStartTime inside PlayerMovement is " + songStartingTime);
+            startPosition.x = startPosition.x - (runSpeed * songStartingTime);
+            transform.position = startPosition; // sets char start position. 
+        }
+        
         isSpecialJumping = false;
         if (runSpeed == 0) runSpeed = 15f;      
         if (jumpForce == 0) jumpForce = 25f;
