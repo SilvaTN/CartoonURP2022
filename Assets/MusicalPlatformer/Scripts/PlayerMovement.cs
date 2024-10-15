@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpForce;
     [SerializeField] float rainbowJumpForce;
     [SerializeField] float goldJumpForce;
+    [SerializeField] float flowerJumpForce;
+    [SerializeField] float treeJumpForce;
     [SerializeField] float runSpeed;
     [SerializeField] float customGravity;
     [SerializeField] bool isOnGround = true;
@@ -29,9 +31,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isSpecialJumping;
     
 
-    public void upwardsThrust(bool isRainbow = false, bool isGold = false)
+    public void upwardsThrust(bool isRainbow = false, bool isGold = false, bool isFlower = false, bool isTree = false)
     {
-        isSpecialJumping = isRainbow || isGold;
+        isSpecialJumping = isRainbow || isGold || isFlower || isTree;
         if (isRainbow)
         {
             upwardThrustForce = rainbowJumpForce;
@@ -39,9 +41,17 @@ public class PlayerMovement : MonoBehaviour
         } else if (isGold)
         {
             upwardThrustForce = goldJumpForce;
-            Debug.Log("goldJumpForce is " + goldJumpForce);
             currentJumpAnim = SPECIAL_JUMP_ANIM;
-        } else
+        } else if (isFlower)
+        {
+            upwardThrustForce = flowerJumpForce;
+            currentJumpAnim = SPECIAL_JUMP_ANIM;
+        }  else if (isTree)
+        {
+            upwardThrustForce = flowerJumpForce;
+            //currentJumpAnim = SPECIAL_JUMP_ANIM;
+        }
+        else
         {
             upwardThrustForce = jumpForce;
             currentJumpAnim = JUMP_ANIM;
@@ -73,6 +83,8 @@ public class PlayerMovement : MonoBehaviour
         if (jumpForce == 0) jumpForce = 25f;
         if (rainbowJumpForce == 0) rainbowJumpForce = 15f;
         if (goldJumpForce == 0) goldJumpForce = 25f;
+        if (flowerJumpForce == 0) flowerJumpForce = 25f;
+        if (treeJumpForce == 0) treeJumpForce = 25f;
         if (customGravity == 0) customGravity = -50f;        
         cForce = GetComponent<ConstantForce>();
         cForce.force = new Vector3(0, customGravity, 0);

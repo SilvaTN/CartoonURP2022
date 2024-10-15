@@ -33,9 +33,11 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] private float correctNoteShrinkSpeed = 500f;
     [SerializeField] private float correctNoteMinSize = 20f;
     private bool isInsideRainbowPathTrigger;
-    private bool isRainbow;
+    private bool isRainbow;    
     private int numofRainbowNotesCorrect;
     private bool isGold;
+    private bool isFlower;
+    private bool isTree;
     private int noteNumberForWIP = 0;
     
 
@@ -54,7 +56,7 @@ public class PlayerSound : MonoBehaviour
         {
             srcGuitarHarmony.mute = false;
             noteDissipationCorrect.Play();
-            playerMovementScript.upwardsThrust(isRainbow, isGold);
+            playerMovementScript.upwardsThrust(isRainbow, isGold, isFlower);
             specialJumpSwirl.Play();
             sparklesFromRainbowNote.Play();
             rainbowPathPS.Play();
@@ -64,10 +66,17 @@ public class PlayerSound : MonoBehaviour
             srcGuitarHarmony.mute = false;
             goldNoteSound.Play();
             noteDissipationGold.Play();
-            playerMovementScript.upwardsThrust(isRainbow, isGold);
+            playerMovementScript.upwardsThrust(isRainbow, isGold, isFlower);
             specialJumpSwirl.Play();
             StartCoroutine(waitThenShowSpecialNoteUI());
-        } else
+        } else if (isFlower)
+        {
+            srcGuitarHarmony.mute = false;
+            noteDissipationCorrect.Play();
+            playerMovementScript.upwardsThrust(isRainbow, isGold, isFlower);
+            specialJumpSwirl.Play();
+        }
+        else
         {
             noteDissipationCorrect.Play();
             glowInsideGuitar.Play();
@@ -86,6 +95,7 @@ public class PlayerSound : MonoBehaviour
         StartCoroutine(ScaleDownAndDestroy(noteTouched.gameObject));
         isRainbow = false;
         isGold = false;
+        isFlower = false;
         //specialKeyCodeIsPrevCorrect = correctKeyCode;
         correctKeyCode = 0; //Resets the correctKeyCode after you play correctly.
     }
@@ -94,7 +104,7 @@ public class PlayerSound : MonoBehaviour
     {
         srcGuitar.mute = true;
         updatingUIScript.DecreaseLives();
-        if (isRainbow || isGold)
+        if (isRainbow || isGold || isFlower)
         {
             srcGuitarHarmony.mute = true;            
         }
@@ -142,7 +152,7 @@ public class PlayerSound : MonoBehaviour
     {
         if (Input.GetKeyDown(keyPressed))
         {
-            if ((keyPressed == correctKeyCode) || (isRainbow))
+            if ((keyPressed == correctKeyCode) || (isRainbow) || (isFlower))
             {
                 CorrectNotePressed();
             }
@@ -162,6 +172,7 @@ public class PlayerSound : MonoBehaviour
     {
         isRainbow = false;
         isGold = false;
+        isFlower = false;
         isInsideRainbowPathTrigger = false;
         numofRainbowNotesCorrect = 0;
         if (rotationSpeed == 0)
@@ -207,6 +218,9 @@ public class PlayerSound : MonoBehaviour
         if (other.CompareTag("RainbowPathTrigger"))
         {
             isInsideRainbowPathTrigger = true;
+        } else if (other.CompareTag("Tree"))
+        {
+            playerMovementScript.upwardsThrust(isRainbow, isGold, isFlower, isTree);
         }
         else
         {
@@ -221,36 +235,48 @@ public class PlayerSound : MonoBehaviour
                 correctKeyCode = KeyCode.Period;
                 isRainbow = false;
                 isGold = false;
+                isFlower = false;
             }
             else if (other.CompareTag("NoteC"))
             {
                 correctKeyCode = KeyCode.Comma;
                 isRainbow = false;
                 isGold = false;
+                isFlower = false;
             }
             else if (other.CompareTag("NoteX"))
             {
                 correctKeyCode = KeyCode.M;
                 isRainbow = false;
                 isGold = false;
+                isFlower = false;
             }
             else if (other.CompareTag("NoteZ"))
             {
                 correctKeyCode = KeyCode.N;
                 isRainbow = false;
                 isGold = false;
+                isFlower = false;
             }
             else if (other.CompareTag("NoteSpecial"))
             {
                 //correctKeyCode = specialKeyCodeIsPrevCorrect;
                 isRainbow = true;
                 isGold = false;
+                isFlower = false;
             }
             else if (other.CompareTag("NoteGold"))
             {
                 correctKeyCode = KeyCode.Comma; //same as NoteX tag
                 isRainbow = false;
                 isGold = true;
+                isFlower = false;
+            }
+            else if (other.CompareTag("NoteFlower"))
+            {
+                isRainbow = false;
+                isGold = false;
+                isFlower = true;
             }
         }
         
@@ -272,9 +298,10 @@ public class PlayerSound : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         //noteTouched = null;
-        other.transform.localScale = noteSizeOriginalScale;        
-        if (!other.CompareTag("RainbowPathTrigger")) //otherwise it automatically mutes when you leave rainbow.
+        //other.transform.localScale = noteSizeOriginalScale;        
+        if (!(other.CompareTag("RainbowPathTrigger") || other.CompareTag("Tree"))) //if it's not a rainbow path or tree, enter if statement.
         {
+            other.transform.localScale = noteSizeOriginalScale;
             correctKeyCode = 0; // do not reset to 0 just bc you stopped touching rainbow.
             srcGuitar.mute = true; //if you run past note and don't play it, mute the correct guitar track.
             srcGuitarHarmony.mute = true;

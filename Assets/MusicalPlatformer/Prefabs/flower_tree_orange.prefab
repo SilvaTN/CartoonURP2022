@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3365949534542037897}
+  - component: {fileID: 6645570662905682716}
   m_Layer: 0
   m_Name: flower_tree_orange
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,6 +34,27 @@ Transform:
   - {fileID: 5461490758654533274}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -27, z: 0}
+--- !u!135 &6645570662905682716
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054672917362100132}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.07168124
+  m_Center: {x: 0.03, y: 0.11602626, z: 0.0058561973}
 --- !u!1 &2528321774615413347
 GameObject:
   m_ObjectHideFlags: 0
