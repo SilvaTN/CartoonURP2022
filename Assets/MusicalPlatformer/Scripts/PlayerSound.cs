@@ -14,6 +14,7 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] AudioSource srcGuitar;
     [SerializeField] AudioSource srcGuitarHarmony;
     [SerializeField] AudioSource srcBgInstrumentals;
+    [SerializeField] AudioSource srcVocalsForDeving;
     [SerializeField] ParticleSystem noteDissipationCorrect;
     [SerializeField] ParticleSystem noteDissipationGold;
     [SerializeField] float timeBeforeUpdatingSpecialUI = 0.2f;
@@ -173,6 +174,7 @@ public class PlayerSound : MonoBehaviour
         isRainbow = false;
         isGold = false;
         isFlower = false;
+        isTree = false;
         isInsideRainbowPathTrigger = false;
         numofRainbowNotesCorrect = 0;
         if (rotationSpeed == 0)
@@ -182,7 +184,9 @@ public class PlayerSound : MonoBehaviour
         correctKeyCode = 0;
 
         srcGuitar.time = songStartTime;
+        srcGuitarHarmony.time = songStartTime;
         srcBgInstrumentals.time = songStartTime;
+        srcVocalsForDeving.time = songStartTime;
     }
 
     // Update is called once per frame
@@ -220,7 +224,9 @@ public class PlayerSound : MonoBehaviour
             isInsideRainbowPathTrigger = true;
         } else if (other.CompareTag("Tree"))
         {
+            isTree = true;
             playerMovementScript.upwardsThrust(isRainbow, isGold, isFlower, isTree);
+            isTree = false;
         }
         else
         {

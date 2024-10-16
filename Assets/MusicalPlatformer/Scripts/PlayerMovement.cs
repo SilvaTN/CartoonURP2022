@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     public void upwardsThrust(bool isRainbow = false, bool isGold = false, bool isFlower = false, bool isTree = false)
     {
         isSpecialJumping = isRainbow || isGold || isFlower || isTree;
+        //Debug.Log("isSpecialJumping value is " + isSpecialJumping);
         if (isRainbow)
         {
             upwardThrustForce = rainbowJumpForce;
@@ -48,8 +49,8 @@ public class PlayerMovement : MonoBehaviour
             currentJumpAnim = SPECIAL_JUMP_ANIM;
         }  else if (isTree)
         {
-            upwardThrustForce = flowerJumpForce;
-            //currentJumpAnim = SPECIAL_JUMP_ANIM;
+            upwardThrustForce = treeJumpForce;
+            currentJumpAnim = SPECIAL_JUMP_ANIM;
         }
         else
         {
@@ -62,7 +63,16 @@ public class PlayerMovement : MonoBehaviour
         isOnGround = false;
         GuitarAnimator.SetBool("isOnGround", isOnGround);
         isJumping = true;
-        GuitarAnimator.Play(currentJumpAnim);
+        //Debug.Log("currentJumpAnim is " + currentJumpAnim);
+        if (isTree)
+        {
+            //otherwise can't do consecutive special jumps bc did not interrupt transition out of the special jump animation I think;
+            GuitarAnimator.Play(currentJumpAnim, 0, 0f);
+        } else
+        {
+            GuitarAnimator.Play(currentJumpAnim);
+        }
+        
         jumpPoof.Play();
     }
 
@@ -73,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         if (moveToStartPosition)
         {
             int songStartingTime = GetComponent<PlayerSound>().songStartTime;
-            Debug.Log("songStartTime inside PlayerMovement is " + songStartingTime);
+            //Debug.Log("songStartTime inside PlayerMovement is " + songStartingTime);
             startPosition.x = startPosition.x - (runSpeed * songStartingTime);
             transform.position = startPosition; // sets char start position. 
         }
@@ -134,6 +144,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+            transform.position = new Vector3(transform.position.x, transform.position.y, 104.42f); //otherwise, char changes rotation/position slightly in rainbow path for some reason.
+            transform.rotation = Quaternion.identity; //otherwise, char changes rotation/position slightly in rainbow path for some reason.
+
             isOnGround = true;
             //if (isSpecialJumping) transform.rotation = Quaternion.identity; //otherwise, it changes rotation slightly for some reason.
             isSpecialJumping = false;
